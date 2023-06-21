@@ -1,8 +1,13 @@
 {
   "version": 2,
-  "dgSpecHash": "MN/0S+Qh7g4Pcl89aRhaVZYYUpnFkUSXOF+tTZ8BBAjSVRuyNOCW7rV11i2ztIy3+NPCrxazwnyWX1HEvbcTNA==",
+  "dgSpecHash": "39lJ69c9XWhBMyG+MxmiYdUR5X1P9Eue0GE54BQ0K3x6vTkHciYrM+h9z97OAGNe4XW3HHQUQIhAmMLtuG6Nvw==",
   "success": true,
-  "projectFilePath": "C:\\Users\\User\\source\\repos\\Calcular\\Calcular\\Calcular.vbproj",
-  "expectedPackageFiles": [],
+  "projectFilePath": "C:\\Users\\50370\\source\\repos\\IsaiAlvarezF\\CalVenta\\Calcular\\Calcular.vbproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\50370\\.nuget\\packages\\microsoft.windowsdesktop.app.ref\\5.0.0\\microsoft.windowsdesktop.app.ref.5.0.0.nupkg.sha512",
+    "C:\\Users\\50370\\.nuget\\packages\\microsoft.netcore.app.ref\\5.0.0\\microsoft.netcore.app.ref.5.0.0.nupkg.sha512",
+    "C:\\Users\\50370\\.nuget\\packages\\microsoft.aspnetcore.app.ref\\5.0.0\\microsoft.aspnetcore.app.ref.5.0.0.nupkg.sha512",
+    "C:\\Users\\50370\\.nuget\\packages\\microsoft.netcore.app.host.win-x64\\5.0.17\\microsoft.netcore.app.host.win-x64.5.0.17.nupkg.sha512"
+  ],
   "logs": []
 }
