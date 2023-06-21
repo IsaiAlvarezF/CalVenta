@@ -1,0 +1,5 @@
+C:\Users\User\Desktop\Cal\Calcular.exe
+C:\Users\User\Desktop\Cal\Calcular.dll
+C:\Users\User\Desktop\Cal\Calcular.deps.json
+C:\Users\User\Desktop\Cal\Calcular.runtimeconfig.json
+C:\Users\User\Desktop\Cal\Calcular.pdb
