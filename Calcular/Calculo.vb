@@ -3,8 +3,17 @@
     Private Sub Form1(sender As Object, e As EventArgs) Handles MyBase.Load
         ' Habilitar el reconocimiento de la tecla Enter
         Me.AcceptButton = Calcular
+
+        My.Computer.Registry.CurrentUser.CreateSubKey("Historial5")
+        My.Computer.Registry.CurrentUser.CreateSubKey("Historial4")
+        My.Computer.Registry.CurrentUser.CreateSubKey("Historial3")
+        My.Computer.Registry.CurrentUser.CreateSubKey("Historial2")
+        My.Computer.Registry.CurrentUser.CreateSubKey("Historial1")
+        My.Computer.Registry.CurrentUser.CreateSubKey("LeyendaHistorial")
+
+        ObtenerHistorial()
+
         TipoCliente.SelectedItem = "Empleado"
-        Me.LeyendaHistorial.Text = "Historial vacío..."
     End Sub
 
     Private Sub Calculo()
@@ -25,6 +34,7 @@
                     Me.PrecioConIva.Text = FormatCurrency(Total)
                 End If
                 LlenarHistorial()
+                MontoIngresado.Select(0, 100)
             Else
                 MessageBox.Show("Por favor, selecciona una opción.")
             End If
@@ -57,21 +67,35 @@
     End Sub
 
     Private Sub LlenarHistorial()
-        Me.Historial5.Text = Me.Historial4.Text
-        Me.Historial4.Text = Me.Historial3.Text
-        Me.Historial3.Text = Me.Historial2.Text
-        Me.Historial2.Text = Me.Historial1.Text
-        Me.Historial1.Text = "Monto ingresado: " & FormatCurrency(Me.MontoIngresado.Text) & "; Precio total: " & Me.PrecioConIva.Text & "; Precio sin IVA: " & Me.PrecioSinIva.Text
-        Me.LeyendaHistorial.Text = Nothing
+        My.Computer.Registry.SetValue("HKEY_CURRENT_USER\Historial5", "Historial5Value", Me.Historial4.Text, Microsoft.Win32.RegistryValueKind.String)
+        My.Computer.Registry.SetValue("HKEY_CURRENT_USER\Historial4", "Historial4Value", Me.Historial3.Text, Microsoft.Win32.RegistryValueKind.String)
+        My.Computer.Registry.SetValue("HKEY_CURRENT_USER\Historial3", "Historial3Value", Me.Historial2.Text, Microsoft.Win32.RegistryValueKind.String)
+        My.Computer.Registry.SetValue("HKEY_CURRENT_USER\Historial2", "Historial2Value", Me.Historial1.Text, Microsoft.Win32.RegistryValueKind.String)
+        My.Computer.Registry.SetValue("HKEY_CURRENT_USER\Historial1", "Historial1Value",
+                                      "Monto ingresado: " & FormatCurrency(Me.MontoIngresado.Text) & "; Precio total: " & Me.PrecioConIva.Text & "; Precio sin IVA: " & Me.PrecioSinIva.Text, Microsoft.Win32.RegistryValueKind.String)
+        My.Computer.Registry.SetValue("HKEY_CURRENT_USER\LeyendaHistorial", "LeyendaHistorialValue", "Actualizado: " & DateTime.Now.ToString, Microsoft.Win32.RegistryValueKind.String)
+
+        ObtenerHistorial()
+
+    End Sub
+
+    Private Sub ObtenerHistorial()
+        Me.Historial5.Text = My.Computer.Registry.GetValue("HKEY_CURRENT_USER\Historial5", "Historial5Value", Nothing)
+        Me.Historial4.Text = My.Computer.Registry.GetValue("HKEY_CURRENT_USER\Historial4", "Historial4Value", Nothing)
+        Me.Historial3.Text = My.Computer.Registry.GetValue("HKEY_CURRENT_USER\Historial3", "Historial3Value", Nothing)
+        Me.Historial2.Text = My.Computer.Registry.GetValue("HKEY_CURRENT_USER\Historial2", "Historial2Value", Nothing)
+        Me.Historial1.Text = My.Computer.Registry.GetValue("HKEY_CURRENT_USER\Historial1", "Historial1Value", Nothing)
+        Me.LeyendaHistorial.Text = My.Computer.Registry.GetValue("HKEY_CURRENT_USER\LeyendaHistorial", "LeyendaHistorialValue", Nothing)
     End Sub
 
     Private Sub LimpiarHistorial_Click(sender As Object, e As EventArgs) Handles LimpiarHistorial.Click
-        Me.Historial5.Text = Nothing
-        Me.Historial4.Text = Nothing
-        Me.Historial3.Text = Nothing
-        Me.Historial2.Text = Nothing
-        Me.Historial1.Text = Nothing
-        Me.LeyendaHistorial.Text = "Historial vacío..."
+        My.Computer.Registry.SetValue("HKEY_CURRENT_USER\Historial5", "Historial5Value", "", Microsoft.Win32.RegistryValueKind.String)
+        My.Computer.Registry.SetValue("HKEY_CURRENT_USER\Historial4", "Historial4Value", "", Microsoft.Win32.RegistryValueKind.String)
+        My.Computer.Registry.SetValue("HKEY_CURRENT_USER\Historial3", "Historial3Value", "", Microsoft.Win32.RegistryValueKind.String)
+        My.Computer.Registry.SetValue("HKEY_CURRENT_USER\Historial2", "Historial2Value", "", Microsoft.Win32.RegistryValueKind.String)
+        My.Computer.Registry.SetValue("HKEY_CURRENT_USER\Historial1", "Historial1Value", "", Microsoft.Win32.RegistryValueKind.String)
+        My.Computer.Registry.SetValue("HKEY_CURRENT_USER\LeyendaHistorial", "LeyendaHistorialValue", "Historial vacío...", Microsoft.Win32.RegistryValueKind.String)
+        ObtenerHistorial()
     End Sub
 
 End Class

@@ -136,6 +136,7 @@ Partial Class Form1
         ' MontoIngresado
         ' 
         MontoIngresado.Location = New Point(127, 97)
+        MontoIngresado.MaxLength = 100
         MontoIngresado.Name = "MontoIngresado"
         MontoIngresado.Size = New Size(173, 23)
         MontoIngresado.TabIndex = 2
