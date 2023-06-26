@@ -41,6 +41,8 @@ Partial Class Form1
         Historial3 = New TextBox()
         Historial4 = New TextBox()
         Historial5 = New TextBox()
+        LimpiarHistorial = New Button()
+        LeyendaHistorial = New TextBox()
         CType(ApplyHighDpiModeEventArgsBindingSource, ComponentModel.ISupportInitialize).BeginInit()
         SuspendLayout()
         ' 
@@ -215,12 +217,35 @@ Partial Class Form1
         Historial5.TabIndex = 18
         Historial5.TextAlign = HorizontalAlignment.Center
         ' 
+        ' LimpiarHistorial
+        ' 
+        LimpiarHistorial.Font = New Font("Segoe UI", 7F, FontStyle.Regular, GraphicsUnit.Point)
+        LimpiarHistorial.Location = New Point(272, 392)
+        LimpiarHistorial.Name = "LimpiarHistorial"
+        LimpiarHistorial.Size = New Size(85, 23)
+        LimpiarHistorial.TabIndex = 19
+        LimpiarHistorial.Text = "Limpiar Historial"
+        LimpiarHistorial.UseVisualStyleBackColor = True
+        ' 
+        ' LeyendaHistorial
+        ' 
+        LeyendaHistorial.BackColor = SystemColors.GradientActiveCaption
+        LeyendaHistorial.BorderStyle = BorderStyle.None
+        LeyendaHistorial.Font = New Font("Segoe UI", 7F, FontStyle.Regular, GraphicsUnit.Point)
+        LeyendaHistorial.Location = New Point(25, 397)
+        LeyendaHistorial.Name = "LeyendaHistorial"
+        LeyendaHistorial.ReadOnly = True
+        LeyendaHistorial.Size = New Size(241, 13)
+        LeyendaHistorial.TabIndex = 20
+        ' 
         ' Form1
         ' 
         AutoScaleDimensions = New SizeF(7F, 15F)
         AutoScaleMode = AutoScaleMode.Font
         BackColor = SystemColors.GradientActiveCaption
-        ClientSize = New Size(369, 407)
+        ClientSize = New Size(369, 427)
+        Controls.Add(LeyendaHistorial)
+        Controls.Add(LimpiarHistorial)
         Controls.Add(Historial5)
         Controls.Add(Historial4)
         Controls.Add(Historial3)
@@ -264,4 +289,6 @@ Partial Class Form1
     Friend WithEvents Historial3 As TextBox
     Friend WithEvents Historial4 As TextBox
     Friend WithEvents Historial5 As TextBox
+    Friend WithEvents LimpiarHistorial As Button
+    Friend WithEvents LeyendaHistorial As TextBox
 End Class

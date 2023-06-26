@@ -4,6 +4,7 @@
         ' Habilitar el reconocimiento de la tecla Enter
         Me.AcceptButton = Calcular
         TipoCliente.SelectedItem = "Empleado"
+        Me.LeyendaHistorial.Text = "Historial vacío..."
     End Sub
 
     Private Sub Calculo()
@@ -61,6 +62,16 @@
         Me.Historial3.Text = Me.Historial2.Text
         Me.Historial2.Text = Me.Historial1.Text
         Me.Historial1.Text = "Monto ingresado: " & FormatCurrency(Me.MontoIngresado.Text) & "; Precio total: " & Me.PrecioConIva.Text & "; Precio sin IVA: " & Me.PrecioSinIva.Text
+        Me.LeyendaHistorial.Text = Nothing
+    End Sub
+
+    Private Sub LimpiarHistorial_Click(sender As Object, e As EventArgs) Handles LimpiarHistorial.Click
+        Me.Historial5.Text = Nothing
+        Me.Historial4.Text = Nothing
+        Me.Historial3.Text = Nothing
+        Me.Historial2.Text = Nothing
+        Me.Historial1.Text = Nothing
+        Me.LeyendaHistorial.Text = "Historial vacío..."
     End Sub
 
 End Class
