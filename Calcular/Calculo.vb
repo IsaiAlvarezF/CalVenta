@@ -62,6 +62,7 @@
     End Sub
 
     Private Sub LlenarHistorial()
+
         My.Computer.Registry.SetValue("HKEY_CURRENT_USER\HistorialCalculadora", "Historial5", Me.Historial4.Text, Microsoft.Win32.RegistryValueKind.String)
         My.Computer.Registry.SetValue("HKEY_CURRENT_USER\HistorialCalculadora", "Historial4", Me.Historial3.Text, Microsoft.Win32.RegistryValueKind.String)
         My.Computer.Registry.SetValue("HKEY_CURRENT_USER\HistorialCalculadora", "Historial3", Me.Historial2.Text, Microsoft.Win32.RegistryValueKind.String)
@@ -77,6 +78,9 @@
     End Sub
 
     Private Sub ObtenerHistorial()
+
+        ListaHistorial.Items.Add(My.Computer.Registry.GetValue("HKEY_CURRENT_USER\HistorialCalculadora", "Historial5", Nothing))
+
         Me.Historial5.Text = My.Computer.Registry.GetValue("HKEY_CURRENT_USER\HistorialCalculadora", "Historial5", Nothing)
         Me.Historial4.Text = My.Computer.Registry.GetValue("HKEY_CURRENT_USER\HistorialCalculadora", "Historial4", Nothing)
         Me.Historial3.Text = My.Computer.Registry.GetValue("HKEY_CURRENT_USER\HistorialCalculadora", "Historial3", Nothing)
@@ -98,4 +102,7 @@
         End If
     End Sub
 
+    Private Sub VScrollBar1_Scroll(sender As Object, e As ScrollEventArgs)
+
+    End Sub
 End Class
