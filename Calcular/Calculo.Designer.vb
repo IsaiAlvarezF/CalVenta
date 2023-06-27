@@ -57,7 +57,7 @@ Partial Class Form1
         ' Label1
         ' 
         Label1.AutoSize = True
-        Label1.Location = New Point(127, 26)
+        Label1.Location = New Point(120, 29)
         Label1.Name = "Label1"
         Label1.Size = New Size(146, 15)
         Label1.TabIndex = 3
