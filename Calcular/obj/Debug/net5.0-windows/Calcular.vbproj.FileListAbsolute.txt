@@ -36,3 +36,6 @@ C:\Users\50370\source\repos\IsaiAlvarezF\CalVenta\Calcular\obj\Debug\net5.0-wind
 C:\Users\50370\source\repos\IsaiAlvarezF\CalVenta\Calcular\obj\Debug\net5.0-windows\Calcular.pdb
 C:\Users\50370\source\repos\IsaiAlvarezF\CalVenta\Calcular\obj\Debug\net5.0-windows\Calcular.genruntimeconfig.cache
 C:\Users\50370\source\repos\IsaiAlvarezF\CalVenta\Calcular\obj\Debug\net5.0-windows\ref\Calcular.dll
+C:\Users\enriq\Source\Repos\IsaiAlvarezF\CalVenta\Calcular\obj\Debug\net5.0-windows\Calcular.dll
+C:\Users\enriq\Source\Repos\IsaiAlvarezF\CalVenta\Calcular\obj\Debug\net5.0-windows\refint\Calcular.dll
+C:\Users\enriq\Source\Repos\IsaiAlvarezF\CalVenta\Calcular\obj\Debug\net5.0-windows\Calcular.pdb
