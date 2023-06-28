@@ -71,6 +71,7 @@ Public Class Form1
         Dim ListRow As New System.Text.StringBuilder()
         For Each O As Object In ListHistorial.Items
             ListRow.AppendLine(O)
+
         Next
 
         System.IO.File.WriteAllText(HistorialPath, ListRow.ToString())
