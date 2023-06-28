@@ -34,15 +34,11 @@ Partial Class Form1
         MontoIngresado = New TextBox()
         Label5 = New Label()
         PrecioSinIva = New TextBox()
-        Historial1 = New TextBox()
-        Historial2 = New TextBox()
-        Historial3 = New TextBox()
-        Historial4 = New TextBox()
-        Historial5 = New TextBox()
         LimpiarHistorial = New Button()
         TabPrincipal = New TabControl()
         TabCalcular = New TabPage()
         TabHistorial = New TabPage()
+        ListHistorial = New ListBox()
         ListLeyendaHistorial = New ListBox()
         TabPrincipal.SuspendLayout()
         TabCalcular.SuspendLayout()
@@ -157,66 +153,6 @@ Partial Class Form1
         PrecioSinIva.Size = New Size(173, 23)
         PrecioSinIva.TabIndex = 13
         ' 
-        ' Historial1
-        ' 
-        Historial1.BackColor = Color.White
-        Historial1.BorderStyle = BorderStyle.None
-        Historial1.Font = New Font("Segoe UI", 7.5F, FontStyle.Regular, GraphicsUnit.Point)
-        Historial1.Location = New Point(6, 6)
-        Historial1.Name = "Historial1"
-        Historial1.ReadOnly = True
-        Historial1.Size = New Size(345, 14)
-        Historial1.TabIndex = 14
-        Historial1.TextAlign = HorizontalAlignment.Center
-        ' 
-        ' Historial2
-        ' 
-        Historial2.BackColor = Color.White
-        Historial2.BorderStyle = BorderStyle.None
-        Historial2.Font = New Font("Segoe UI", 7.5F, FontStyle.Regular, GraphicsUnit.Point)
-        Historial2.Location = New Point(6, 35)
-        Historial2.Name = "Historial2"
-        Historial2.ReadOnly = True
-        Historial2.Size = New Size(345, 14)
-        Historial2.TabIndex = 15
-        Historial2.TextAlign = HorizontalAlignment.Center
-        ' 
-        ' Historial3
-        ' 
-        Historial3.BackColor = Color.White
-        Historial3.BorderStyle = BorderStyle.None
-        Historial3.Font = New Font("Segoe UI", 7.5F, FontStyle.Regular, GraphicsUnit.Point)
-        Historial3.Location = New Point(6, 64)
-        Historial3.Name = "Historial3"
-        Historial3.ReadOnly = True
-        Historial3.Size = New Size(345, 14)
-        Historial3.TabIndex = 16
-        Historial3.TextAlign = HorizontalAlignment.Center
-        ' 
-        ' Historial4
-        ' 
-        Historial4.BackColor = Color.White
-        Historial4.BorderStyle = BorderStyle.None
-        Historial4.Font = New Font("Segoe UI", 7.5F, FontStyle.Regular, GraphicsUnit.Point)
-        Historial4.Location = New Point(6, 93)
-        Historial4.Name = "Historial4"
-        Historial4.ReadOnly = True
-        Historial4.Size = New Size(345, 14)
-        Historial4.TabIndex = 17
-        Historial4.TextAlign = HorizontalAlignment.Center
-        ' 
-        ' Historial5
-        ' 
-        Historial5.BackColor = Color.White
-        Historial5.BorderStyle = BorderStyle.None
-        Historial5.Font = New Font("Segoe UI", 7.5F, FontStyle.Regular, GraphicsUnit.Point)
-        Historial5.Location = New Point(6, 122)
-        Historial5.Name = "Historial5"
-        Historial5.ReadOnly = True
-        Historial5.Size = New Size(345, 14)
-        Historial5.TabIndex = 18
-        Historial5.TextAlign = HorizontalAlignment.Center
-        ' 
         ' LimpiarHistorial
         ' 
         LimpiarHistorial.Font = New Font("Segoe UI", 7F, FontStyle.Regular, GraphicsUnit.Point)
@@ -235,7 +171,7 @@ Partial Class Form1
         TabPrincipal.Name = "TabPrincipal"
         TabPrincipal.Padding = New Point(0, 0)
         TabPrincipal.SelectedIndex = 0
-        TabPrincipal.Size = New Size(480, 179)
+        TabPrincipal.Size = New Size(482, 179)
         TabPrincipal.SizeMode = TabSizeMode.FillToRight
         TabPrincipal.TabIndex = 21
         ' 
@@ -255,27 +191,32 @@ Partial Class Form1
         TabCalcular.Location = New Point(4, 24)
         TabCalcular.Name = "TabCalcular"
         TabCalcular.Padding = New Padding(3)
-        TabCalcular.Size = New Size(472, 151)
+        TabCalcular.Size = New Size(474, 151)
         TabCalcular.TabIndex = 0
         TabCalcular.Text = "Calcular"
         TabCalcular.UseVisualStyleBackColor = True
         ' 
         ' TabHistorial
         ' 
+        TabHistorial.Controls.Add(ListHistorial)
         TabHistorial.Controls.Add(ListLeyendaHistorial)
-        TabHistorial.Controls.Add(Historial1)
-        TabHistorial.Controls.Add(Historial2)
         TabHistorial.Controls.Add(LimpiarHistorial)
-        TabHistorial.Controls.Add(Historial3)
-        TabHistorial.Controls.Add(Historial5)
-        TabHistorial.Controls.Add(Historial4)
         TabHistorial.Location = New Point(4, 24)
         TabHistorial.Name = "TabHistorial"
         TabHistorial.Padding = New Padding(3)
-        TabHistorial.Size = New Size(472, 151)
+        TabHistorial.Size = New Size(474, 151)
         TabHistorial.TabIndex = 1
         TabHistorial.Text = "Historial"
         TabHistorial.UseVisualStyleBackColor = True
+        ' 
+        ' ListHistorial
+        ' 
+        ListHistorial.Font = New Font("Segoe UI", 8F, FontStyle.Regular, GraphicsUnit.Point)
+        ListHistorial.FormattingEnabled = True
+        ListHistorial.Location = New Point(3, 6)
+        ListHistorial.Name = "ListHistorial"
+        ListHistorial.Size = New Size(357, 134)
+        ListHistorial.TabIndex = 22
         ' 
         ' ListLeyendaHistorial
         ' 
@@ -293,7 +234,7 @@ Partial Class Form1
         AutoScaleDimensions = New SizeF(7F, 15F)
         AutoScaleMode = AutoScaleMode.Font
         BackColor = SystemColors.GradientActiveCaption
-        ClientSize = New Size(480, 207)
+        ClientSize = New Size(482, 207)
         Controls.Add(TabPrincipal)
         Controls.Add(Label1)
         ForeColor = SystemColors.InactiveCaptionText
@@ -304,7 +245,6 @@ Partial Class Form1
         TabCalcular.ResumeLayout(False)
         TabCalcular.PerformLayout()
         TabHistorial.ResumeLayout(False)
-        TabHistorial.PerformLayout()
         ResumeLayout(False)
         PerformLayout()
     End Sub
@@ -320,14 +260,10 @@ Partial Class Form1
     Friend WithEvents MontoIngresado As TextBox
     Friend WithEvents Label5 As Label
     Friend WithEvents PrecioSinIva As TextBox
-    Friend WithEvents Historial1 As TextBox
-    Friend WithEvents Historial2 As TextBox
-    Friend WithEvents Historial3 As TextBox
-    Friend WithEvents Historial4 As TextBox
-    Friend WithEvents Historial5 As TextBox
     Friend WithEvents LimpiarHistorial As Button
     Friend WithEvents TabPrincipal As TabControl
     Friend WithEvents TabCalcular As TabPage
     Friend WithEvents TabHistorial As TabPage
     Friend WithEvents ListLeyendaHistorial As ListBox
+    Friend WithEvents ListHistorial As ListBox
 End Class

@@ -1,4 +1,8 @@
-﻿Public Class Form1
+﻿Option Explicit On
+Imports System.IO
+
+Public Class Form1
+    Public Const HistorialPath As String = "C:\Users\50370\source\repos\IsaiAlvarezF\CalVenta\Historial.txt"
     Private Sub Form1(sender As Object, e As EventArgs) Handles MyBase.Load
         Me.Show()
         ' Habilitar el reconocimiento de la tecla Enter
@@ -54,37 +58,69 @@
         Me.Close()
     End Sub
     Private Sub LlenarHistorial()
-        My.Computer.Registry.SetValue("HKEY_CURRENT_USER\HistorialCalculadora", "Historial5", Me.Historial4.Text, Microsoft.Win32.RegistryValueKind.String)
-        My.Computer.Registry.SetValue("HKEY_CURRENT_USER\HistorialCalculadora", "Historial4", Me.Historial3.Text, Microsoft.Win32.RegistryValueKind.String)
-        My.Computer.Registry.SetValue("HKEY_CURRENT_USER\HistorialCalculadora", "Historial3", Me.Historial2.Text, Microsoft.Win32.RegistryValueKind.String)
-        My.Computer.Registry.SetValue("HKEY_CURRENT_USER\HistorialCalculadora", "Historial2", Me.Historial1.Text, Microsoft.Win32.RegistryValueKind.String)
-        My.Computer.Registry.SetValue("HKEY_CURRENT_USER\HistorialCalculadora", "Historial1",
-                                      "Monto ingresado: " & FormatCurrency(Me.MontoIngresado.Text) & "; Precio total: " & Me.PrecioConIva.Text & "; Precio sin IVA: " & Me.PrecioSinIva.Text, Microsoft.Win32.RegistryValueKind.String)
-        My.Computer.Registry.SetValue("HKEY_CURRENT_USER\HistorialCalculadora", "LeyendaHistorialDia", "Actualizado: " & DateTime.Now.Date.ToString, Microsoft.Win32.RegistryValueKind.String)
+        My.Computer.Registry.SetValue("HKEY_CURRENT_USER\HistorialCalculadora", "LeyendaHistorialDia", "Actualizado: " & Date.Now.Date.ToString, Microsoft.Win32.RegistryValueKind.String)
         My.Computer.Registry.SetValue("HKEY_CURRENT_USER\HistorialCalculadora", "LeyendaHistorialHora", "A las: " & DateTime.Now.TimeOfDay.ToString, Microsoft.Win32.RegistryValueKind.String)
+
+        If Dir(HistorialPath) = "" Then
+            Exit Sub
+        End If
+
+        Dim registro As String
+        registro = "Monto ingresado: " & FormatCurrency(MontoIngresado.Text) & "; Total sin IVA: " & PrecioSinIva.Text & "; Total con IVA: " & PrecioConIva.Text
+
+        Using writer As New StreamWriter(HistorialPath, True)
+            writer.WriteLine(registro)
+        End Using
+
         ObtenerHistorial()
     End Sub
     Private Sub ObtenerHistorial()
-        Me.Historial5.Text = My.Computer.Registry.GetValue("HKEY_CURRENT_USER\HistorialCalculadora", "Historial5", Nothing)
-        Me.Historial4.Text = My.Computer.Registry.GetValue("HKEY_CURRENT_USER\HistorialCalculadora", "Historial4", Nothing)
-        Me.Historial3.Text = My.Computer.Registry.GetValue("HKEY_CURRENT_USER\HistorialCalculadora", "Historial3", Nothing)
-        Me.Historial2.Text = My.Computer.Registry.GetValue("HKEY_CURRENT_USER\HistorialCalculadora", "Historial2", Nothing)
-        Me.Historial1.Text = My.Computer.Registry.GetValue("HKEY_CURRENT_USER\HistorialCalculadora", "Historial1", Nothing)
         Me.ListLeyendaHistorial.Items.Clear()
         Me.ListLeyendaHistorial.Items.Add(My.Computer.Registry.GetValue("HKEY_CURRENT_USER\HistorialCalculadora", "LeyendaHistorialDia", Nothing))
         Me.ListLeyendaHistorial.Items.Add(My.Computer.Registry.GetValue("HKEY_CURRENT_USER\HistorialCalculadora", "LeyendaHistorialHora", Nothing))
+
+        Me.ListHistorial.Items.Clear()
+
+        If Dir(HistorialPath) = "" Then
+            Exit Sub
+        End If
+
+        Dim strLine As String
+        FileOpen(FileNumber:=1, FileName:=HistorialPath, Mode:=OpenMode.Input)
+        Do While Not EOF(1)
+            strLine = LineInput(1)
+            ListHistorial.Items.Add(strLine)
+        Loop
+        FileClose(1)
+
+        ReordenarHistorial()
+
         MontoIngresado.Focus()
     End Sub
     Private Sub LimpiarHistorial_Click(sender As Object, e As EventArgs) Handles LimpiarHistorial.Click
         If MessageBox.Show(Me, "¿Desea borrar el historial?", "Limpiar Historial", MessageBoxButtons.YesNo, MessageBoxIcon.Question) = DialogResult.Yes Then
-            My.Computer.Registry.SetValue("HKEY_CURRENT_USER\HistorialCalculadora", "Historial5", "", Microsoft.Win32.RegistryValueKind.String)
-            My.Computer.Registry.SetValue("HKEY_CURRENT_USER\HistorialCalculadora", "Historial4", "", Microsoft.Win32.RegistryValueKind.String)
-            My.Computer.Registry.SetValue("HKEY_CURRENT_USER\HistorialCalculadora", "Historial3", "", Microsoft.Win32.RegistryValueKind.String)
-            My.Computer.Registry.SetValue("HKEY_CURRENT_USER\HistorialCalculadora", "Historial2", "", Microsoft.Win32.RegistryValueKind.String)
-            My.Computer.Registry.SetValue("HKEY_CURRENT_USER\HistorialCalculadora", "Historial1", "", Microsoft.Win32.RegistryValueKind.String)
+            System.IO.File.WriteAllText(HistorialPath, "")
+
             My.Computer.Registry.SetValue("HKEY_CURRENT_USER\HistorialCalculadora", "LeyendaHistorialDia", "Historial vacío...", Microsoft.Win32.RegistryValueKind.String)
             My.Computer.Registry.SetValue("HKEY_CURRENT_USER\HistorialCalculadora", "LeyendaHistorialHora", "", Microsoft.Win32.RegistryValueKind.String)
             ObtenerHistorial()
+        End If
+    End Sub
+    Private Sub ReordenarHistorial()
+        If ListHistorial.Items.Count > 0 Then
+            Dim i As Integer, j As Integer, row As String
+            Dim temporal As New ListBox
+            Do
+                i = ListHistorial.Items.Count - 1
+                row = ListHistorial.Items(i)
+                temporal.Items.Add(row)
+                ListHistorial.Items.RemoveAt(i)
+            Loop Until i = 0
+            For j = 0 To temporal.Items.Count - 1
+                row = temporal.Items(j)
+                ListHistorial.Items.Add(row)
+            Next
+            temporal.Items.Clear()
         End If
     End Sub
 End Class
