@@ -1,5 +1,10 @@
-Monto ingresado: $100.00; Total sin IVA: $111.11; Total con IVA: $125.56
-Monto ingresado: $400.00; Total sin IVA: $444.44; Total con IVA: $502.22
-Monto ingresado: $200.00; Total sin IVA: $222.22; Total con IVA: $251.11
-Monto ingresado: $300.00; Total sin IVA: $333.33; Total con IVA: $376.67
-Monto ingresado: $500.00; Total sin IVA: $555.56; Total con IVA: $627.78
+Monto ingresado: $17.00; Total sin IVA: $18.89; Total con IVA: $21.34
+Monto ingresado: $18.00; Total sin IVA: $20.00; Total con IVA: $22.60
+Monto ingresado: $19.00; Total sin IVA: $21.11; Total con IVA: $23.86
+Monto ingresado: $20.00; Total sin IVA: $22.22; Total con IVA: $25.11
+Monto ingresado: $21.00; Total sin IVA: $23.33; Total con IVA: $26.37
+Monto ingresado: $22.00; Total sin IVA: $24.44; Total con IVA: $27.62
+Monto ingresado: $23.00; Total sin IVA: $25.56; Total con IVA: $28.88
+Monto ingresado: $24.00; Total sin IVA: $26.67; Total con IVA: $30.13
+Monto ingresado: $25.00; Total sin IVA: $27.78; Total con IVA: $31.39
+Monto ingresado: $26.00; Total sin IVA: $28.89; Total con IVA: $32.64

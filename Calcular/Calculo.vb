@@ -1,6 +1,8 @@
 ﻿Option Explicit On
+Imports System.IO
+
 Public Class Form1
-    Public Const HistorialPath As String = "C:\Users\enriq\source\repos\IsaiAlvarezF\CalVenta\Historial.txt"
+    Public Const HistorialPath As String = "C:\Users\50370\source\repos\IsaiAlvarezF\CalVenta\Historial.txt"
     Private Sub Form1(sender As Object, e As EventArgs) Handles MyBase.Load
         Me.Show()
         ' Habilitar el reconocimiento de la tecla Enter
@@ -66,14 +68,9 @@ Public Class Form1
         Dim registro As String
         registro = "Monto ingresado: " & FormatCurrency(MontoIngresado.Text) & "; Total sin IVA: " & PrecioSinIva.Text & "; Total con IVA: " & PrecioConIva.Text
 
-        ListHistorial.Items.Add(registro)
-
-        Dim ListRow As New System.Text.StringBuilder()
-        For Each O As Object In ListHistorial.Items
-            ListRow.AppendLine(O)
-        Next
-
-        System.IO.File.WriteAllText(HistorialPath, ListRow.ToString())
+        Using writer As New StreamWriter(HistorialPath, True)
+            writer.WriteLine(registro)
+        End Using
 
         ObtenerHistorial()
     End Sub
@@ -96,6 +93,8 @@ Public Class Form1
         Loop
         FileClose(1)
 
+        ReordenarHistorial()
+
         MontoIngresado.Focus()
     End Sub
     Private Sub LimpiarHistorial_Click(sender As Object, e As EventArgs) Handles LimpiarHistorial.Click
@@ -105,6 +104,23 @@ Public Class Form1
             My.Computer.Registry.SetValue("HKEY_CURRENT_USER\HistorialCalculadora", "LeyendaHistorialDia", "Historial vacío...", Microsoft.Win32.RegistryValueKind.String)
             My.Computer.Registry.SetValue("HKEY_CURRENT_USER\HistorialCalculadora", "LeyendaHistorialHora", "", Microsoft.Win32.RegistryValueKind.String)
             ObtenerHistorial()
+        End If
+    End Sub
+    Private Sub ReordenarHistorial()
+        If ListHistorial.Items.Count > 0 Then
+            Dim i As Integer, j As Integer, row As String
+            Dim temporal As New ListBox
+            Do
+                i = ListHistorial.Items.Count - 1
+                row = ListHistorial.Items(i)
+                temporal.Items.Add(row)
+                ListHistorial.Items.RemoveAt(i)
+            Loop Until i = 0
+            For j = 0 To temporal.Items.Count - 1
+                row = temporal.Items(j)
+                ListHistorial.Items.Add(row)
+            Next
+            temporal.Items.Clear()
         End If
     End Sub
 End Class
