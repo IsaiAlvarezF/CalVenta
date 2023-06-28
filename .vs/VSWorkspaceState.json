@@ -1,7 +1,8 @@
 {
   "ExpandedNodes": [
-    ""
+    "",
+    "\\Calcular"
   ],
-  "SelectedNode": "\\Calcular.sln",
+  "SelectedNode": "\\Calcular\\Calculo.vb",
   "PreviewInSolutionExplorer": false
 }

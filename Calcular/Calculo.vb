@@ -1,6 +1,6 @@
 ﻿Option Explicit On
 Public Class Form1
-    Public Const HistorialPath As String = "C:\Users\50370\source\repos\IsaiAlvarezF\CalVenta\Historial.txt"
+    Public Const HistorialPath As String = "C:\Users\enriq\source\repos\IsaiAlvarezF\CalVenta\Historial.txt"
     Private Sub Form1(sender As Object, e As EventArgs) Handles MyBase.Load
         Me.Show()
         ' Habilitar el reconocimiento de la tecla Enter
@@ -95,16 +95,6 @@ Public Class Form1
             ListHistorial.Items.Add(strLine)
         Loop
         FileClose(1)
-
-        Dim i As Integer, row As String
-        If ListHistorial.Items.Count > 1 Then
-            i = ListHistorial.Items.Count - 1
-            Do
-                row = ListHistorial.Items(i)
-                ListHistorial.Items.Add(row)
-                ListHistorial.Items.RemoveAt(i)
-            Loop Until i = 0
-        End If
 
         MontoIngresado.Focus()
     End Sub
