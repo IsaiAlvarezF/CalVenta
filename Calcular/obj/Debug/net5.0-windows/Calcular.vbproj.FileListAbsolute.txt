@@ -43,7 +43,6 @@ C:\Users\User\Documents\GitHub\CalVenta\Calcular\bin\Debug\net5.0-windows\Calcul
 C:\Users\User\Documents\GitHub\CalVenta\Calcular\bin\Debug\net5.0-windows\Calcular.dll
 C:\Users\User\Documents\GitHub\CalVenta\Calcular\bin\Debug\net5.0-windows\ref\Calcular.dll
 C:\Users\User\Documents\GitHub\CalVenta\Calcular\bin\Debug\net5.0-windows\Calcular.pdb
-C:\Users\User\Documents\GitHub\CalVenta\Calcular\obj\Debug\net5.0-windows\Calcular.vbproj.AssemblyReference.cache
 C:\Users\User\Documents\GitHub\CalVenta\Calcular\obj\Debug\net5.0-windows\Calcular.Form1.resources
 C:\Users\User\Documents\GitHub\CalVenta\Calcular\obj\Debug\net5.0-windows\Calcular.Resources.resources
 C:\Users\User\Documents\GitHub\CalVenta\Calcular\obj\Debug\net5.0-windows\Calcular.vbproj.GenerateResource.cache
@@ -55,3 +54,4 @@ C:\Users\User\Documents\GitHub\CalVenta\Calcular\obj\Debug\net5.0-windows\Calcul
 C:\Users\User\Documents\GitHub\CalVenta\Calcular\obj\Debug\net5.0-windows\ref\Calcular.dll
 C:\Users\User\Documents\GitHub\CalVenta\Calcular\obj\Debug\net5.0-windows\Calcular.pdb
 C:\Users\User\Documents\GitHub\CalVenta\Calcular\obj\Debug\net5.0-windows\Calcular.genruntimeconfig.cache
+C:\Users\User\Documents\GitHub\CalVenta\Calcular\obj\Debug\net5.0-windows\Calcular.Login.resources
