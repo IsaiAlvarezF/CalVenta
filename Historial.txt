@@ -1,7 +1,5 @@
 Monto ingresado: $100.00; Total sin IVA: $111.11; Total con IVA: $125.56
-Monto ingresado: $600.00; Total sin IVA: $666.67; Total con IVA: $753.33
 Monto ingresado: $400.00; Total sin IVA: $444.44; Total con IVA: $502.22
 Monto ingresado: $200.00; Total sin IVA: $222.22; Total con IVA: $251.11
 Monto ingresado: $300.00; Total sin IVA: $333.33; Total con IVA: $376.67
 Monto ingresado: $500.00; Total sin IVA: $555.56; Total con IVA: $627.78
-Monto ingresado: $700.00; Total sin IVA: $777.78; Total con IVA: $878.89
