@@ -2,12 +2,13 @@
 Imports System.IO
 
 Public Class Form1
-    Public Const HistorialPath As String = "C:\Users\50370\source\repos\IsaiAlvarezF\CalVenta\Historial.txt"
+    Public Const HistorialPath As String = "C:\Users\User\Documents\GitHub\CalVenta\Historial.txt"
     Private Sub Form1(sender As Object, e As EventArgs) Handles MyBase.Load
         Me.Show()
         ' Habilitar el reconocimiento de la tecla Enter
         Me.AcceptButton = Calcular
         My.Computer.Registry.CurrentUser.CreateSubKey("HistorialCalculadora")
+        LlenarHistorial()
         ObtenerHistorial()
         MontoIngresado.Select(0, 1)
         TipoCliente.SelectedItem = "Empleado"
@@ -66,7 +67,7 @@ Public Class Form1
         End If
 
         Dim registro As String
-        registro = "Monto ingresado: " & FormatCurrency(MontoIngresado.Text) & "; Total sin IVA: " & PrecioSinIva.Text & "; Total con IVA: " & PrecioConIva.Text
+        registro = "Monto ingresado: $" & Me.MontoIngresado.Text & "; Total sin IVA: " & Me.PrecioSinIva.Text & "; Total con IVA: " & Me.PrecioConIva.Text
 
         Using writer As New StreamWriter(HistorialPath, True)
             writer.WriteLine(registro)
@@ -111,14 +112,14 @@ Public Class Form1
             Dim i As Integer, j As Integer, row As String
             Dim temporal As New ListBox
             Do
-                i = ListHistorial.Items.Count - 1
-                row = ListHistorial.Items(i)
+                i = Me.ListHistorial.Items.Count - 1
+                row = Me.ListHistorial.Items(i)
                 temporal.Items.Add(row)
-                ListHistorial.Items.RemoveAt(i)
+                Me.ListHistorial.Items.RemoveAt(i)
             Loop Until i = 0
             For j = 0 To temporal.Items.Count - 1
                 row = temporal.Items(j)
-                ListHistorial.Items.Add(row)
+                Me.ListHistorial.Items.Add(row)
             Next
             temporal.Items.Clear()
         End If
