@@ -2,21 +2,19 @@
 Imports System.IO
 
 Public Class Form1
-    Public Const HistorialPath As String = "C:\Users\Son Isai\source\repos\IsaiAlvarezF\CalVenta\Historial.txt"
+    Public Const HistorialPath As String = "C:\Users\50370\source\repos\IsaiAlvarezF\CalVenta\Historial.txt"
     Private Sub Form1(sender As Object, e As EventArgs) Handles MyBase.Load
         Me.Show()
         ' Habilitar el reconocimiento de la tecla Enter
         Me.AcceptButton = Calcular
         My.Computer.Registry.CurrentUser.CreateSubKey("HistorialCalculadora")
         ObtenerHistorial()
-        MontoIngresado.Select(0, 1)
-        TipoCliente.SelectedItem = "Empleado"
+        Me.MontoIngresado.Select(0, 1)
+        Me.TipoCliente.SelectedItem = "Empleado"
+        Me.NombreTxt.Text = "Clientes Varios"
     End Sub
     Private Sub Calculo()
-
-
         Try
-
             Dim MontoInicial, ValorTotalSinIva, Total As Double
             If TipoCliente.SelectedItem IsNot Nothing Then
                 Dim Op As String = TipoCliente.SelectedItem.ToString()
@@ -36,17 +34,13 @@ Public Class Form1
                 MontoIngresado.Select(0, 100)
             Else
                 MessageBox.Show("Por favor, selecciona una opción.")
-
             End If
-
         Catch ex As FormatException
             MessageBox.Show("Por favor, ingresa un valor.")
-
-
         End Try
 
         If NombreTxt.Text.Length = 0 Then
-            MessageBox.Show("NO SE INGRESO NOMBRE ")
+            MessageBox.Show("Por favor, ingresa un nombre de cliente.")
         End If
     End Sub
     Private Sub Form1_KeyPress(sender As Object, e As KeyPressEventArgs) Handles MyBase.KeyPress
@@ -78,7 +72,7 @@ Public Class Form1
         End If
 
         Dim registro As String
-        registro = "|Nombre Cliente: " & NombreTxt.Text & " |Monto ingresado: " & FormatCurrency(MontoIngresado.Text) & "| Total sin IVA: " & PrecioSinIva.Text & "| Total con IVA: " & PrecioConIva.Text
+        registro = "Nombre Cliente: " & NombreTxt.Text & " | Monto ingresado: " & FormatCurrency(MontoIngresado.Text) & " | Total sin IVA: " & PrecioSinIva.Text & " | Total con IVA: " & PrecioConIva.Text
 
         Using writer As New StreamWriter(HistorialPath, True)
             writer.WriteLine(registro)
@@ -120,7 +114,7 @@ Public Class Form1
     End Sub
     Private Sub ReordenarHistorial()
         If ListHistorial.Items.Count > 0 Then
-            Dim i As Integer, j As Integer, row As String
+            Dim i As Integer, row As String
             Dim temporal As New ListBox
             Do
                 i = ListHistorial.Items.Count - 1
@@ -128,23 +122,11 @@ Public Class Form1
                 temporal.Items.Add(row)
                 ListHistorial.Items.RemoveAt(i)
             Loop Until i = 0
-            For j = 0 To temporal.Items.Count - 1
-                row = temporal.Items(j)
+            For i = 0 To temporal.Items.Count - 1
+                row = temporal.Items(i)
                 ListHistorial.Items.Add(row)
             Next
             temporal.Items.Clear()
         End If
     End Sub
-
-    Private Sub TabCalcular_Click(sender As Object, e As EventArgs) Handles TabCalcular.Click
-
-    End Sub
-
-    Private Sub NombreTxt_TextChanged(sender As Object, e As EventArgs) Handles NombreTxt.TextChanged
-        If NombreTxt.Text.Length = 0 Then
-            MessageBox.Show("Por favor, completa el campo.")
-        End If
-    End Sub
-
-
 End Class
