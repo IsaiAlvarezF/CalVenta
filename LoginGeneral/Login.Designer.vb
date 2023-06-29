@@ -22,88 +22,84 @@ Partial Class Login
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
-        Me.PictureBox1 = New System.Windows.Forms.PictureBox()
-        Me.Label1 = New System.Windows.Forms.Label()
-        Me.Label2 = New System.Windows.Forms.Label()
-        Me.TextBox1 = New System.Windows.Forms.TextBox()
-        Me.TextBox2 = New System.Windows.Forms.TextBox()
-        CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
-        Me.SuspendLayout()
-        '
-        'PictureBox1
-        '
-        Me.PictureBox1.Anchor = CType((((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
-            Or System.Windows.Forms.AnchorStyles.Left) _
-            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.PictureBox1.Image = Global.LoginGeneral.My.Resources.Resources.login_gov_icon_1460241
-        Me.PictureBox1.InitialImage = Global.LoginGeneral.My.Resources.Resources.login_gov_icon_146024
-        Me.PictureBox1.Location = New System.Drawing.Point(142, 29)
-        Me.PictureBox1.Name = "PictureBox1"
-        Me.PictureBox1.Size = New System.Drawing.Size(67, 79)
-        Me.PictureBox1.TabIndex = 0
-        Me.PictureBox1.TabStop = False
-        '
-        'Label1
-        '
-        Me.Label1.AutoSize = True
-        Me.Label1.Font = New System.Drawing.Font("Segoe UI", 10.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point)
-        Me.Label1.ForeColor = System.Drawing.SystemColors.ControlLightLight
-        Me.Label1.Location = New System.Drawing.Point(26, 135)
-        Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(56, 19)
-        Me.Label1.TabIndex = 1
-        Me.Label1.Text = "Usuario"
-        '
-        'Label2
-        '
-        Me.Label2.AutoSize = True
-        Me.Label2.Font = New System.Drawing.Font("Segoe UI", 10.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point)
-        Me.Label2.ForeColor = System.Drawing.SystemColors.ControlLightLight
-        Me.Label2.Location = New System.Drawing.Point(26, 164)
-        Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(79, 19)
-        Me.Label2.TabIndex = 2
-        Me.Label2.Text = "Contraseña"
-        '
-        'TextBox1
-        '
-        Me.TextBox1.Location = New System.Drawing.Point(116, 131)
-        Me.TextBox1.Name = "TextBox1"
-        Me.TextBox1.Size = New System.Drawing.Size(136, 23)
-        Me.TextBox1.TabIndex = 3
-        '
-        'TextBox2
-        '
-        Me.TextBox2.Location = New System.Drawing.Point(116, 160)
-        Me.TextBox2.Name = "TextBox2"
-        Me.TextBox2.Size = New System.Drawing.Size(136, 23)
-        Me.TextBox2.TabIndex = 4
-        '
-        'lOGIN
-        '
-        Me.AutoScaleDimensions = New System.Drawing.SizeF(96.0!, 96.0!)
-        Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi
-        Me.BackColor = System.Drawing.Color.Black
-        Me.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center
-        Me.ClientSize = New System.Drawing.Size(320, 266)
-        Me.Controls.Add(Me.TextBox2)
-        Me.Controls.Add(Me.TextBox1)
-        Me.Controls.Add(Me.Label2)
-        Me.Controls.Add(Me.Label1)
-        Me.Controls.Add(Me.PictureBox1)
-        Me.Cursor = System.Windows.Forms.Cursors.Default
-        Me.DoubleBuffered = True
-        Me.ForeColor = System.Drawing.SystemColors.ControlText
-        Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.SizableToolWindow
-        Me.Name = "lOGIN"
-        Me.Opacity = 0.8R
-        Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
-        Me.Text = "Login"
-        Me.TransparencyKey = System.Drawing.Color.FromArgb(CType(CType(192, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer))
-        CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
-        Me.ResumeLayout(False)
-        Me.PerformLayout()
-
+        PictureBox1 = New PictureBox()
+        Label1 = New Label()
+        Label2 = New Label()
+        TextBox1 = New TextBox()
+        TextBox2 = New TextBox()
+        CType(PictureBox1, ComponentModel.ISupportInitialize).BeginInit()
+        SuspendLayout()
+        ' 
+        ' PictureBox1
+        ' 
+        PictureBox1.Anchor = AnchorStyles.Top Or AnchorStyles.Bottom Or AnchorStyles.Left Or AnchorStyles.Right
+        PictureBox1.Image = My.Resources.Resources.login_gov_icon_1460241
+        PictureBox1.InitialImage = My.Resources.Resources.login_gov_icon_146024
+        PictureBox1.Location = New Point(129, 26)
+        PictureBox1.Name = "PictureBox1"
+        PictureBox1.Size = New Size(67, 79)
+        PictureBox1.TabIndex = 0
+        PictureBox1.TabStop = False
+        ' 
+        ' Label1
+        ' 
+        Label1.AutoSize = True
+        Label1.Font = New Font("Segoe UI", 10F, FontStyle.Regular, GraphicsUnit.Point)
+        Label1.ForeColor = SystemColors.ControlLightLight
+        Label1.Location = New Point(26, 135)
+        Label1.Name = "Label1"
+        Label1.Size = New Size(56, 19)
+        Label1.TabIndex = 1
+        Label1.Text = "Usuario"
+        ' 
+        ' Label2
+        ' 
+        Label2.AutoSize = True
+        Label2.Font = New Font("Segoe UI", 10F, FontStyle.Regular, GraphicsUnit.Point)
+        Label2.ForeColor = SystemColors.ControlLightLight
+        Label2.Location = New Point(26, 164)
+        Label2.Name = "Label2"
+        Label2.Size = New Size(79, 19)
+        Label2.TabIndex = 2
+        Label2.Text = "Contraseña"
+        ' 
+        ' TextBox1
+        ' 
+        TextBox1.Location = New Point(116, 131)
+        TextBox1.Name = "TextBox1"
+        TextBox1.Size = New Size(136, 23)
+        TextBox1.TabIndex = 3
+        ' 
+        ' TextBox2
+        ' 
+        TextBox2.Location = New Point(116, 160)
+        TextBox2.Name = "TextBox2"
+        TextBox2.Size = New Size(136, 23)
+        TextBox2.TabIndex = 4
+        ' 
+        ' Login
+        ' 
+        AutoScaleDimensions = New SizeF(96F, 96F)
+        AutoScaleMode = AutoScaleMode.Dpi
+        BackColor = Color.Black
+        BackgroundImageLayout = ImageLayout.Center
+        ClientSize = New Size(320, 266)
+        Controls.Add(TextBox2)
+        Controls.Add(TextBox1)
+        Controls.Add(Label2)
+        Controls.Add(Label1)
+        Controls.Add(PictureBox1)
+        DoubleBuffered = True
+        ForeColor = SystemColors.ControlText
+        FormBorderStyle = FormBorderStyle.SizableToolWindow
+        Name = "Login"
+        Opacity = 0.9R
+        StartPosition = FormStartPosition.CenterScreen
+        Text = "Login"
+        TransparencyKey = Color.FromArgb(CByte(192), CByte(0), CByte(0))
+        CType(PictureBox1, ComponentModel.ISupportInitialize).EndInit()
+        ResumeLayout(False)
+        PerformLayout()
     End Sub
 
     Friend WithEvents PictureBox1 As PictureBox

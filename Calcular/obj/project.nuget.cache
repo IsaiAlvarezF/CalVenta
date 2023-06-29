@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "+KDKzbs1nXMHp7dW76RPiJ9r35XCZcxKqt5zpY4mHG/FqiLNigfjli1/5FH6AoygwKv2RTLVSD57vU1UN3RIsQ==",
+  "dgSpecHash": "Ly0N7PCuBkHuKClBrZNmAeOjPUnE3MA1aCpJAjtGCfw5rGGxmBJn98b14Zf3CVUGTsllbdEc84UNz9I4Op6dqA==",
   "success": true,
-  "projectFilePath": "C:\\Users\\50370\\Source\\Repos\\IsaiAlvarezF\\CalVenta\\Calcular\\Calcular.vbproj",
+  "projectFilePath": "C:\\Users\\50370\\source\\repos\\IsaiAlvarezF\\CalVenta\\Calcular\\Calcular.vbproj",
   "expectedPackageFiles": [
     "C:\\Users\\50370\\.nuget\\packages\\microsoft.windowsdesktop.app.ref\\5.0.0\\microsoft.windowsdesktop.app.ref.5.0.0.nupkg.sha512",
     "C:\\Users\\50370\\.nuget\\packages\\microsoft.netcore.app.ref\\5.0.0\\microsoft.netcore.app.ref.5.0.0.nupkg.sha512",
