@@ -1,9 +1,9 @@
-﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()> _
+﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()>
 Partial Class Form1
     Inherits System.Windows.Forms.Form
 
     'Form overrides dispose to clean up the component list.
-    <System.Diagnostics.DebuggerNonUserCode()> _
+    <System.Diagnostics.DebuggerNonUserCode()>
     Protected Overrides Sub Dispose(ByVal disposing As Boolean)
         Try
             If disposing AndAlso components IsNot Nothing Then
@@ -20,7 +20,7 @@ Partial Class Form1
     'NOTE: The following procedure is required by the Windows Form Designer
     'It can be modified using the Windows Form Designer.  
     'Do not modify it using the code editor.
-    <System.Diagnostics.DebuggerStepThrough()> _
+    <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
         Me.PrecioConIva = New System.Windows.Forms.TextBox()
         Me.Label1 = New System.Windows.Forms.Label()
@@ -211,7 +211,7 @@ Partial Class Form1
         'Nombre
         '
         Me.Nombre.AutoSize = True
-        Me.Nombre.Location = New System.Drawing.Point(8, 77)
+        Me.Nombre.Location = New System.Drawing.Point(6, 69)
         Me.Nombre.Name = "Nombre"
         Me.Nombre.Size = New System.Drawing.Size(54, 15)
         Me.Nombre.TabIndex = 14
@@ -234,8 +234,10 @@ Partial Class Form1
         '
         Me.ListHistorial.Font = New System.Drawing.Font("Segoe UI", 8.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point)
         Me.ListHistorial.FormattingEnabled = True
+        Me.ListHistorial.HorizontalScrollbar = True
         Me.ListHistorial.Location = New System.Drawing.Point(3, 6)
         Me.ListHistorial.Name = "ListHistorial"
+        Me.ListHistorial.ScrollAlwaysVisible = True
         Me.ListHistorial.Size = New System.Drawing.Size(412, 134)
         Me.ListHistorial.TabIndex = 22
         '

@@ -17,9 +17,6 @@ Public Class Form1
 
         Try
 
-            If NombreTxt.Text.Length = 0 Then
-                MessageBox.Show("NO SE INGRESO NOMBRE ")
-            End If
             Dim MontoInicial, ValorTotalSinIva, Total As Double
             If TipoCliente.SelectedItem IsNot Nothing Then
                 Dim Op As String = TipoCliente.SelectedItem.ToString()
@@ -48,6 +45,9 @@ Public Class Form1
 
         End Try
 
+        If NombreTxt.Text.Length = 0 Then
+            MessageBox.Show("NO SE INGRESO NOMBRE ")
+        End If
     End Sub
     Private Sub Form1_KeyPress(sender As Object, e As KeyPressEventArgs) Handles MyBase.KeyPress
         If e.KeyChar = ChrW(Keys.Enter) Then
