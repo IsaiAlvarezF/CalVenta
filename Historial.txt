@@ -9,3 +9,9 @@ Nombre Cliente: Clientes Varios | Monto ingresado: $678.00 | Total sin IVA: $753
 Nombre Cliente: Clientes Varios | Monto ingresado: $789.00 | Total sin IVA: $876.67 | Total con IVA: $990.63
 Nombre Cliente: Clientes Varios | Monto ingresado: $111,111,111.00 | Total sin IVA: $123,456,790.00 | Total con IVA: $139,506,172.70
 Nombre Cliente: EL RICHY | Monto ingresado: $111,111,111.00 | Total sin IVA: $123,456,790.00 | Total con IVA: $139,506,172.70
+Nombre Cliente: Clientes Varios | Monto ingresado: $200.00 | Total sin IVA: $222.22 | Total con IVA: $251.11
+Nombre Cliente:  | Monto ingresado: $344.00 | Total sin IVA: $382.22 | Total con IVA: $431.91
+Nombre Cliente:  | Monto ingresado: $324.00 | Total sin IVA: $360.00 | Total con IVA: $406.80
+Nombre Cliente:  | Monto ingresado: $324.00 | Total sin IVA: $360.00 | Total con IVA: $406.80
+Nombre Cliente:  | Monto ingresado: $454.00 | Total sin IVA: $504.44 | Total con IVA: $570.02
+Nombre Cliente: Vanesa | Monto ingresado: $666.00 | Total sin IVA: $740.00 | Total con IVA: $836.20

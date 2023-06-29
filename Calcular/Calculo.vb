@@ -15,33 +15,33 @@ Public Class Form1
     End Sub
     Private Sub Calculo()
         Try
-            Dim MontoInicial, ValorTotalSinIva, Total As Double
-            If TipoCliente.SelectedItem IsNot Nothing Then
-                Dim Op As String = TipoCliente.SelectedItem.ToString()
-                MontoInicial = Double.Parse(Me.MontoIngresado.Text)
-                If (Op = "Empleado") Then
-                    ValorTotalSinIva = MontoInicial / 0.9
-                    Total = ValorTotalSinIva * 1.13
-                    Me.PrecioSinIva.Text = FormatCurrency(ValorTotalSinIva)
-                    Me.PrecioConIva.Text = FormatCurrency(Total)
-                ElseIf (Op = "Cliente") Then
-                    ValorTotalSinIva = MontoInicial / 0.8
-                    Total = ValorTotalSinIva * 1.13
-                    Me.PrecioSinIva.Text = FormatCurrency(ValorTotalSinIva)
-                    Me.PrecioConIva.Text = FormatCurrency(Total)
+            If NombreTxt.Text.Length > 0 Then
+                Dim MontoInicial, ValorTotalSinIva, Total As Double
+                If TipoCliente.SelectedItem IsNot Nothing Then
+                    Dim Op As String = TipoCliente.SelectedItem.ToString()
+                    MontoInicial = Double.Parse(Me.MontoIngresado.Text)
+                    If (Op = "Empleado") Then
+                        ValorTotalSinIva = MontoInicial / 0.9
+                        Total = ValorTotalSinIva * 1.13
+                        Me.PrecioSinIva.Text = FormatCurrency(ValorTotalSinIva)
+                        Me.PrecioConIva.Text = FormatCurrency(Total)
+                    ElseIf (Op = "Cliente") Then
+                        ValorTotalSinIva = MontoInicial / 0.8
+                        Total = ValorTotalSinIva * 1.13
+                        Me.PrecioSinIva.Text = FormatCurrency(ValorTotalSinIva)
+                        Me.PrecioConIva.Text = FormatCurrency(Total)
+                    End If
+                    LlenarHistorial()
+                    MontoIngresado.Select(0, 100)
+                Else
+                    MessageBox.Show("Por favor, selecciona una opción.")
                 End If
-                LlenarHistorial()
-                MontoIngresado.Select(0, 100)
             Else
-                MessageBox.Show("Por favor, selecciona una opción.")
+                MessageBox.Show("Por favor, ingresa un nombre de cliente.")
             End If
         Catch ex As FormatException
             MessageBox.Show("Por favor, ingresa un valor.")
         End Try
-
-        If NombreTxt.Text.Length = 0 Then
-            MessageBox.Show("Por favor, ingresa un nombre de cliente.")
-        End If
     End Sub
     Private Sub Form1_KeyPress(sender As Object, e As KeyPressEventArgs) Handles MyBase.KeyPress
         If e.KeyChar = ChrW(Keys.Enter) Then
