@@ -1,9 +1,9 @@
-﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()> _
+﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()>
 Partial Class Form1
     Inherits System.Windows.Forms.Form
 
     'Form overrides dispose to clean up the component list.
-    <System.Diagnostics.DebuggerNonUserCode()> _
+    <System.Diagnostics.DebuggerNonUserCode()>
     Protected Overrides Sub Dispose(ByVal disposing As Boolean)
         Try
             If disposing AndAlso components IsNot Nothing Then
@@ -20,233 +20,258 @@ Partial Class Form1
     'NOTE: The following procedure is required by the Windows Form Designer
     'It can be modified using the Windows Form Designer.  
     'Do not modify it using the code editor.
-    <System.Diagnostics.DebuggerStepThrough()> _
+    <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
-        PrecioConIva = New TextBox()
-        Label1 = New Label()
-        Calcular = New Button()
-        Limpiar = New Button()
-        TipoCliente = New ComboBox()
-        Label2 = New Label()
-        Label3 = New Label()
-        Label4 = New Label()
-        Salir = New Button()
-        MontoIngresado = New TextBox()
-        Label5 = New Label()
-        PrecioSinIva = New TextBox()
-        LimpiarHistorial = New Button()
-        TabPrincipal = New TabControl()
-        TabCalcular = New TabPage()
-        TabHistorial = New TabPage()
-        ListHistorial = New ListBox()
-        ListLeyendaHistorial = New ListBox()
-        TabPrincipal.SuspendLayout()
-        TabCalcular.SuspendLayout()
-        TabHistorial.SuspendLayout()
-        SuspendLayout()
-        ' 
-        ' PrecioConIva
-        ' 
-        PrecioConIva.Location = New Point(108, 99)
-        PrecioConIva.Name = "PrecioConIva"
-        PrecioConIva.ReadOnly = True
-        PrecioConIva.Size = New Size(173, 23)
-        PrecioConIva.TabIndex = 10
-        ' 
-        ' Label1
-        ' 
-        Label1.AutoSize = True
-        Label1.Location = New Point(168, 9)
-        Label1.Name = "Label1"
-        Label1.Size = New Size(146, 15)
-        Label1.TabIndex = 3
-        Label1.Text = "CALCULADORA DE VENTA"
-        ' 
-        ' Calcular
-        ' 
-        Calcular.Location = New Point(302, 15)
-        Calcular.Name = "Calcular"
-        Calcular.Size = New Size(75, 23)
-        Calcular.TabIndex = 3
-        Calcular.Text = "Calcular "
-        Calcular.UseVisualStyleBackColor = True
-        ' 
-        ' Limpiar
-        ' 
-        Limpiar.Location = New Point(302, 44)
-        Limpiar.Name = "Limpiar"
-        Limpiar.Size = New Size(75, 23)
-        Limpiar.TabIndex = 5
-        Limpiar.Text = "Limpiar "
-        Limpiar.UseVisualStyleBackColor = True
-        ' 
-        ' TipoCliente
-        ' 
-        TipoCliente.DisplayMember = "Empleado,Cliente"
-        TipoCliente.DropDownStyle = ComboBoxStyle.DropDownList
-        TipoCliente.FormattingEnabled = True
-        TipoCliente.Items.AddRange(New Object() {"Empleado", "Cliente"})
-        TipoCliente.Location = New Point(108, 12)
-        TipoCliente.Name = "TipoCliente"
-        TipoCliente.Size = New Size(173, 23)
-        TipoCliente.TabIndex = 1
-        TipoCliente.ValueMember = "0,1"
-        ' 
-        ' Label2
-        ' 
-        Label2.AutoSize = True
-        Label2.Location = New Point(6, 15)
-        Label2.Name = "Label2"
-        Label2.Size = New Size(87, 15)
-        Label2.TabIndex = 9
-        Label2.Text = "Tipo de cliente:"
-        ' 
-        ' Label3
-        ' 
-        Label3.AutoSize = True
-        Label3.Location = New Point(6, 44)
-        Label3.Name = "Label3"
-        Label3.Size = New Size(87, 15)
-        Label3.TabIndex = 10
-        Label3.Text = "Ingrese monto:"
-        ' 
-        ' Label4
-        ' 
-        Label4.AutoSize = True
-        Label4.Location = New Point(6, 102)
-        Label4.Name = "Label4"
-        Label4.Size = New Size(70, 15)
-        Label4.TabIndex = 11
-        Label4.Text = "Precio total:"
-        ' 
-        ' Salir
-        ' 
-        Salir.Location = New Point(302, 73)
-        Salir.Name = "Salir"
-        Salir.Size = New Size(75, 23)
-        Salir.TabIndex = 6
-        Salir.Text = "Salir"
-        Salir.UseVisualStyleBackColor = True
-        ' 
-        ' MontoIngresado
-        ' 
-        MontoIngresado.Location = New Point(108, 41)
-        MontoIngresado.MaxLength = 100
-        MontoIngresado.Name = "MontoIngresado"
-        MontoIngresado.Size = New Size(173, 23)
-        MontoIngresado.TabIndex = 2
-        ' 
-        ' Label5
-        ' 
-        Label5.AutoSize = True
-        Label5.Location = New Point(6, 73)
-        Label5.Name = "Label5"
-        Label5.Size = New Size(81, 15)
-        Label5.TabIndex = 12
-        Label5.Text = "Precio sin IVA:"
-        ' 
-        ' PrecioSinIva
-        ' 
-        PrecioSinIva.Location = New Point(108, 70)
-        PrecioSinIva.Name = "PrecioSinIva"
-        PrecioSinIva.ReadOnly = True
-        PrecioSinIva.Size = New Size(173, 23)
-        PrecioSinIva.TabIndex = 13
-        ' 
-        ' LimpiarHistorial
-        ' 
-        LimpiarHistorial.Font = New Font("Segoe UI", 7F, FontStyle.Regular, GraphicsUnit.Point)
-        LimpiarHistorial.Location = New Point(366, 6)
-        LimpiarHistorial.Name = "LimpiarHistorial"
-        LimpiarHistorial.Size = New Size(98, 23)
-        LimpiarHistorial.TabIndex = 19
-        LimpiarHistorial.Text = "Limpiar Historial"
-        LimpiarHistorial.UseVisualStyleBackColor = True
-        ' 
-        ' TabPrincipal
-        ' 
-        TabPrincipal.Controls.Add(TabCalcular)
-        TabPrincipal.Controls.Add(TabHistorial)
-        TabPrincipal.Location = New Point(0, 27)
-        TabPrincipal.Name = "TabPrincipal"
-        TabPrincipal.Padding = New Point(0, 0)
-        TabPrincipal.SelectedIndex = 0
-        TabPrincipal.Size = New Size(482, 179)
-        TabPrincipal.SizeMode = TabSizeMode.FillToRight
-        TabPrincipal.TabIndex = 21
-        ' 
-        ' TabCalcular
-        ' 
-        TabCalcular.Controls.Add(TipoCliente)
-        TabCalcular.Controls.Add(Label2)
-        TabCalcular.Controls.Add(Label5)
-        TabCalcular.Controls.Add(Calcular)
-        TabCalcular.Controls.Add(Limpiar)
-        TabCalcular.Controls.Add(PrecioConIva)
-        TabCalcular.Controls.Add(PrecioSinIva)
-        TabCalcular.Controls.Add(Label4)
-        TabCalcular.Controls.Add(Salir)
-        TabCalcular.Controls.Add(MontoIngresado)
-        TabCalcular.Controls.Add(Label3)
-        TabCalcular.Location = New Point(4, 24)
-        TabCalcular.Name = "TabCalcular"
-        TabCalcular.Padding = New Padding(3)
-        TabCalcular.Size = New Size(474, 151)
-        TabCalcular.TabIndex = 0
-        TabCalcular.Text = "Calcular"
-        TabCalcular.UseVisualStyleBackColor = True
-        ' 
-        ' TabHistorial
-        ' 
-        TabHistorial.Controls.Add(ListHistorial)
-        TabHistorial.Controls.Add(ListLeyendaHistorial)
-        TabHistorial.Controls.Add(LimpiarHistorial)
-        TabHistorial.Location = New Point(4, 24)
-        TabHistorial.Name = "TabHistorial"
-        TabHistorial.Padding = New Padding(3)
-        TabHistorial.Size = New Size(474, 151)
-        TabHistorial.TabIndex = 1
-        TabHistorial.Text = "Historial"
-        TabHistorial.UseVisualStyleBackColor = True
-        ' 
-        ' ListHistorial
-        ' 
-        ListHistorial.Font = New Font("Segoe UI", 8F, FontStyle.Regular, GraphicsUnit.Point)
-        ListHistorial.FormattingEnabled = True
-        ListHistorial.Location = New Point(3, 6)
-        ListHistorial.Name = "ListHistorial"
-        ListHistorial.Size = New Size(357, 134)
-        ListHistorial.TabIndex = 22
-        ' 
-        ' ListLeyendaHistorial
-        ' 
-        ListLeyendaHistorial.BackColor = Color.White
-        ListLeyendaHistorial.Font = New Font("Segoe UI", 7F, FontStyle.Regular, GraphicsUnit.Point)
-        ListLeyendaHistorial.FormattingEnabled = True
-        ListLeyendaHistorial.ItemHeight = 12
-        ListLeyendaHistorial.Location = New Point(366, 35)
-        ListLeyendaHistorial.Name = "ListLeyendaHistorial"
-        ListLeyendaHistorial.Size = New Size(100, 88)
-        ListLeyendaHistorial.TabIndex = 21
-        ' 
-        ' Form1
-        ' 
-        AutoScaleDimensions = New SizeF(7F, 15F)
-        AutoScaleMode = AutoScaleMode.Font
-        BackColor = SystemColors.GradientActiveCaption
-        ClientSize = New Size(482, 207)
-        Controls.Add(TabPrincipal)
-        Controls.Add(Label1)
-        ForeColor = SystemColors.InactiveCaptionText
-        FormBorderStyle = FormBorderStyle.Fixed3D
-        Name = "Form1"
-        Text = "Cal "
-        TabPrincipal.ResumeLayout(False)
-        TabCalcular.ResumeLayout(False)
-        TabCalcular.PerformLayout()
-        TabHistorial.ResumeLayout(False)
-        ResumeLayout(False)
-        PerformLayout()
+        Me.PrecioConIva = New System.Windows.Forms.TextBox()
+        Me.Label1 = New System.Windows.Forms.Label()
+        Me.Calcular = New System.Windows.Forms.Button()
+        Me.Limpiar = New System.Windows.Forms.Button()
+        Me.TipoCliente = New System.Windows.Forms.ComboBox()
+        Me.Label2 = New System.Windows.Forms.Label()
+        Me.Label3 = New System.Windows.Forms.Label()
+        Me.Label4 = New System.Windows.Forms.Label()
+        Me.Salir = New System.Windows.Forms.Button()
+        Me.MontoIngresado = New System.Windows.Forms.TextBox()
+        Me.Label5 = New System.Windows.Forms.Label()
+        Me.PrecioSinIva = New System.Windows.Forms.TextBox()
+        Me.LimpiarHistorial = New System.Windows.Forms.Button()
+        Me.TabPrincipal = New System.Windows.Forms.TabControl()
+        Me.TabCalcular = New System.Windows.Forms.TabPage()
+        Me.NombreTxt = New System.Windows.Forms.TextBox()
+        Me.Nombre = New System.Windows.Forms.Label()
+        Me.TabHistorial = New System.Windows.Forms.TabPage()
+        Me.ListHistorial = New System.Windows.Forms.ListBox()
+        Me.ListLeyendaHistorial = New System.Windows.Forms.ListBox()
+        Me.TabPrincipal.SuspendLayout()
+        Me.TabCalcular.SuspendLayout()
+        Me.TabHistorial.SuspendLayout()
+        Me.SuspendLayout()
+        '
+        'PrecioConIva
+        '
+        Me.PrecioConIva.Location = New System.Drawing.Point(108, 126)
+        Me.PrecioConIva.Name = "PrecioConIva"
+        Me.PrecioConIva.ReadOnly = True
+        Me.PrecioConIva.Size = New System.Drawing.Size(173, 23)
+        Me.PrecioConIva.TabIndex = 1000
+        '
+        'Label1
+        '
+        Me.Label1.AutoSize = True
+        Me.Label1.Location = New System.Drawing.Point(168, 9)
+        Me.Label1.Name = "Label1"
+        Me.Label1.Size = New System.Drawing.Size(146, 15)
+        Me.Label1.TabIndex = 3
+        Me.Label1.Text = "CALCULADORA DE VENTA"
+        '
+        'Calcular
+        '
+        Me.Calcular.Location = New System.Drawing.Point(302, 15)
+        Me.Calcular.Name = "Calcular"
+        Me.Calcular.Size = New System.Drawing.Size(75, 23)
+        Me.Calcular.TabIndex = 4
+        Me.Calcular.Text = "Calcular "
+        Me.Calcular.UseVisualStyleBackColor = True
+        '
+        'Limpiar
+        '
+        Me.Limpiar.Location = New System.Drawing.Point(302, 44)
+        Me.Limpiar.Name = "Limpiar"
+        Me.Limpiar.Size = New System.Drawing.Size(75, 23)
+        Me.Limpiar.TabIndex = 5
+        Me.Limpiar.Text = "Limpiar "
+        Me.Limpiar.UseVisualStyleBackColor = True
+        '
+        'TipoCliente
+        '
+        Me.TipoCliente.DisplayMember = "Empleado,Cliente"
+        Me.TipoCliente.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
+        Me.TipoCliente.FormattingEnabled = True
+        Me.TipoCliente.Items.AddRange(New Object() {"Empleado", "Cliente"})
+        Me.TipoCliente.Location = New System.Drawing.Point(108, 12)
+        Me.TipoCliente.Name = "TipoCliente"
+        Me.TipoCliente.Size = New System.Drawing.Size(173, 23)
+        Me.TipoCliente.TabIndex = 1
+        Me.TipoCliente.ValueMember = "0,1"
+        '
+        'Label2
+        '
+        Me.Label2.AutoSize = True
+        Me.Label2.Location = New System.Drawing.Point(6, 15)
+        Me.Label2.Name = "Label2"
+        Me.Label2.Size = New System.Drawing.Size(87, 15)
+        Me.Label2.TabIndex = 9
+        Me.Label2.Text = "Tipo de cliente:"
+        '
+        'Label3
+        '
+        Me.Label3.AutoSize = True
+        Me.Label3.Location = New System.Drawing.Point(6, 44)
+        Me.Label3.Name = "Label3"
+        Me.Label3.Size = New System.Drawing.Size(87, 15)
+        Me.Label3.TabIndex = 10
+        Me.Label3.Text = "Ingrese monto:"
+        '
+        'Label4
+        '
+        Me.Label4.AutoSize = True
+        Me.Label4.Location = New System.Drawing.Point(8, 126)
+        Me.Label4.Name = "Label4"
+        Me.Label4.Size = New System.Drawing.Size(70, 15)
+        Me.Label4.TabIndex = 11
+        Me.Label4.Text = "Precio total:"
+        '
+        'Salir
+        '
+        Me.Salir.Location = New System.Drawing.Point(302, 73)
+        Me.Salir.Name = "Salir"
+        Me.Salir.Size = New System.Drawing.Size(75, 23)
+        Me.Salir.TabIndex = 6
+        Me.Salir.Text = "Salir"
+        Me.Salir.UseVisualStyleBackColor = True
+        '
+        'MontoIngresado
+        '
+        Me.MontoIngresado.Location = New System.Drawing.Point(108, 41)
+        Me.MontoIngresado.MaxLength = 100
+        Me.MontoIngresado.Name = "MontoIngresado"
+        Me.MontoIngresado.Size = New System.Drawing.Size(173, 23)
+        Me.MontoIngresado.TabIndex = 2
+        '
+        'Label5
+        '
+        Me.Label5.AutoSize = True
+        Me.Label5.Location = New System.Drawing.Point(3, 102)
+        Me.Label5.Name = "Label5"
+        Me.Label5.Size = New System.Drawing.Size(81, 15)
+        Me.Label5.TabIndex = 12
+        Me.Label5.Text = "Precio sin IVA:"
+        '
+        'PrecioSinIva
+        '
+        Me.PrecioSinIva.Location = New System.Drawing.Point(108, 94)
+        Me.PrecioSinIva.Name = "PrecioSinIva"
+        Me.PrecioSinIva.ReadOnly = True
+        Me.PrecioSinIva.Size = New System.Drawing.Size(173, 23)
+        Me.PrecioSinIva.TabIndex = 100
+        '
+        'LimpiarHistorial
+        '
+        Me.LimpiarHistorial.Font = New System.Drawing.Font("Segoe UI", 7.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point)
+        Me.LimpiarHistorial.Location = New System.Drawing.Point(423, 6)
+        Me.LimpiarHistorial.Name = "LimpiarHistorial"
+        Me.LimpiarHistorial.Size = New System.Drawing.Size(98, 23)
+        Me.LimpiarHistorial.TabIndex = 19
+        Me.LimpiarHistorial.Text = "Limpiar Historial"
+        Me.LimpiarHistorial.UseVisualStyleBackColor = True
+        '
+        'TabPrincipal
+        '
+        Me.TabPrincipal.Controls.Add(Me.TabCalcular)
+        Me.TabPrincipal.Controls.Add(Me.TabHistorial)
+        Me.TabPrincipal.Location = New System.Drawing.Point(0, 27)
+        Me.TabPrincipal.Name = "TabPrincipal"
+        Me.TabPrincipal.Padding = New System.Drawing.Point(0, 0)
+        Me.TabPrincipal.SelectedIndex = 0
+        Me.TabPrincipal.Size = New System.Drawing.Size(535, 194)
+        Me.TabPrincipal.SizeMode = System.Windows.Forms.TabSizeMode.FillToRight
+        Me.TabPrincipal.TabIndex = 21
+        '
+        'TabCalcular
+        '
+        Me.TabCalcular.Controls.Add(Me.NombreTxt)
+        Me.TabCalcular.Controls.Add(Me.Nombre)
+        Me.TabCalcular.Controls.Add(Me.TipoCliente)
+        Me.TabCalcular.Controls.Add(Me.Label2)
+        Me.TabCalcular.Controls.Add(Me.Label5)
+        Me.TabCalcular.Controls.Add(Me.Calcular)
+        Me.TabCalcular.Controls.Add(Me.Limpiar)
+        Me.TabCalcular.Controls.Add(Me.PrecioConIva)
+        Me.TabCalcular.Controls.Add(Me.PrecioSinIva)
+        Me.TabCalcular.Controls.Add(Me.Label4)
+        Me.TabCalcular.Controls.Add(Me.Salir)
+        Me.TabCalcular.Controls.Add(Me.MontoIngresado)
+        Me.TabCalcular.Controls.Add(Me.Label3)
+        Me.TabCalcular.Location = New System.Drawing.Point(4, 24)
+        Me.TabCalcular.Name = "TabCalcular"
+        Me.TabCalcular.Padding = New System.Windows.Forms.Padding(3)
+        Me.TabCalcular.Size = New System.Drawing.Size(527, 166)
+        Me.TabCalcular.TabIndex = 0
+        Me.TabCalcular.Text = "Calcular"
+        Me.TabCalcular.UseVisualStyleBackColor = True
+        '
+        'NombreTxt
+        '
+        Me.NombreTxt.Location = New System.Drawing.Point(108, 69)
+        Me.NombreTxt.MaxLength = 100
+        Me.NombreTxt.Name = "NombreTxt"
+        Me.NombreTxt.Size = New System.Drawing.Size(173, 23)
+        Me.NombreTxt.TabIndex = 3
+        '
+        'Nombre
+        '
+        Me.Nombre.AutoSize = True
+        Me.Nombre.Location = New System.Drawing.Point(6, 69)
+        Me.Nombre.Name = "Nombre"
+        Me.Nombre.Size = New System.Drawing.Size(54, 15)
+        Me.Nombre.TabIndex = 14
+        Me.Nombre.Text = "Nombre:"
+        '
+        'TabHistorial
+        '
+        Me.TabHistorial.Controls.Add(Me.ListHistorial)
+        Me.TabHistorial.Controls.Add(Me.ListLeyendaHistorial)
+        Me.TabHistorial.Controls.Add(Me.LimpiarHistorial)
+        Me.TabHistorial.Location = New System.Drawing.Point(4, 24)
+        Me.TabHistorial.Name = "TabHistorial"
+        Me.TabHistorial.Padding = New System.Windows.Forms.Padding(3)
+        Me.TabHistorial.Size = New System.Drawing.Size(527, 166)
+        Me.TabHistorial.TabIndex = 1
+        Me.TabHistorial.Text = "Historial"
+        Me.TabHistorial.UseVisualStyleBackColor = True
+        '
+        'ListHistorial
+        '
+        Me.ListHistorial.Font = New System.Drawing.Font("Segoe UI", 8.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point)
+        Me.ListHistorial.FormattingEnabled = True
+        Me.ListHistorial.HorizontalScrollbar = True
+        Me.ListHistorial.Location = New System.Drawing.Point(3, 6)
+        Me.ListHistorial.Name = "ListHistorial"
+        Me.ListHistorial.ScrollAlwaysVisible = True
+        Me.ListHistorial.Size = New System.Drawing.Size(412, 134)
+        Me.ListHistorial.TabIndex = 22
+        '
+        'ListLeyendaHistorial
+        '
+        Me.ListLeyendaHistorial.BackColor = System.Drawing.Color.White
+        Me.ListLeyendaHistorial.Font = New System.Drawing.Font("Segoe UI", 7.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point)
+        Me.ListLeyendaHistorial.FormattingEnabled = True
+        Me.ListLeyendaHistorial.ItemHeight = 12
+        Me.ListLeyendaHistorial.Location = New System.Drawing.Point(421, 35)
+        Me.ListLeyendaHistorial.Name = "ListLeyendaHistorial"
+        Me.ListLeyendaHistorial.Size = New System.Drawing.Size(100, 88)
+        Me.ListLeyendaHistorial.TabIndex = 21
+        '
+        'Form1
+        '
+        Me.AutoScaleDimensions = New System.Drawing.SizeF(7.0!, 15.0!)
+        Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
+        Me.BackColor = System.Drawing.SystemColors.GradientActiveCaption
+        Me.ClientSize = New System.Drawing.Size(547, 227)
+        Me.Controls.Add(Me.TabPrincipal)
+        Me.Controls.Add(Me.Label1)
+        Me.ForeColor = System.Drawing.SystemColors.InactiveCaptionText
+        Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.Fixed3D
+        Me.Name = "Form1"
+        Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
+        Me.Text = "Cal "
+        Me.TabPrincipal.ResumeLayout(False)
+        Me.TabCalcular.ResumeLayout(False)
+        Me.TabCalcular.PerformLayout()
+        Me.TabHistorial.ResumeLayout(False)
+        Me.ResumeLayout(False)
+        Me.PerformLayout()
+
     End Sub
     Friend WithEvents PrecioConIva As TextBox
     Friend WithEvents Label1 As Label
@@ -266,4 +291,6 @@ Partial Class Form1
     Friend WithEvents TabHistorial As TabPage
     Friend WithEvents ListLeyendaHistorial As ListBox
     Friend WithEvents ListHistorial As ListBox
+    Friend WithEvents NombreTxt As TextBox
+    Friend WithEvents Nombre As Label
 End Class

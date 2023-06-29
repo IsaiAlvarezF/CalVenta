@@ -2,7 +2,7 @@
 Imports System.IO
 
 Public Class Form1
-    Public Const HistorialPath As String = "C:\Users\50370\source\repos\IsaiAlvarezF\CalVenta\Historial.txt"
+    Public Const HistorialPath As String = "C:\Users\Son Isai\source\repos\IsaiAlvarezF\CalVenta\Historial.txt"
     Private Sub Form1(sender As Object, e As EventArgs) Handles MyBase.Load
         Me.Show()
         ' Habilitar el reconocimiento de la tecla Enter
@@ -13,7 +13,10 @@ Public Class Form1
         TipoCliente.SelectedItem = "Empleado"
     End Sub
     Private Sub Calculo()
+
+
         Try
+
             Dim MontoInicial, ValorTotalSinIva, Total As Double
             If TipoCliente.SelectedItem IsNot Nothing Then
                 Dim Op As String = TipoCliente.SelectedItem.ToString()
@@ -33,10 +36,18 @@ Public Class Form1
                 MontoIngresado.Select(0, 100)
             Else
                 MessageBox.Show("Por favor, selecciona una opción.")
+
             End If
+
         Catch ex As FormatException
             MessageBox.Show("Por favor, ingresa un valor.")
+
+
         End Try
+
+        If NombreTxt.Text.Length = 0 Then
+            MessageBox.Show("NO SE INGRESO NOMBRE ")
+        End If
     End Sub
     Private Sub Form1_KeyPress(sender As Object, e As KeyPressEventArgs) Handles MyBase.KeyPress
         If e.KeyChar = ChrW(Keys.Enter) Then
@@ -52,6 +63,7 @@ Public Class Form1
         Me.PrecioConIva.Text = Nothing
         Me.PrecioSinIva.Text = Nothing
         Me.TipoCliente.Text = Nothing
+        Me.NombreTxt.Text = Nothing
         TipoCliente.SelectedItem = "Empleado"
     End Sub
     Private Sub Button3_Click(sender As Object, e As EventArgs) Handles Salir.Click
@@ -66,7 +78,7 @@ Public Class Form1
         End If
 
         Dim registro As String
-        registro = "Monto ingresado: " & FormatCurrency(MontoIngresado.Text) & "; Total sin IVA: " & PrecioSinIva.Text & "; Total con IVA: " & PrecioConIva.Text
+        registro = "|Nombre Cliente: " & NombreTxt.Text & " |Monto ingresado: " & FormatCurrency(MontoIngresado.Text) & "| Total sin IVA: " & PrecioSinIva.Text & "| Total con IVA: " & PrecioConIva.Text
 
         Using writer As New StreamWriter(HistorialPath, True)
             writer.WriteLine(registro)
@@ -123,4 +135,16 @@ Public Class Form1
             temporal.Items.Clear()
         End If
     End Sub
+
+    Private Sub TabCalcular_Click(sender As Object, e As EventArgs) Handles TabCalcular.Click
+
+    End Sub
+
+    Private Sub NombreTxt_TextChanged(sender As Object, e As EventArgs) Handles NombreTxt.TextChanged
+        If NombreTxt.Text.Length = 0 Then
+            MessageBox.Show("Por favor, completa el campo.")
+        End If
+    End Sub
+
+
 End Class
