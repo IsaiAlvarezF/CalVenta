@@ -9,9 +9,10 @@ Public Class Form1
         Me.AcceptButton = Calcular
         My.Computer.Registry.CurrentUser.CreateSubKey("HistorialCalculadora")
         ObtenerHistorial()
-        MontoIngresado.Select(0, 1)
         TipoCliente.SelectedItem = "Empleado"
         NombreTxt.Text = "Clientes varios"
+        MontoIngresado.Focus()
+        CantidadProducto.Text = "1"
 
     End Sub
     Private Sub Calculo()
@@ -124,7 +125,7 @@ Public Class Form1
 
         ReordenarHistorial()
 
-        NombreTxt.Focus()
+        MontoIngresado.Focus()
     End Sub
     Private Sub LimpiarHistorial_Click(sender As Object, e As EventArgs) Handles LimpiarHistorial.Click
         If MessageBox.Show(Me, "¿Desea borrar el historial?", "Limpiar Historial", MessageBoxButtons.YesNo, MessageBoxIcon.Question) = DialogResult.Yes Then
@@ -152,6 +153,5 @@ Public Class Form1
             temporal.Items.Clear()
         End If
     End Sub
-
 
 End Class

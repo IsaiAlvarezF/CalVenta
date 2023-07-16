@@ -1,8 +1,9 @@
 {
   "ExpandedNodes": [
     "",
-    "\\Calcular"
+    "\\Calcular",
+    "\\LoginGeneral"
   ],
-  "SelectedNode": "\\Calcular.sln",
+  "SelectedNode": "\\Calcular\\Calculo.Designer.vb",
   "PreviewInSolutionExplorer": false
 }
