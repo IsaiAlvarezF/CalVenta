@@ -37,11 +37,19 @@ Partial Class Form1
         Me.LimpiarHistorial = New System.Windows.Forms.Button()
         Me.TabPrincipal = New System.Windows.Forms.TabControl()
         Me.TabCalcular = New System.Windows.Forms.TabPage()
+        Me.PrecioTotal = New System.Windows.Forms.TextBox()
+        Me.Label7 = New System.Windows.Forms.Label()
         Me.CantidadProducto = New System.Windows.Forms.TextBox()
         Me.Label6 = New System.Windows.Forms.Label()
         Me.NombreTxt = New System.Windows.Forms.TextBox()
         Me.Nombre = New System.Windows.Forms.Label()
         Me.TabHistorial = New System.Windows.Forms.TabPage()
+        Me.Label13 = New System.Windows.Forms.Label()
+        Me.Label12 = New System.Windows.Forms.Label()
+        Me.Label11 = New System.Windows.Forms.Label()
+        Me.Label10 = New System.Windows.Forms.Label()
+        Me.Label9 = New System.Windows.Forms.Label()
+        Me.Label8 = New System.Windows.Forms.Label()
         Me.ListHistorial = New System.Windows.Forms.ListBox()
         Me.ListLeyendaHistorial = New System.Windows.Forms.ListBox()
         Me.TabPrincipal.SuspendLayout()
@@ -55,7 +63,8 @@ Partial Class Form1
         Me.PrecioConIva.Name = "PrecioConIva"
         Me.PrecioConIva.ReadOnly = True
         Me.PrecioConIva.Size = New System.Drawing.Size(173, 23)
-        Me.PrecioConIva.TabIndex = 1000
+        Me.PrecioConIva.TabIndex = 0
+        Me.PrecioConIva.TabStop = False
         '
         'Label1
         '
@@ -71,7 +80,7 @@ Partial Class Form1
         Me.Calcular.Location = New System.Drawing.Point(302, 15)
         Me.Calcular.Name = "Calcular"
         Me.Calcular.Size = New System.Drawing.Size(75, 23)
-        Me.Calcular.TabIndex = 4
+        Me.Calcular.TabIndex = 5
         Me.Calcular.Text = "Calcular "
         Me.Calcular.UseVisualStyleBackColor = True
         '
@@ -80,7 +89,7 @@ Partial Class Form1
         Me.Limpiar.Location = New System.Drawing.Point(302, 44)
         Me.Limpiar.Name = "Limpiar"
         Me.Limpiar.Size = New System.Drawing.Size(75, 23)
-        Me.Limpiar.TabIndex = 5
+        Me.Limpiar.TabIndex = 6
         Me.Limpiar.Text = "Limpiar "
         Me.Limpiar.UseVisualStyleBackColor = True
         '
@@ -119,16 +128,16 @@ Partial Class Form1
         Me.Label4.AutoSize = True
         Me.Label4.Location = New System.Drawing.Point(8, 162)
         Me.Label4.Name = "Label4"
-        Me.Label4.Size = New System.Drawing.Size(70, 15)
+        Me.Label4.Size = New System.Drawing.Size(84, 15)
         Me.Label4.TabIndex = 11
-        Me.Label4.Text = "Precio total:"
+        Me.Label4.Text = "Precio unitario"
         '
         'Salir
         '
         Me.Salir.Location = New System.Drawing.Point(302, 73)
         Me.Salir.Name = "Salir"
         Me.Salir.Size = New System.Drawing.Size(75, 23)
-        Me.Salir.TabIndex = 6
+        Me.Salir.TabIndex = 7
         Me.Salir.Text = "Salir"
         Me.Salir.UseVisualStyleBackColor = True
         '
@@ -155,7 +164,8 @@ Partial Class Form1
         Me.PrecioSinIva.Name = "PrecioSinIva"
         Me.PrecioSinIva.ReadOnly = True
         Me.PrecioSinIva.Size = New System.Drawing.Size(173, 23)
-        Me.PrecioSinIva.TabIndex = 100
+        Me.PrecioSinIva.TabIndex = 0
+        Me.PrecioSinIva.TabStop = False
         '
         'LimpiarHistorial
         '
@@ -175,12 +185,14 @@ Partial Class Form1
         Me.TabPrincipal.Name = "TabPrincipal"
         Me.TabPrincipal.Padding = New System.Drawing.Point(0, 0)
         Me.TabPrincipal.SelectedIndex = 0
-        Me.TabPrincipal.Size = New System.Drawing.Size(477, 227)
+        Me.TabPrincipal.Size = New System.Drawing.Size(569, 227)
         Me.TabPrincipal.SizeMode = System.Windows.Forms.TabSizeMode.FillToRight
-        Me.TabPrincipal.TabIndex = 21
+        Me.TabPrincipal.TabIndex = 8
         '
         'TabCalcular
         '
+        Me.TabCalcular.Controls.Add(Me.PrecioTotal)
+        Me.TabCalcular.Controls.Add(Me.Label7)
         Me.TabCalcular.Controls.Add(Me.CantidadProducto)
         Me.TabCalcular.Controls.Add(Me.Label6)
         Me.TabCalcular.Controls.Add(Me.NombreTxt)
@@ -199,17 +211,36 @@ Partial Class Form1
         Me.TabCalcular.Location = New System.Drawing.Point(4, 24)
         Me.TabCalcular.Name = "TabCalcular"
         Me.TabCalcular.Padding = New System.Windows.Forms.Padding(3)
-        Me.TabCalcular.Size = New System.Drawing.Size(469, 199)
+        Me.TabCalcular.Size = New System.Drawing.Size(561, 199)
         Me.TabCalcular.TabIndex = 0
         Me.TabCalcular.Text = "Calcular"
         Me.TabCalcular.UseVisualStyleBackColor = True
+        '
+        'PrecioTotal
+        '
+        Me.PrecioTotal.BackColor = System.Drawing.SystemColors.Control
+        Me.PrecioTotal.Location = New System.Drawing.Point(378, 162)
+        Me.PrecioTotal.Name = "PrecioTotal"
+        Me.PrecioTotal.ReadOnly = True
+        Me.PrecioTotal.Size = New System.Drawing.Size(158, 23)
+        Me.PrecioTotal.TabIndex = 0
+        Me.PrecioTotal.TabStop = False
+        '
+        'Label7
+        '
+        Me.Label7.AutoSize = True
+        Me.Label7.Location = New System.Drawing.Point(302, 167)
+        Me.Label7.Name = "Label7"
+        Me.Label7.Size = New System.Drawing.Size(70, 15)
+        Me.Label7.TabIndex = 1002
+        Me.Label7.Text = "Precio total:"
         '
         'CantidadProducto
         '
         Me.CantidadProducto.Location = New System.Drawing.Point(108, 94)
         Me.CantidadProducto.Name = "CantidadProducto"
         Me.CantidadProducto.Size = New System.Drawing.Size(173, 23)
-        Me.CantidadProducto.TabIndex = 3
+        Me.CantidadProducto.TabIndex = 4
         '
         'Label6
         '
@@ -239,26 +270,86 @@ Partial Class Form1
         '
         'TabHistorial
         '
+        Me.TabHistorial.Controls.Add(Me.Label13)
+        Me.TabHistorial.Controls.Add(Me.Label12)
+        Me.TabHistorial.Controls.Add(Me.Label11)
+        Me.TabHistorial.Controls.Add(Me.Label10)
+        Me.TabHistorial.Controls.Add(Me.Label9)
+        Me.TabHistorial.Controls.Add(Me.Label8)
         Me.TabHistorial.Controls.Add(Me.ListHistorial)
         Me.TabHistorial.Controls.Add(Me.ListLeyendaHistorial)
         Me.TabHistorial.Controls.Add(Me.LimpiarHistorial)
         Me.TabHistorial.Location = New System.Drawing.Point(4, 24)
         Me.TabHistorial.Name = "TabHistorial"
         Me.TabHistorial.Padding = New System.Windows.Forms.Padding(3)
-        Me.TabHistorial.Size = New System.Drawing.Size(469, 199)
+        Me.TabHistorial.Size = New System.Drawing.Size(561, 199)
         Me.TabHistorial.TabIndex = 1
         Me.TabHistorial.Text = "Historial"
         Me.TabHistorial.UseVisualStyleBackColor = True
+        '
+        'Label13
+        '
+        Me.Label13.AutoSize = True
+        Me.Label13.Location = New System.Drawing.Point(369, 6)
+        Me.Label13.Name = "Label13"
+        Me.Label13.Size = New System.Drawing.Size(32, 15)
+        Me.Label13.TabIndex = 28
+        Me.Label13.Text = "Total"
+        '
+        'Label12
+        '
+        Me.Label12.AutoSize = True
+        Me.Label12.Location = New System.Drawing.Point(292, 6)
+        Me.Label12.Name = "Label12"
+        Me.Label12.Size = New System.Drawing.Size(61, 15)
+        Me.Label12.TabIndex = 27
+        Me.Label12.Text = "Precio Uni"
+        '
+        'Label11
+        '
+        Me.Label11.AutoSize = True
+        Me.Label11.Location = New System.Drawing.Point(215, 6)
+        Me.Label11.Name = "Label11"
+        Me.Label11.Size = New System.Drawing.Size(71, 15)
+        Me.Label11.TabIndex = 26
+        Me.Label11.Text = "Total Sin IVA"
+        '
+        'Label10
+        '
+        Me.Label10.AutoSize = True
+        Me.Label10.Location = New System.Drawing.Point(136, 6)
+        Me.Label10.Name = "Label10"
+        Me.Label10.Size = New System.Drawing.Size(62, 15)
+        Me.Label10.TabIndex = 25
+        Me.Label10.Text = "Monto Inc"
+        '
+        'Label9
+        '
+        Me.Label9.AutoSize = True
+        Me.Label9.Location = New System.Drawing.Point(3, 6)
+        Me.Label9.Name = "Label9"
+        Me.Label9.Size = New System.Drawing.Size(55, 15)
+        Me.Label9.TabIndex = 24
+        Me.Label9.Text = "Cantidad"
+        '
+        'Label8
+        '
+        Me.Label8.AutoSize = True
+        Me.Label8.Location = New System.Drawing.Point(64, 6)
+        Me.Label8.Name = "Label8"
+        Me.Label8.Size = New System.Drawing.Size(51, 15)
+        Me.Label8.TabIndex = 23
+        Me.Label8.Text = "Nombre"
         '
         'ListHistorial
         '
         Me.ListHistorial.Font = New System.Drawing.Font("Segoe UI", 8.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point)
         Me.ListHistorial.FormattingEnabled = True
         Me.ListHistorial.HorizontalScrollbar = True
-        Me.ListHistorial.Location = New System.Drawing.Point(3, 6)
+        Me.ListHistorial.Location = New System.Drawing.Point(3, 24)
         Me.ListHistorial.Name = "ListHistorial"
         Me.ListHistorial.ScrollAlwaysVisible = True
-        Me.ListHistorial.Size = New System.Drawing.Size(412, 134)
+        Me.ListHistorial.Size = New System.Drawing.Size(412, 160)
         Me.ListHistorial.TabIndex = 22
         '
         'ListLeyendaHistorial
@@ -277,7 +368,7 @@ Partial Class Form1
         Me.AutoScaleDimensions = New System.Drawing.SizeF(7.0!, 15.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.SystemColors.GradientActiveCaption
-        Me.ClientSize = New System.Drawing.Size(488, 271)
+        Me.ClientSize = New System.Drawing.Size(569, 272)
         Me.Controls.Add(Me.TabPrincipal)
         Me.Controls.Add(Me.Label1)
         Me.ForeColor = System.Drawing.SystemColors.InactiveCaptionText
@@ -289,6 +380,7 @@ Partial Class Form1
         Me.TabCalcular.ResumeLayout(False)
         Me.TabCalcular.PerformLayout()
         Me.TabHistorial.ResumeLayout(False)
+        Me.TabHistorial.PerformLayout()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -315,4 +407,12 @@ Partial Class Form1
     Friend WithEvents Nombre As Label
     Friend WithEvents CantidadProducto As TextBox
     Friend WithEvents Label6 As Label
+    Friend WithEvents PrecioTotal As TextBox
+    Friend WithEvents Label7 As Label
+    Friend WithEvents Label8 As Label
+    Friend WithEvents Label9 As Label
+    Friend WithEvents Label13 As Label
+    Friend WithEvents Label12 As Label
+    Friend WithEvents Label11 As Label
+    Friend WithEvents Label10 As Label
 End Class
