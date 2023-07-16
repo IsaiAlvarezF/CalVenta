@@ -2,7 +2,7 @@
 Imports System.IO
 
 Public Class Form1
-    Public Const HistorialPath As String = "C:\Users\Son Isai\source\repos\IsaiAlvarezF\CalVenta\Historial.txt"
+    Public Const HistorialPath As String = "C:\CalVentaHistorial\Historial.txt"
     Private Sub Form1(sender As Object, e As EventArgs) Handles MyBase.Load
         Me.Show()
         ' Habilitar el reconocimiento de la tecla Enter
@@ -11,6 +11,8 @@ Public Class Form1
         ObtenerHistorial()
         MontoIngresado.Select(0, 1)
         TipoCliente.SelectedItem = "Empleado"
+        NombreTxt.Text = "Clientes varios"
+
     End Sub
     Private Sub Calculo()
 
@@ -150,7 +152,6 @@ Public Class Form1
             temporal.Items.Clear()
         End If
     End Sub
-
 
 
 End Class
