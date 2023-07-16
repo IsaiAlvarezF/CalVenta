@@ -107,7 +107,7 @@ Public Class Form1
 
         ReordenarHistorial()
 
-        MontoIngresado.Focus()
+        NombreTxt.Focus()
     End Sub
     Private Sub LimpiarHistorial_Click(sender As Object, e As EventArgs) Handles LimpiarHistorial.Click
         If MessageBox.Show(Me, "¿Desea borrar el historial?", "Limpiar Historial", MessageBoxButtons.YesNo, MessageBoxIcon.Question) = DialogResult.Yes Then

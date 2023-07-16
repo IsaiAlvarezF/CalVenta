@@ -1,9 +1,0 @@
-|Nombre Cliente: dfgdf |Monto ingresado: $55,00| Total sin IVA: $61,11| Total con IVA: $69,06
-|Nombre Cliente:  |Monto ingresado: $54,00| Total sin IVA: $60,00| Total con IVA: $67,80
-|Nombre Cliente:  |Monto ingresado: $54,00| Total sin IVA: $60,00| Total con IVA: $67,80
-|Nombre Cliente:  |Monto ingresado: $45.465,00| Total sin IVA: $50.516,67| Total con IVA: $57.083,83
-|Nombre Cliente:  |Monto ingresado: $4.545,00| Total sin IVA: $5.050,00| Total con IVA: $5.706,50
-|Nombre Cliente:  |Monto ingresado: $54.545,00| Total sin IVA: $60.605,56| Total con IVA: $68.484,28
-|Nombre Cliente:  |Monto ingresado: $4.545,00| Total sin IVA: $5.050,00| Total con IVA: $5.706,50
-|Nombre Cliente:  |Monto ingresado: $45.454,00| Total sin IVA: $50.504,44| Total con IVA: $57.070,02
-|Nombre Cliente:  |Monto ingresado: $445.454,00| Total sin IVA: $494.948,89| Total con IVA: $559.292,24
