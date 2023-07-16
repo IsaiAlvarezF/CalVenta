@@ -26,30 +26,30 @@ Public Class Form1
 
             ElseIf TipoCliente.SelectedItem IsNot Nothing Then
                 Dim Op As String = TipoCliente.SelectedItem.ToString()
-                    MontoInicial = Double.Parse(Me.MontoIngresado.Text)
-                    Cantidad = Integer.Parse(Me.CantidadProducto.Text)
+                MontoInicial = Double.Parse(Me.MontoIngresado.Text)
+                Cantidad = Integer.Parse(Me.CantidadProducto.Text)
 
-                    If (Op = "Empleado") Then
-                        ValorTotalSinIva = MontoInicial / 0.9
-                        TotalUnitario = ValorTotalSinIva * 1.13
-                        Total = TotalUnitario * Cantidad
-                        Me.PrecioSinIva.Text = FormatCurrency(ValorTotalSinIva)
-                        Me.PrecioConIva.Text = FormatCurrency(TotalUnitario)
-                        Me.PrecioTotal.Text = FormatCurrency(Total)
+                If (Op = "Empleado") Then
+                    ValorTotalSinIva = MontoInicial / 0.9
+                    TotalUnitario = ValorTotalSinIva * 1.13
+                    Total = TotalUnitario * Cantidad
+                    Me.PrecioSinIva.Text = FormatCurrency(ValorTotalSinIva)
+                    Me.PrecioConIva.Text = FormatCurrency(TotalUnitario)
+                    Me.PrecioTotal.Text = FormatCurrency(Total)
 
 
-                    ElseIf (Op = "Cliente") Then
-                        ValorTotalSinIva = MontoInicial / 0.8
-                        TotalUnitario = ValorTotalSinIva * 1.13
-                        Total = TotalUnitario * Cantidad
-                        Me.PrecioSinIva.Text = FormatCurrency(ValorTotalSinIva)
-                        Me.PrecioConIva.Text = FormatCurrency(TotalUnitario)
-                        Me.PrecioTotal.Text = FormatCurrency(Total)
-                    End If
-                    LlenarHistorial()
-                    MontoIngresado.Select(0, 100)
-                Else
-                    MessageBox.Show("Por favor, selecciona una opción.")
+                ElseIf (Op = "Cliente") Then
+                    ValorTotalSinIva = MontoInicial / 0.8
+                    TotalUnitario = ValorTotalSinIva * 1.13
+                    Total = TotalUnitario * Cantidad
+                    Me.PrecioSinIva.Text = FormatCurrency(ValorTotalSinIva)
+                    Me.PrecioConIva.Text = FormatCurrency(TotalUnitario)
+                    Me.PrecioTotal.Text = FormatCurrency(Total)
+                End If
+                LlenarHistorial()
+                MontoIngresado.Select(0, 100)
+            Else
+                MessageBox.Show("Por favor, selecciona una opción.")
 
             End If
 

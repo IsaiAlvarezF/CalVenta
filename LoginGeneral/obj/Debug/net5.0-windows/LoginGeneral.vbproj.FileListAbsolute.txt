@@ -17,3 +17,22 @@ C:\Users\Son Isai\source\repos\IsaiAlvarezF\CalVenta\LoginGeneral\obj\Debug\net5
 C:\Users\Son Isai\source\repos\IsaiAlvarezF\CalVenta\LoginGeneral\obj\Debug\net5.0-windows\LoginGeneral.genruntimeconfig.cache
 C:\Users\Son Isai\source\repos\IsaiAlvarezF\CalVenta\LoginGeneral\obj\Debug\net5.0-windows\LoginGeneral.lOGIN.resources
 C:\Users\Son Isai\source\repos\IsaiAlvarezF\CalVenta\LoginGeneral\obj\Debug\net5.0-windows\LoginGeneral.Resources.resources
+C:\Users\50370\source\repos\IsaiAlvarezF\CalVenta\LoginGeneral\bin\Debug\net5.0-windows\LoginGeneral.exe
+C:\Users\50370\source\repos\IsaiAlvarezF\CalVenta\LoginGeneral\bin\Debug\net5.0-windows\LoginGeneral.deps.json
+C:\Users\50370\source\repos\IsaiAlvarezF\CalVenta\LoginGeneral\bin\Debug\net5.0-windows\LoginGeneral.runtimeconfig.json
+C:\Users\50370\source\repos\IsaiAlvarezF\CalVenta\LoginGeneral\bin\Debug\net5.0-windows\LoginGeneral.runtimeconfig.dev.json
+C:\Users\50370\source\repos\IsaiAlvarezF\CalVenta\LoginGeneral\bin\Debug\net5.0-windows\LoginGeneral.dll
+C:\Users\50370\source\repos\IsaiAlvarezF\CalVenta\LoginGeneral\bin\Debug\net5.0-windows\LoginGeneral.pdb
+C:\Users\50370\source\repos\IsaiAlvarezF\CalVenta\LoginGeneral\obj\Debug\net5.0-windows\LoginGeneral.vbproj.AssemblyReference.cache
+C:\Users\50370\source\repos\IsaiAlvarezF\CalVenta\LoginGeneral\obj\Debug\net5.0-windows\LoginGeneral.Login.resources
+C:\Users\50370\source\repos\IsaiAlvarezF\CalVenta\LoginGeneral\obj\Debug\net5.0-windows\LoginGeneral.Resources.resources
+C:\Users\50370\source\repos\IsaiAlvarezF\CalVenta\LoginGeneral\obj\Debug\net5.0-windows\LoginGeneral.vbproj.GenerateResource.cache
+C:\Users\50370\source\repos\IsaiAlvarezF\CalVenta\LoginGeneral\obj\Debug\net5.0-windows\LoginGeneral.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\50370\source\repos\IsaiAlvarezF\CalVenta\LoginGeneral\obj\Debug\net5.0-windows\LoginGeneral.AssemblyInfoInputs.cache
+C:\Users\50370\source\repos\IsaiAlvarezF\CalVenta\LoginGeneral\obj\Debug\net5.0-windows\LoginGeneral.AssemblyInfo.vb
+C:\Users\50370\source\repos\IsaiAlvarezF\CalVenta\LoginGeneral\obj\Debug\net5.0-windows\LoginGeneral.vbproj.CoreCompileInputs.cache
+C:\Users\50370\source\repos\IsaiAlvarezF\CalVenta\LoginGeneral\obj\Debug\net5.0-windows\LoginGeneral.dll
+C:\Users\50370\source\repos\IsaiAlvarezF\CalVenta\LoginGeneral\obj\Debug\net5.0-windows\refint\LoginGeneral.dll
+C:\Users\50370\source\repos\IsaiAlvarezF\CalVenta\LoginGeneral\obj\Debug\net5.0-windows\LoginGeneral.pdb
+C:\Users\50370\source\repos\IsaiAlvarezF\CalVenta\LoginGeneral\obj\Debug\net5.0-windows\LoginGeneral.genruntimeconfig.cache
+C:\Users\50370\source\repos\IsaiAlvarezF\CalVenta\LoginGeneral\obj\Debug\net5.0-windows\ref\LoginGeneral.dll
