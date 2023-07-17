@@ -74,3 +74,5 @@ C:\Users\Son Isai\source\repos\IsaiAlvarezF\CalVenta\Calcular\obj\Debug\net5.0-w
 C:\Users\Son Isai\source\repos\IsaiAlvarezF\CalVenta\Calcular\obj\Debug\net5.0-windows\ref\Calcular.dll
 C:\Users\Son Isai\source\repos\IsaiAlvarezF\CalVenta\Calcular\obj\Debug\net5.0-windows\Calcular.pdb
 C:\Users\Son Isai\source\repos\IsaiAlvarezF\CalVenta\Calcular\obj\Debug\net5.0-windows\Calcular.genruntimeconfig.cache
+C:\Users\Son Isai\source\repos\IsaiAlvarezF\CalVenta\Calcular\obj\Debug\net5.0-windows\Calcular.MDIParent1.resources
+C:\Users\Son Isai\source\repos\IsaiAlvarezF\CalVenta\Calcular\obj\Debug\net5.0-windows\Calcular.AccesosRemoto.resources

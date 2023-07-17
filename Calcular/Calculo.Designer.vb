@@ -368,7 +368,7 @@ Partial Class Form1
         Me.AutoScaleDimensions = New System.Drawing.SizeF(7.0!, 15.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.SystemColors.GradientActiveCaption
-        Me.ClientSize = New System.Drawing.Size(569, 272)
+        Me.ClientSize = New System.Drawing.Size(579, 281)
         Me.Controls.Add(Me.TabPrincipal)
         Me.Controls.Add(Me.Label1)
         Me.ForeColor = System.Drawing.SystemColors.InactiveCaptionText
