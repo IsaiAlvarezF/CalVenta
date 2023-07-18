@@ -8,19 +8,19 @@
     "net5.0-windows7.0": []
   },
   "packageFolders": {
-    "C:\\Users\\Son Isai\\.nuget\\packages\\": {}
+    "C:\\Users\\User\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Son Isai\\source\\repos\\IsaiAlvarezF\\CalVenta\\Calcular\\Calcular.vbproj",
+      "projectUniqueName": "C:\\Users\\User\\Desktop\\IsaiAlvarezF\\CalVenta\\Calcular\\Calcular.vbproj",
       "projectName": "Calcular",
-      "projectPath": "C:\\Users\\Son Isai\\source\\repos\\IsaiAlvarezF\\CalVenta\\Calcular\\Calcular.vbproj",
-      "packagesPath": "C:\\Users\\Son Isai\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Son Isai\\source\\repos\\IsaiAlvarezF\\CalVenta\\Calcular\\obj\\",
+      "projectPath": "C:\\Users\\User\\Desktop\\IsaiAlvarezF\\CalVenta\\Calcular\\Calcular.vbproj",
+      "packagesPath": "C:\\Users\\User\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\User\\Desktop\\IsaiAlvarezF\\CalVenta\\Calcular\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\Son Isai\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\User\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -63,7 +63,7 @@
             "privateAssets": "none"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.302\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.303\\RuntimeIdentifierGraph.json"
       }
     }
   }
