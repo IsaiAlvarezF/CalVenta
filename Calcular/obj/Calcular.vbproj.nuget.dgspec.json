@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\User\\Desktop\\IsaiAlvarezF\\CalVenta\\Calcular\\Calcular.vbproj": {}
+    "C:\\Users\\Son Isai\\source\\repos\\IsaiAlvarezF\\CalVenta\\Calcular\\Calcular.vbproj": {}
   },
   "projects": {
-    "C:\\Users\\User\\Desktop\\IsaiAlvarezF\\CalVenta\\Calcular\\Calcular.vbproj": {
+    "C:\\Users\\Son Isai\\source\\repos\\IsaiAlvarezF\\CalVenta\\Calcular\\Calcular.vbproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\User\\Desktop\\IsaiAlvarezF\\CalVenta\\Calcular\\Calcular.vbproj",
+        "projectUniqueName": "C:\\Users\\Son Isai\\source\\repos\\IsaiAlvarezF\\CalVenta\\Calcular\\Calcular.vbproj",
         "projectName": "Calcular",
-        "projectPath": "C:\\Users\\User\\Desktop\\IsaiAlvarezF\\CalVenta\\Calcular\\Calcular.vbproj",
-        "packagesPath": "C:\\Users\\User\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\User\\Desktop\\IsaiAlvarezF\\CalVenta\\Calcular\\obj\\",
+        "projectPath": "C:\\Users\\Son Isai\\source\\repos\\IsaiAlvarezF\\CalVenta\\Calcular\\Calcular.vbproj",
+        "packagesPath": "C:\\Users\\Son Isai\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Son Isai\\source\\repos\\IsaiAlvarezF\\CalVenta\\Calcular\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\User\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\Son Isai\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -39,6 +39,12 @@
       "frameworks": {
         "net5.0-windows7.0": {
           "targetAlias": "net5.0-windows",
+          "dependencies": {
+            "System.Data.SqlClient": {
+              "target": "Package",
+              "version": "[4.8.5, )"
+            }
+          },
           "imports": [
             "net461",
             "net462",
@@ -57,7 +63,7 @@
               "privateAssets": "none"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.303\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.302\\RuntimeIdentifierGraph.json"
         }
       }
     }
