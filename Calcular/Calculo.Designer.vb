@@ -77,6 +77,7 @@ Partial Class Form1
         '
         'Calcular
         '
+        Me.Calcular.AccessibleRole = System.Windows.Forms.AccessibleRole.None
         Me.Calcular.Location = New System.Drawing.Point(302, 15)
         Me.Calcular.Name = "Calcular"
         Me.Calcular.Size = New System.Drawing.Size(75, 23)

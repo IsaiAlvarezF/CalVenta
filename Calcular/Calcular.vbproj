@@ -54,11 +54,6 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Folder Include="Logico\" />
-    <Folder Include="Presentacion\" />
-  </ItemGroup>
-
-  <ItemGroup>
     <PackageReference Include="System.Data.SqlClient" Version="4.8.5" />
   </ItemGroup>
 

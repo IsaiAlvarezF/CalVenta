@@ -124,3 +124,4 @@ C:\Users\Son Isai\source\repos\IsaiAlvarezF\CalVenta\Calcular\obj\Debug\net5.0-w
 C:\Users\Son Isai\source\repos\IsaiAlvarezF\CalVenta\Calcular\obj\Debug\net5.0-windows\Calcular.MDIParent1.resources
 C:\Users\Son Isai\source\repos\IsaiAlvarezF\CalVenta\Calcular\obj\Debug\net5.0-windows\Calcular.vbproj.CopyComplete
 C:\Users\Son Isai\source\repos\IsaiAlvarezF\CalVenta\Calcular\bin\Debug\net5.0-windows\Calcular.dll.config
+C:\Users\Son Isai\source\repos\IsaiAlvarezF\CalVenta\Calcular\obj\Debug\net5.0-windows\Calcular.FrmAccesoRemotos.resources

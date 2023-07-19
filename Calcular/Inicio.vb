@@ -118,7 +118,7 @@ Partial Class MDIParent1
     End Sub
 
     Private Sub ToolStripMenuItem5_Click(sender As Object, e As EventArgs) Handles ToolStripMenuItem5.Click
-        Dim frmlAccesos As New AccesosRemoto
+        Dim frmlAccesos As New FrmAccesoRemotos
         frmlAccesos.Show()
     End Sub
 End Class
