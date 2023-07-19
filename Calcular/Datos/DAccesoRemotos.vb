@@ -19,11 +19,6 @@ Public Class DAccesoRemotos
         PassRust = pRusk
     End Sub
 
-    Public Sub New()
-
-    End Sub
-
-
     Public Property IdUsuario As Integer
         Get
             Return Id
@@ -82,11 +77,12 @@ Public Class DAccesoRemotos
         End Set
     End Property
     Public Function InsertarAcceso(da As DAccesoRemotos) As Boolean
+        Dim con As SqlConnection = Nothing
         Try
-            conectar()
+            conectar(con)
             Dim sql As String = "INSERT INTO AccesosRemotos(NombreUsuario,AccesoAnydesk,AccesoRuskDesk, PassAny, PassRust)VALUES('" & da.Nombre_Usuario & "','" &
                                    da.AccesoAnydesk & "','" & da.AccesoRuskDesk & "','" & da.Password_Any & "','" & da.Password_Rust & "' )"
-            cmd = New SqlCommand(sql, conexion)
+            cmd = New SqlCommand(sql, con)
             If cmd.ExecuteNonQuery() Then
                 MsgBox("El cliente se ha ingresado correctamemte")
                 Return True
@@ -101,7 +97,7 @@ Public Class DAccesoRemotos
 
 
         Finally
-            desconectar()
+            desconectar(con)
 
         End Try
     End Function
