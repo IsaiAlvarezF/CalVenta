@@ -80,7 +80,7 @@ Public Class DAccesoRemotos
         Dim con As SqlConnection = Nothing
         Try
             conectar(con)
-            Dim sql As String = "INSERT INTO AccesosRemotos(NombreUsuario,AccesoAnydesk,AccesoRuskDesk, PassAny, PassRust)VALUES('" & da.Nombre_Usuario & "','" &
+            Dim sql As String = "INSERT INTO SoporteIt.dbo.AccesosRemotos(NombreUsuario,AccesoAnydesk,AccesoRuskDesk, PassAny, PassRust)VALUES('" & da.Nombre_Usuario & "','" &
                                    da.AccesoAnydesk & "','" & da.AccesoRuskDesk & "','" & da.Password_Any & "','" & da.Password_Rust & "' )"
             cmd = New SqlCommand(sql, con)
             If cmd.ExecuteNonQuery() Then
