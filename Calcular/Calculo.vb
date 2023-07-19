@@ -9,39 +9,60 @@ Public Class Form1
         Me.AcceptButton = Calcular
         My.Computer.Registry.CurrentUser.CreateSubKey("HistorialCalculadora")
         ObtenerHistorial()
-        Me.MontoIngresado.Select(0, 1)
-        Me.TipoCliente.SelectedItem = "Empleado"
-        Me.NombreTxt.Text = "Clientes Varios"
+        TipoCliente.SelectedItem = "Empleado"
+        NombreTxt.Text = "Clientes varios"
+        MontoIngresado.Focus()
+        CantidadProducto.Text = "1"
+
     End Sub
     Private Sub Calculo()
+
+
         Try
-            If NombreTxt.Text.Length > 0 Then
-                Dim MontoInicial, ValorTotalSinIva, Total As Double
-                If TipoCliente.SelectedItem IsNot Nothing Then
-                    Dim Op As String = TipoCliente.SelectedItem.ToString()
-                    MontoInicial = Double.Parse(Me.MontoIngresado.Text)
-                    If (Op = "Empleado") Then
-                        ValorTotalSinIva = MontoInicial / 0.9
-                        Total = ValorTotalSinIva * 1.13
-                        Me.PrecioSinIva.Text = FormatCurrency(ValorTotalSinIva)
-                        Me.PrecioConIva.Text = FormatCurrency(Total)
-                    ElseIf (Op = "Cliente") Then
-                        ValorTotalSinIva = MontoInicial / 0.8
-                        Total = ValorTotalSinIva * 1.13
-                        Me.PrecioSinIva.Text = FormatCurrency(ValorTotalSinIva)
-                        Me.PrecioConIva.Text = FormatCurrency(Total)
-                    End If
-                    LlenarHistorial()
-                    MontoIngresado.Select(0, 100)
-                Else
-                    MessageBox.Show("Por favor, selecciona una opción.")
+
+            Dim MontoInicial, ValorTotalSinIva, Total, TotalUnitario As Double
+            Dim Cantidad As Integer
+
+            If NombreTxt.Text.Length = 0 Then
+                MessageBox.Show("NO SE INGRESO NOMBRE ")
+
+
+            ElseIf TipoCliente.SelectedItem IsNot Nothing Then
+                Dim Op As String = TipoCliente.SelectedItem.ToString()
+                MontoInicial = Double.Parse(Me.MontoIngresado.Text)
+                Cantidad = Integer.Parse(Me.CantidadProducto.Text)
+
+                If (Op = "Empleado") Then
+                    ValorTotalSinIva = MontoInicial / 0.9
+                    TotalUnitario = ValorTotalSinIva * 1.13
+                    Total = TotalUnitario * Cantidad
+                    Me.PrecioSinIva.Text = FormatCurrency(ValorTotalSinIva)
+                    Me.PrecioConIva.Text = FormatCurrency(TotalUnitario)
+                    Me.PrecioTotal.Text = FormatCurrency(Total)
+
+
+                ElseIf (Op = "Cliente") Then
+                    ValorTotalSinIva = MontoInicial / 0.8
+                    TotalUnitario = ValorTotalSinIva * 1.13
+                    Total = TotalUnitario * Cantidad
+                    Me.PrecioSinIva.Text = FormatCurrency(ValorTotalSinIva)
+                    Me.PrecioConIva.Text = FormatCurrency(TotalUnitario)
+                    Me.PrecioTotal.Text = FormatCurrency(Total)
                 End If
+                LlenarHistorial()
+                MontoIngresado.Select(0, 100)
             Else
-                MessageBox.Show("Por favor, ingresa un nombre de cliente.")
+                MessageBox.Show("Por favor, selecciona una opción.")
+
             End If
+
         Catch ex As FormatException
             MessageBox.Show("Por favor, ingresa un valor.")
+
+
         End Try
+
+
     End Sub
     Private Sub Form1_KeyPress(sender As Object, e As KeyPressEventArgs) Handles MyBase.KeyPress
         If e.KeyChar = ChrW(Keys.Enter) Then
@@ -58,7 +79,10 @@ Public Class Form1
         Me.PrecioSinIva.Text = Nothing
         Me.TipoCliente.Text = Nothing
         Me.NombreTxt.Text = Nothing
+        Me.PrecioTotal.Text = Nothing
+        Me.CantidadProducto.Text = Nothing
         TipoCliente.SelectedItem = "Empleado"
+
     End Sub
     Private Sub Button3_Click(sender As Object, e As EventArgs) Handles Salir.Click
         Me.Close()
@@ -72,8 +96,8 @@ Public Class Form1
         End If
 
         Dim registro As String
-        registro = "Nombre Cliente: " & NombreTxt.Text & " | Monto ingresado: " & FormatCurrency(MontoIngresado.Text) & " | Total sin IVA: " & PrecioSinIva.Text & " | Total con IVA: " & PrecioConIva.Text
-
+        'registro = "|Nombre Cliente: " & NombreTxt.Text & " |Monto ingresado: " & FormatCurrency(MontoIngresado.Text) & "| Total sin IVA: " & PrecioSinIva.Text & "| Total con IVA: " & PrecioConIva.Text
+        registro = "      " & CantidadProducto.Text & "           " & NombreTxt.Text & "      " & FormatCurrency(MontoIngresado.Text) & "        " & PrecioSinIva.Text & "           " & PrecioConIva.Text & "         " & PrecioTotal.Text
         Using writer As New StreamWriter(HistorialPath, True)
             writer.WriteLine(registro)
         End Using
@@ -114,7 +138,7 @@ Public Class Form1
     End Sub
     Private Sub ReordenarHistorial()
         If ListHistorial.Items.Count > 0 Then
-            Dim i As Integer, row As String
+            Dim i As Integer, j As Integer, row As String
             Dim temporal As New ListBox
             Do
                 i = ListHistorial.Items.Count - 1
@@ -122,11 +146,12 @@ Public Class Form1
                 temporal.Items.Add(row)
                 ListHistorial.Items.RemoveAt(i)
             Loop Until i = 0
-            For i = 0 To temporal.Items.Count - 1
-                row = temporal.Items(i)
+            For j = 0 To temporal.Items.Count - 1
+                row = temporal.Items(j)
                 ListHistorial.Items.Add(row)
             Next
             temporal.Items.Clear()
         End If
     End Sub
+
 End Class

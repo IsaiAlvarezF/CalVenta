@@ -1,17 +1,63 @@
-|Nombre Cliente:  |Monto ingresado: $123.00| Total sin IVA: $136.67| Total con IVA: $154.43
-Nombre Cliente: Clientes Varios | Monto ingresado: $123.00 | Total sin IVA: $136.67 | Total con IVA: $154.43
-Nombre Cliente: Clientes Varios | Monto ingresado: $123.00 | Total sin IVA: $136.67 | Total con IVA: $154.43
-Nombre Cliente: Clientes Varios | Monto ingresado: $234.00 | Total sin IVA: $260.00 | Total con IVA: $293.80
-Nombre Cliente: Clientes Varios | Monto ingresado: $345.00 | Total sin IVA: $383.33 | Total con IVA: $433.17
-Nombre Cliente: Clientes Varios | Monto ingresado: $456.00 | Total sin IVA: $506.67 | Total con IVA: $572.53
-Nombre Cliente: Clientes Varios | Monto ingresado: $567.00 | Total sin IVA: $630.00 | Total con IVA: $711.90
-Nombre Cliente: Clientes Varios | Monto ingresado: $678.00 | Total sin IVA: $753.33 | Total con IVA: $851.27
-Nombre Cliente: Clientes Varios | Monto ingresado: $789.00 | Total sin IVA: $876.67 | Total con IVA: $990.63
-Nombre Cliente: Clientes Varios | Monto ingresado: $111,111,111.00 | Total sin IVA: $123,456,790.00 | Total con IVA: $139,506,172.70
-Nombre Cliente: EL RICHY | Monto ingresado: $111,111,111.00 | Total sin IVA: $123,456,790.00 | Total con IVA: $139,506,172.70
-Nombre Cliente: Clientes Varios | Monto ingresado: $200.00 | Total sin IVA: $222.22 | Total con IVA: $251.11
-Nombre Cliente:  | Monto ingresado: $344.00 | Total sin IVA: $382.22 | Total con IVA: $431.91
-Nombre Cliente:  | Monto ingresado: $324.00 | Total sin IVA: $360.00 | Total con IVA: $406.80
-Nombre Cliente:  | Monto ingresado: $324.00 | Total sin IVA: $360.00 | Total con IVA: $406.80
-Nombre Cliente:  | Monto ingresado: $454.00 | Total sin IVA: $504.44 | Total con IVA: $570.02
-Nombre Cliente: Vanesa | Monto ingresado: $666.00 | Total sin IVA: $740.00 | Total con IVA: $836.20
+      3           Rodolfo Gonza      $123,00        $136,67           $154,43         $463,30
+      3           Rodolfo Gonza      $123,00        $136,67           $154,43         $463,30
+      3           Rodolfo Gonza      $123,00        $136,67           $154,43         $463,30
+      3           Rodolfo Gonza      $123,00        $136,67           $154,43         $463,30
+      3           Rodolfo Gonza      $123,00        $136,67           $154,43         $463,30
+      3           Rodolfo Gonza      $123,00        $136,67           $154,43         $463,30
+      3           Rodolfo Gonza      $123,00        $136,67           $154,43         $463,30
+      3           Rodolfo Gonza      $123,00        $136,67           $154,43         $463,30
+      3           Rodolfo Gonza      $123,00        $136,67           $154,43         $463,30
+      3           Rodolfo Gonza      $123,00        $136,67           $154,43         $463,30
+      3           Rodolfo Gonza      $123,00        $136,67           $154,43         $463,30
+      3           Rodolfo Gonza      $123,00        $136,67           $154,43         $463,30
+      3           Rodolfo Gonza      $123,00        $136,67           $154,43         $463,30
+      3           Rodolfo Gonza      $123,00        $136,67           $154,43         $463,30
+      3           Rodolfo Gonza      $123,00        $136,67           $154,43         $463,30
+      3           Rodolfo Gonza      $123,00        $136,67           $154,43         $463,30
+      3           Rodolfo Gonza      $123,00        $136,67           $154,43         $463,30
+      3           Rodolfo Gonza      $123,00        $136,67           $154,43         $463,30
+      3           Rodolfo Gonza      $123,00        $136,67           $154,43         $463,30
+      3           Rodolfo Gonza      $123,00        $136,67           $154,43         $463,30
+      3                 $123,00        $136,67           $154,43         $463,30
+      2           asdasd      $34,00        $37,78           $42,69         $85,38
+      2                 $34,00        $37,78           $42,69         $85,38
+      2           ewe      $34,00        $37,78           $42,69         $85,38
+      2                 $21,00        $23,33           $26,37         $52,73
+      3                 $33,00        $36,67           $41,43         $124,30
+      3           33      $4,00        $4,44           $5,02         $15,07
+      2           Isai       $2,00        $2,22           $2,51         $5,02
+      3           Isai       $32,00        $35,56           $40,18         $120,53
+      3           sss      $3,00        $3,33           $3,77         $11,30
+      3           sss      $3,00        $3,33           $3,77         $11,30
+      3           sss      $3,00        $3,33           $3,77         $11,30
+      3           sss      $3,00        $3,33           $3,77         $11,30
+      33           sss      $3,00        $3,33           $3,77         $124,30
+      33           sss      $3,00        $3,33           $3,77         $124,30
+      333           sss      $3,00        $3,33           $3,77         $1.254,30
+      333           sss      $33,00        $36,67           $41,43         $13.797,30
+      333           sss      $33,00        $41,25           $46,61         $15.521,96
+      333           sss      $33,00        $41,25           $46,61         $15.521,96
+      2           isai alva       $136,00        $170,00           $192,10         $384,20
+      2           isai alva       $136,00        $170,00           $192,10         $384,20
+      2           isai alva       $136,00        $170,00           $192,10         $384,20
+      2           isai alva       $136,00        $170,00           $192,10         $384,20
+      2           isai alva       $136,00        $170,00           $192,10         $384,20
+      2           isai alva       $135,00        $168,75           $190,69         $381,37
+      2           isai alva       $135,00        $150,00           $169,50         $339,00
+      2           isai alva       $1,30        $1,44           $1,63         $3,26
+      4           dfghd      $4,00        $4,44           $5,02         $20,09
+      3           Isai alvarez      $32,00        $35,56           $40,18         $120,53
+      3                 $3,00        $3,33           $3,77         $11,30
+      2                 $2,00        $2,22           $2,51         $5,02
+      3                 $3,00        $3,33           $3,77         $11,30
+      3                 $3,00        $3,33           $3,77         $11,30
+      3                 $3,00        $3,33           $3,77         $11,30
+      3           d      $3,00        $3,33           $3,77         $11,30
+      3           d      $3,00        $3,33           $3,77         $11,30
+      3           d      $3,00        $3,33           $3,77         $11,30
+      3           d      $3,00        $3,33           $3,77         $11,30
+      3                 $3,00        $3,33           $3,77         $11,30
+      3                 $4,00        $4,44           $5,02         $15,07
+      3           Isai Alvarez      $32,00        $35,56           $40,18         $120,53
+      2           Isai Alvarez      $33,00        $36,67           $41,43         $82,87
+      5           D      $5,00        $6,25           $7,06         $35,31

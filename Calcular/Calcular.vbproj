@@ -4,7 +4,7 @@
     <OutputType>WinExe</OutputType>
     <TargetFramework>net5.0-windows</TargetFramework>
     <RootNamespace>Calcular</RootNamespace>
-    <StartupObject>Sub Main</StartupObject>
+    <StartupObject>Calcular.MDIParent1</StartupObject>
     <UseWindowsForms>true</UseWindowsForms>
     <MyType>WindowsForms</MyType>
   </PropertyGroup>
@@ -26,6 +26,11 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <Compile Update="My Project\Settings.Designer.vb">
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+    </Compile>
   </ItemGroup>
 
   <ItemGroup>
@@ -41,6 +46,15 @@
       <Generator>MyApplicationCodeGenerator</Generator>
       <LastGenOutput>Application.Designer.vb</LastGenOutput>
     </None>
+    <None Update="My Project\Settings.settings">
+      <CustomToolNamespace>My</CustomToolNamespace>
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.vb</LastGenOutput>
+    </None>
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="System.Data.SqlClient" Version="4.8.5" />
   </ItemGroup>
 
 </Project>
