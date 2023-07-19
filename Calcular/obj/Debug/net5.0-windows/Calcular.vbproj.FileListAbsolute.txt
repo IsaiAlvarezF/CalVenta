@@ -136,3 +136,12 @@ C:\Users\50370\source\repos\IsaiAlvarezF\CalVenta\Calcular\obj\Debug\net5.0-wind
 C:\Users\50370\source\repos\IsaiAlvarezF\CalVenta\Calcular\obj\Debug\net5.0-windows\Calcular.MDIParent1.resources
 C:\Users\50370\source\repos\IsaiAlvarezF\CalVenta\Calcular\obj\Debug\net5.0-windows\Calcular.FrmAccesoRemotos.resources
 C:\Users\50370\source\repos\IsaiAlvarezF\CalVenta\Calcular\obj\Debug\net5.0-windows\Calcular.vbproj.CopyComplete
+C:\Users\User\Desktop\IsaiAlvarezF\CalVenta\Calcular\bin\Debug\net5.0-windows\Calcular.dll.config
+C:\Users\User\Desktop\IsaiAlvarezF\CalVenta\Calcular\bin\Debug\net5.0-windows\System.Data.SqlClient.dll
+C:\Users\User\Desktop\IsaiAlvarezF\CalVenta\Calcular\bin\Debug\net5.0-windows\runtimes\win-arm64\native\sni.dll
+C:\Users\User\Desktop\IsaiAlvarezF\CalVenta\Calcular\bin\Debug\net5.0-windows\runtimes\win-x64\native\sni.dll
+C:\Users\User\Desktop\IsaiAlvarezF\CalVenta\Calcular\bin\Debug\net5.0-windows\runtimes\win-x86\native\sni.dll
+C:\Users\User\Desktop\IsaiAlvarezF\CalVenta\Calcular\bin\Debug\net5.0-windows\runtimes\unix\lib\netcoreapp2.1\System.Data.SqlClient.dll
+C:\Users\User\Desktop\IsaiAlvarezF\CalVenta\Calcular\bin\Debug\net5.0-windows\runtimes\win\lib\netcoreapp2.1\System.Data.SqlClient.dll
+C:\Users\User\Desktop\IsaiAlvarezF\CalVenta\Calcular\obj\Debug\net5.0-windows\Calcular.FrmAccesoRemotos.resources
+C:\Users\User\Desktop\IsaiAlvarezF\CalVenta\Calcular\obj\Debug\net5.0-windows\Calcular.vbproj.CopyComplete
