@@ -75,7 +75,7 @@ Partial Class FrmAccesoRemotos
         'LblUsuario
         '
         Me.LblUsuario.AutoSize = True
-        Me.LblUsuario.Location = New System.Drawing.Point(9, 24)
+        Me.LblUsuario.Location = New System.Drawing.Point(22, 39)
         Me.LblUsuario.Name = "LblUsuario"
         Me.LblUsuario.Size = New System.Drawing.Size(50, 15)
         Me.LblUsuario.TabIndex = 4
