@@ -28,7 +28,12 @@
 
     Private Sub BtnInsertar_Click(sender As Object, e As EventArgs) Handles BtnInsertar.Click
         Agregar()
-
+        TabPrincipal.SelectedIndex = 0
+        TxtUsuario.Text = Nothing
+        TxtAnydesk.Text = Nothing
+        TxtRustDesk.Text = Nothing
+        TxtPassAny.Text = Nothing
+        TxtPassRust.Text = Nothing
     End Sub
 
     Private Sub BtnAgregar_Click(sender As Object, e As EventArgs) Handles BtnAgregar.Click
