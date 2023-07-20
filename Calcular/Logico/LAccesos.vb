@@ -11,4 +11,15 @@ Public Class LAccesos
             Return False
         End If
     End Function
+
+    Public Function EliminarAcceso(Id As String)
+        Dim de As New DAccesoRemotos(Id)
+
+        If de.EliminarAceso(de) = True Then
+            Return True
+
+        Else
+            Return False
+        End If
+    End Function
 End Class

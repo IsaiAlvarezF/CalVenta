@@ -21,6 +21,15 @@
         End Try
     End Sub
 
+    Private Sub Eliminar()
+        Try
+            Dim la As New LAccesos()
+            la.EliminarAcceso(TextUsuario.Text)
+        Catch ex As Exception
+            MsgBox(ex.Message)
+        End Try
+    End Sub
+
     Private Sub FrmAccesoRemotos_KeyPress(sender As Object, e As KeyPressEventArgs) Handles MyBase.KeyPress
         If e.KeyChar = ChrW(Keys.Enter) Then
             Agregar()
@@ -35,5 +44,11 @@
 
     Private Sub BtnAgregar_Click(sender As Object, e As EventArgs) Handles BtnAgregar.Click
         TabPrincipal.SelectedIndex = 1
+
+    End Sub
+
+    Private Sub BtnEliminar_Click(sender As Object, e As EventArgs) Handles BtnEliminar.Click
+        Eliminar()
+
     End Sub
 End Class

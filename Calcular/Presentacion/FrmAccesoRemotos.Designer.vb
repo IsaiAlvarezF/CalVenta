@@ -49,6 +49,8 @@ Partial Class FrmAccesoRemotos
         AccesoRuskDesk = New DataGridViewTextBoxColumn()
         PassAny = New DataGridViewTextBoxColumn()
         PassRusk = New DataGridViewTextBoxColumn()
+        TextUsuario = New TextBox()
+        LabelNota = New Label()
         TabPrincipal.SuspendLayout()
         TabPage1.SuspendLayout()
         TabAgregar.SuspendLayout()
@@ -69,6 +71,8 @@ Partial Class FrmAccesoRemotos
         ' 
         ' TabPage1
         ' 
+        TabPage1.Controls.Add(LabelNota)
+        TabPage1.Controls.Add(TextUsuario)
         TabPage1.Controls.Add(LblUsuario)
         TabPage1.Controls.Add(BtnEliminar)
         TabPage1.Controls.Add(BtnModificar)
@@ -85,7 +89,7 @@ Partial Class FrmAccesoRemotos
         ' LblUsuario
         ' 
         LblUsuario.AutoSize = True
-        LblUsuario.Location = New Point(9, 24)
+        LblUsuario.Location = New Point(6, 19)
         LblUsuario.Name = "LblUsuario"
         LblUsuario.Size = New Size(50, 15)
         LblUsuario.TabIndex = 4
@@ -313,9 +317,26 @@ Partial Class FrmAccesoRemotos
         PassRusk.ReadOnly = True
         PassRusk.Width = 113
         ' 
+        ' TextUsuario
+        ' 
+        TextUsuario.Location = New Point(62, 16)
+        TextUsuario.Name = "TextUsuario"
+        TextUsuario.Size = New Size(262, 23)
+        TextUsuario.TabIndex = 5
+        ' 
+        ' LabelNota
+        ' 
+        LabelNota.AutoSize = True
+        LabelNota.Font = New Font("Segoe UI", 6.5F, FontStyle.Regular, GraphicsUnit.Point)
+        LabelNota.Location = New Point(62, 42)
+        LabelNota.Name = "LabelNota"
+        LabelNota.Size = New Size(255, 12)
+        LabelNota.TabIndex = 6
+        LabelNota.Text = "*Actualmente solo se puede ingresar un IdUsuario para eliminar"
+        ' 
         ' FrmAccesoRemotos
         ' 
-        AutoScaleDimensions = New SizeF(7.0F, 15.0F)
+        AutoScaleDimensions = New SizeF(7F, 15F)
         AutoScaleMode = AutoScaleMode.Font
         BackColor = SystemColors.ActiveCaption
         ClientSize = New Size(375, 343)
@@ -360,4 +381,6 @@ Partial Class FrmAccesoRemotos
     Friend WithEvents AccesoRuskDesk As DataGridViewTextBoxColumn
     Friend WithEvents PassAny As DataGridViewTextBoxColumn
     Friend WithEvents PassRusk As DataGridViewTextBoxColumn
+    Friend WithEvents TextUsuario As TextBox
+    Friend WithEvents LabelNota As Label
 End Class
