@@ -1,13 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "N+YeEZk7/Pitv42YK52RGcRGkjjDQfZ5KXKmKuBn9RTd6nnj/oC6w1XTxbfXnQ3HLJbjNHSLUqKvQh4v8mIAbQ==",
+  "dgSpecHash": "FwqcMNR1XGXZfuxz5eo1fCdgVv5b1ATCrOgeYdfVS+ggFu1YDQtVFkyGukeaSFy8sETcDQq2YWPYcHMoI+kqBQ==",
   "success": true,
-  "projectFilePath": "C:\\Users\\50370\\source\\repos\\IsaiAlvarezF\\CalVenta\\LoginGeneral\\LoginGeneral.vbproj",
-  "expectedPackageFiles": [
-    "C:\\Users\\50370\\.nuget\\packages\\microsoft.windowsdesktop.app.ref\\5.0.0\\microsoft.windowsdesktop.app.ref.5.0.0.nupkg.sha512",
-    "C:\\Users\\50370\\.nuget\\packages\\microsoft.netcore.app.ref\\5.0.0\\microsoft.netcore.app.ref.5.0.0.nupkg.sha512",
-    "C:\\Users\\50370\\.nuget\\packages\\microsoft.aspnetcore.app.ref\\5.0.0\\microsoft.aspnetcore.app.ref.5.0.0.nupkg.sha512",
-    "C:\\Users\\50370\\.nuget\\packages\\microsoft.netcore.app.host.win-x64\\5.0.17\\microsoft.netcore.app.host.win-x64.5.0.17.nupkg.sha512"
-  ],
+  "projectFilePath": "C:\\Users\\enriq\\source\\repos\\IsaiAlvarezF\\CalVenta\\LoginGeneral\\LoginGeneral.vbproj",
+  "expectedPackageFiles": [],
   "logs": []
 }
