@@ -7,13 +7,15 @@
 
     End Sub
     Private Sub Agregar()
-
-
-
         Try
             Dim lu As New LAccesos()
             lu.InsertarAcceso(TxtUsuario.Text, TxtAnydesk.Text, TxtRustDesk.Text, TxtPassAny.Text, TxtPassRust.Text)
-
+            Me.TxtUsuario.Text = Nothing
+            Me.TxtAnydesk.Text = Nothing
+            Me.TxtRustDesk.Text = Nothing
+            Me.TxtPassAny.Text = Nothing
+            Me.TxtPassRust.Text = Nothing
+            Me.TxtUsuario.Focus()
         Catch ex As Exception
             MsgBox(ex.Message)
         End Try
