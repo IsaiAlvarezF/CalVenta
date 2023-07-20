@@ -1,13 +1,24 @@
 ﻿Imports System.Data.Sql
 Imports System.Data.SqlClient
 Public Class Conexion
+    Private cadenaConexion As String = "Data Source=LAPTOP-CSURA\SOPORTIT;Initial Catalog=SoporteIt;Integrated Security=True"
+    'Configurar acceso a base de datos
+    Public Function conectar(ByRef con As SqlConnection) As Boolean
+        con = New SqlConnection(cadenaConexion)
+        'Using con As New SqlConnection("Data Source=LAPTOP-CSURA\SOPORTIT;Initial Catalog=SoporteIt;Integrated Security=True")
+        '    con.Open()
 
-    Protected conexion As New SqlConnection("Data Source=SOPORT-IT;Initial Catalog=SoporteIt;Integrated Security=True")
+        'End Using
 
-    Public Function conectar() As Boolean
+        'Try
 
+
+        'Catch ex As Exception
+        'Finally
+
+        'End Try
         Try
-            conexion.Open()
+            con.Open()
             Return True
 
         Catch ex As Exception
@@ -18,11 +29,11 @@ Public Class Conexion
 
     End Function
 
-    Public Sub desconectar()
+    Public Sub desconectar(ByRef con As SqlConnection)
 
         Try
-            If conexion.State = ConnectionState.Open Then
-                conexion.Close()
+            If con.State = ConnectionState.Open Then
+                con.Close()
 
             End If
         Catch ex As Exception
@@ -30,5 +41,7 @@ Public Class Conexion
         End Try
     End Sub
 
+    'Esto es una prueba
+    'Esto es una prueba 2 
 
 End Class
