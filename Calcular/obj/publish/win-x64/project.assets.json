@@ -14,11 +14,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\User\\source\\repos\\Calcular\\Calcular\\Calcular.vbproj",
+      "projectUniqueName": "C:\\Users\\User\\Desktop\\IsaiAlvarezF\\CalVenta\\Calcular\\Calcular.vbproj",
       "projectName": "Calcular",
-      "projectPath": "C:\\Users\\User\\source\\repos\\Calcular\\Calcular\\Calcular.vbproj",
+      "projectPath": "C:\\Users\\User\\Desktop\\IsaiAlvarezF\\CalVenta\\Calcular\\Calcular.vbproj",
       "packagesPath": "C:\\Users\\User\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\User\\source\\repos\\Calcular\\Calcular\\obj\\publish\\win-x64\\",
+      "outputPath": "C:\\Users\\User\\Desktop\\IsaiAlvarezF\\CalVenta\\Calcular\\obj\\publish\\win-x64\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\User\\AppData\\Roaming\\NuGet\\NuGet.Config",
