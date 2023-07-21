@@ -23,6 +23,9 @@ Public Class DAccesoRemotos
         IdUsuario = Id
     End Sub
 
+    Public Sub New()
+    End Sub
+
     Public Property IdUsuarioP As String
         Get
             Return IdUsuario
@@ -80,6 +83,37 @@ Public Class DAccesoRemotos
             PassRust = value
         End Set
     End Property
+
+    Public Function ConsultarAcceso() As DataTable
+        Dim con As SqlConnection = Nothing
+        Try
+            conectar(con)
+            cmd = New SqlCommand("SELECT * FROM AccesosRemotos")
+            cmd.Connection = con
+
+            If cmd.ExecuteNonQuery Then
+                Dim dt As New DataTable
+                Dim adp As New SqlDataAdapter(cmd)
+
+                adp.Fill(dt)
+
+                Return dt
+            Else
+                Return Nothing
+
+            End If
+
+        Catch ex As Exception
+            MsgBox(ex.Message)
+            Return Nothing
+
+        Finally
+
+            desconectar(con)
+        End Try
+    End Function
+
+
     Public Function InsertarAcceso(da As DAccesoRemotos) As Boolean
         Dim con As SqlConnection = Nothing
         Try

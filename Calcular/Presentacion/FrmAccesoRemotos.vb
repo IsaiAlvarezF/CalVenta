@@ -56,4 +56,23 @@
         Eliminar()
 
     End Sub
+
+
+
+    Private Sub Mostrar()
+        Dim textoConsulta As String = TextUsuario.Text.Trim()
+
+        Try
+            Dim lu As New LAccesos
+            Dim dt As DataTable = lu.consultarAcceso
+
+            DgvConsultar.DataSource = dt
+        Catch ex As Exception
+            MsgBox(ex.Message)
+        End Try
+    End Sub
+    Private Sub BtnConsultar_Click(sender As Object, e As EventArgs) Handles BtnConsultar.Click
+        Mostrar()
+
+    End Sub
 End Class
