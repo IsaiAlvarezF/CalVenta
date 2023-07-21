@@ -7,13 +7,24 @@
 
     End Sub
     Private Sub Agregar()
-
-
-
         Try
             Dim lu As New LAccesos()
             lu.InsertarAcceso(TxtUsuario.Text, TxtAnydesk.Text, TxtRustDesk.Text, TxtPassAny.Text, TxtPassRust.Text)
+            Me.TxtUsuario.Text = Nothing
+            Me.TxtAnydesk.Text = Nothing
+            Me.TxtRustDesk.Text = Nothing
+            Me.TxtPassAny.Text = Nothing
+            Me.TxtPassRust.Text = Nothing
+            Me.TxtUsuario.Focus()
+        Catch ex As Exception
+            MsgBox(ex.Message)
+        End Try
+    End Sub
 
+    Private Sub Eliminar()
+        Try
+            Dim la As New LAccesos()
+            la.EliminarAcceso(TextUsuario.Text)
         Catch ex As Exception
             MsgBox(ex.Message)
         End Try
@@ -38,5 +49,11 @@
 
     Private Sub BtnAgregar_Click(sender As Object, e As EventArgs) Handles BtnAgregar.Click
         TabPrincipal.SelectedIndex = 1
+
+    End Sub
+
+    Private Sub BtnEliminar_Click(sender As Object, e As EventArgs) Handles BtnEliminar.Click
+        Eliminar()
+
     End Sub
 End Class
