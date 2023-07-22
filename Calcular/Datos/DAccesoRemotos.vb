@@ -19,6 +19,10 @@ Public Class DAccesoRemotos
         PassRust = pRusk
     End Sub
 
+    Friend Function consulta() As DataTable
+        Throw New NotImplementedException()
+    End Function
+
     Public Sub New(Id As String)
         IdUsuario = Id
     End Sub
@@ -112,7 +116,25 @@ Public Class DAccesoRemotos
             desconectar(con)
         End Try
     End Function
+    Public adaptador As SqlDataAdapter
+    Sub consulta(ByVal Nombre_Usuario As String, ByVal dgv As DataGridView)
+        Dim con As SqlConnection = Nothing
+        Dim dt As New DataTable
 
+        Try
+            conectar(con)
+            adaptador = New SqlDataAdapter("SELECT * FROM AccesosRemotos WHERE NombreUsuario LIKE '" & Nombre_Usuario + "%" & "'", con)
+            dt = New DataTable
+            adaptador.Fill(dt)
+            dgv.DataSource = dt
+
+
+
+        Catch ex As Exception
+
+
+        End Try
+    End Sub
 
     Public Function InsertarAcceso(da As DAccesoRemotos) As Boolean
         Dim con As SqlConnection = Nothing
