@@ -24,7 +24,7 @@
     Private Sub Eliminar()
         Try
             Dim la As New LAccesos()
-            la.EliminarAcceso(TextUsuario.Text)
+            la.EliminarAcceso(TextConsultar.Text)
         Catch ex As Exception
             MsgBox(ex.Message)
         End Try
@@ -59,8 +59,9 @@
 
 
 
-    Private Sub Mostrar()
-        Dim textoConsulta As String = TextUsuario.Text.Trim()
+
+    Private Sub FrmAccesoRemotos_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+        Dim textoConsulta As String = TextConsultar.Text.Trim()
 
         Try
             Dim lu As New LAccesos
@@ -71,8 +72,24 @@
             MsgBox(ex.Message)
         End Try
     End Sub
-    Private Sub BtnConsultar_Click(sender As Object, e As EventArgs) Handles BtnConsultar.Click
-        Mostrar()
 
+    Private Sub TextUsuario_TextChanged(sender As Object, e As EventArgs) Handles TextConsultar.TextChanged
+        Dim obj As New DAccesoRemotos
+
+        obj.consulta(TextConsultar.Text, DgvConsultar)
     End Sub
+
+    Private Sub IconBuscar_Click(sender As Object, e As EventArgs) Handles IconBuscar.Click
+        Try
+            Dim lu As New LAccesos
+            Dim dt As DataTable = lu.consultarAcceso
+
+            DgvConsultar.DataSource = dt
+        Catch ex As Exception
+            MsgBox(ex.Message)
+        End Try
+    End Sub
+
+
+
 End Class

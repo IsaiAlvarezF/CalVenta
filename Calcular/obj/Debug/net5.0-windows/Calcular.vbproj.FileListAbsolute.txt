@@ -145,3 +145,4 @@ C:\Users\User\Desktop\IsaiAlvarezF\CalVenta\Calcular\bin\Debug\net5.0-windows\ru
 C:\Users\User\Desktop\IsaiAlvarezF\CalVenta\Calcular\bin\Debug\net5.0-windows\runtimes\win\lib\netcoreapp2.1\System.Data.SqlClient.dll
 C:\Users\User\Desktop\IsaiAlvarezF\CalVenta\Calcular\obj\Debug\net5.0-windows\Calcular.FrmAccesoRemotos.resources
 C:\Users\User\Desktop\IsaiAlvarezF\CalVenta\Calcular\obj\Debug\net5.0-windows\Calcular.vbproj.CopyComplete
+C:\Users\Son Isai\source\repos\IsaiAlvarezF\CalVenta\Calcular\bin\Debug\net5.0-windows\FontAwesome.Sharp.dll
