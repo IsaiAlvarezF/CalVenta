@@ -170,8 +170,11 @@ Public Class DAccesoRemotos
         Dim con As SqlConnection = Nothing
         Try
             conectar(con)
-            Dim sql As String = "EXEC DEL_USUARIO " & de.IdUsuario
+            Dim sql As String = "DEL_USUARIO"
             cmd = New SqlCommand(sql, con)
+            cmd.CommandType = CommandType.StoredProcedure
+            cmd.Parameters.Add("@idUsuario", SqlDbType.VarChar)
+            cmd.Parameters("@idusuario").Value = IdUsuario
             If cmd.ExecuteNonQuery() Then
                 MsgBox("El usuario se ha eliminado correctamemte")
                 Return True

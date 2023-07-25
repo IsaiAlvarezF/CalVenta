@@ -228,7 +228,7 @@ Partial Class FrmAccesoRemotos
         DgvConsultar.ReadOnly = True
         DgvConsultar.RowHeadersWidthSizeMode = DataGridViewRowHeadersWidthSizeMode.AutoSizeToAllHeaders
         DgvConsultar.RowTemplate.Height = 25
-        DgvConsultar.SelectionMode = DataGridViewSelectionMode.CellSelect
+        DgvConsultar.SelectionMode = DataGridViewSelectionMode.FullRowSelect
         DgvConsultar.Size = New Size(523, 165)
         DgvConsultar.TabIndex = 7
         ' 
