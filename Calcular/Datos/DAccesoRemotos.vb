@@ -96,12 +96,12 @@ Public Class DAccesoRemotos
             cmd.Connection = con
 
             If cmd.ExecuteNonQuery Then
-                Dim dt As New DataTable
-                Dim adp As New SqlDataAdapter(cmd)
+                Dim data As New DataTable
+                Dim adapt As New SqlDataAdapter(cmd)
 
-                adp.Fill(dt)
+                adapt.Fill(data)
 
-                Return dt
+                Return data
             Else
                 Return Nothing
 
@@ -116,23 +116,27 @@ Public Class DAccesoRemotos
             desconectar(con)
         End Try
     End Function
+
     Public adaptador As SqlDataAdapter
-    Sub consulta(ByVal Nombre_Usuario As String, ByVal dgv As DataGridView)
+
+    Sub consulta(ByVal Nombre_Usuario As String, ByVal DataGrid As DataGridView)
         Dim con As SqlConnection = Nothing
-        Dim dt As New DataTable
+        Dim data As New DataTable
 
         Try
             conectar(con)
-            adaptador = New SqlDataAdapter("SELECT * FROM AccesosRemotos WHERE NombreUsuario LIKE '" & Nombre_Usuario + "%" & "'", con)
-            dt = New DataTable
-            adaptador.Fill(dt)
-            dgv.DataSource = dt
+            adaptador = New SqlDataAdapter("SELECT * FROM SoporteIt.dbo.AccesosRemotos WHERE NombreUsuario LIKE '%" & Nombre_Usuario & "%'", con)
+            data = New DataTable
+            adaptador.Fill(data)
+            DataGrid.DataSource = data
 
 
 
         Catch ex As Exception
 
+        Finally
 
+            desconectar(con)
         End Try
     End Sub
 

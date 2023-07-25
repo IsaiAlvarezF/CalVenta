@@ -1,5 +1,5 @@
 ﻿Public Class FrmAccesoRemotos
-    Private Sub FrmAccesoRemotos(sender As Object, e As EventArgs) Handles MyBase.Load
+    Private Sub FrmAccesoRemotos(sender As Object, e As EventArgs)
         Me.Show()
         ' Habilitar el reconocimiento de la tecla Enter
         Me.AcceptButton = BtnInsertar
@@ -57,9 +57,6 @@
 
     End Sub
 
-
-
-
     Private Sub FrmAccesoRemotos_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         Dim textoConsulta As String = TextConsultar.Text.Trim()
 
@@ -74,22 +71,18 @@
     End Sub
 
     Private Sub TextUsuario_TextChanged(sender As Object, e As EventArgs) Handles TextConsultar.TextChanged
-        Dim obj As New DAccesoRemotos
+        Dim objeto As New DAccesoRemotos
 
-        obj.consulta(TextConsultar.Text, DgvConsultar)
+        objeto.consulta(TextConsultar.Text, DgvConsultar)
     End Sub
 
     Private Sub IconBuscar_Click(sender As Object, e As EventArgs) Handles IconBuscar.Click
-        Try
-            Dim lu As New LAccesos
-            Dim dt As DataTable = lu.consultarAcceso
+        TextConsultar.Text = ""
 
-            DgvConsultar.DataSource = dt
-        Catch ex As Exception
-            MsgBox(ex.Message)
-        End Try
+        Dim objeto As New DAccesoRemotos
+
+        objeto.consulta(TextConsultar.Text, DgvConsultar)
+
     End Sub
-
-
 
 End Class
