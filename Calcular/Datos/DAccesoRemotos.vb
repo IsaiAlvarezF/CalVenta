@@ -175,10 +175,11 @@ Public Class DAccesoRemotos
             cmd.CommandType = CommandType.StoredProcedure
             cmd.Parameters.Add("@idUsuario", SqlDbType.VarChar)
             cmd.Parameters("@idusuario").Value = IdUsuario
-            If cmd.ExecuteNonQuery() Then
-                MsgBox("El usuario se ha eliminado correctamemte")
+            If cmd.ExecuteScalar = 1 Then
+                'MsgBox("El usuario se ha eliminado correctamente")
                 Return True
             Else
+                MsgBox("El usuario no existe")
                 Return False
             End If
 

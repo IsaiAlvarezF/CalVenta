@@ -1,8 +1,10 @@
 ﻿Public Class FrmAccesoRemotos
     Private Sub FrmAccesoRemotos(sender As Object, e As EventArgs)
+        Me.DgvConsultar.ClearSelection()
         Me.Show()
         ' Habilitar el reconocimiento de la tecla Enter
         Me.AcceptButton = BtnInsertar
+
 
 
     End Sub
@@ -23,8 +25,19 @@
 
     Private Sub Eliminar()
         Try
+            Dim selected As DataGridViewSelectedRowCollection = DgvConsultar.SelectedRows
             Dim la As New LAccesos()
-            la.EliminarAcceso(TextConsultar.Text)
+            Dim acceso As New DAccesoRemotos
+
+            If selected.Count > 0 Then
+                For i As Integer = 0 To selected.Count - 1
+                    la.EliminarAcceso(selected.Item(i).Cells.Item(0).Value)
+                Next
+                MsgBox("Los usuarios se han eliminado correctamente")
+                acceso.consulta(TextConsultar.Text, DgvConsultar)
+            Else
+                MsgBox("No hay filas seleccionadas")
+            End If
         Catch ex As Exception
             MsgBox(ex.Message)
         End Try
