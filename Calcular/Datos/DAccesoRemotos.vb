@@ -19,6 +19,10 @@ Public Class DAccesoRemotos
         PassRust = pRusk
     End Sub
 
+    Friend Function consulta() As DataTable
+        Throw New NotImplementedException()
+    End Function
+
     Public Sub New(Id As String)
         IdUsuario = Id
     End Sub
@@ -92,12 +96,12 @@ Public Class DAccesoRemotos
             cmd.Connection = con
 
             If cmd.ExecuteNonQuery Then
-                Dim dt As New DataTable
-                Dim adp As New SqlDataAdapter(cmd)
+                Dim data As New DataTable
+                Dim adapt As New SqlDataAdapter(cmd)
 
-                adp.Fill(dt)
+                adapt.Fill(data)
 
-                Return dt
+                Return data
             Else
                 Return Nothing
 
@@ -113,6 +117,28 @@ Public Class DAccesoRemotos
         End Try
     End Function
 
+    Public adaptador As SqlDataAdapter
+
+    Sub consulta(ByVal Nombre_Usuario As String, ByVal DataGrid As DataGridView)
+        Dim con As SqlConnection = Nothing
+        Dim data As New DataTable
+
+        Try
+            conectar(con)
+            adaptador = New SqlDataAdapter("SELECT * FROM SoporteIt.dbo.AccesosRemotos WHERE NombreUsuario LIKE '%" & Nombre_Usuario & "%'", con)
+            data = New DataTable
+            adaptador.Fill(data)
+            DataGrid.DataSource = data
+
+
+
+        Catch ex As Exception
+
+        Finally
+
+            desconectar(con)
+        End Try
+    End Sub
 
     Public Function InsertarAcceso(da As DAccesoRemotos) As Boolean
         Dim con As SqlConnection = Nothing
@@ -144,12 +170,16 @@ Public Class DAccesoRemotos
         Dim con As SqlConnection = Nothing
         Try
             conectar(con)
-            Dim sql As String = "EXEC DEL_USUARIO " & de.IdUsuario
+            Dim sql As String = "DEL_USUARIO"
             cmd = New SqlCommand(sql, con)
-            If cmd.ExecuteNonQuery() Then
-                MsgBox("El usuario se ha eliminado correctamemte")
+            cmd.CommandType = CommandType.StoredProcedure
+            cmd.Parameters.Add("@idUsuario", SqlDbType.VarChar)
+            cmd.Parameters("@idusuario").Value = IdUsuario
+            If cmd.ExecuteScalar = 1 Then
+                'MsgBox("El usuario se ha eliminado correctamente")
                 Return True
             Else
+                MsgBox("El usuario no existe")
                 Return False
             End If
 

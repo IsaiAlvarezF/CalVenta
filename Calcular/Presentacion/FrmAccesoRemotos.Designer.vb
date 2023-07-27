@@ -22,287 +22,296 @@ Partial Class FrmAccesoRemotos
     'No lo modifique con el editor de código.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
-        Me.TabAgregar = New System.Windows.Forms.TabPage()
-        Me.LblUser = New System.Windows.Forms.Label()
-        Me.BtnInsertar = New System.Windows.Forms.Button()
-        Me.LblPRust = New System.Windows.Forms.Label()
-        Me.LblPAny = New System.Windows.Forms.Label()
-        Me.LvlRust = New System.Windows.Forms.Label()
-        Me.LblAny = New System.Windows.Forms.Label()
-        Me.TxtPassRust = New System.Windows.Forms.TextBox()
-        Me.TxtPassAny = New System.Windows.Forms.TextBox()
-        Me.TxtRustDesk = New System.Windows.Forms.TextBox()
-        Me.TxtAnydesk = New System.Windows.Forms.TextBox()
-        Me.TxtUsuario = New System.Windows.Forms.TextBox()
-        Me.LblDatosUsuario = New System.Windows.Forms.Label()
-        Me.TabPage1 = New System.Windows.Forms.TabPage()
-        Me.DgvConsultar = New System.Windows.Forms.DataGridView()
-        Me.LabelNota = New System.Windows.Forms.Label()
-        Me.TextUsuario = New System.Windows.Forms.TextBox()
-        Me.LblUsuario = New System.Windows.Forms.Label()
-        Me.BtnEliminar = New System.Windows.Forms.Button()
-        Me.BtnModificar = New System.Windows.Forms.Button()
-        Me.BtnConsultar = New System.Windows.Forms.Button()
-        Me.BtnAgregar = New System.Windows.Forms.Button()
-        Me.TabPrincipal = New System.Windows.Forms.TabControl()
-        Me.IconButton1 = New FontAwesome.Sharp.IconButton()
-        Me.TabAgregar.SuspendLayout()
-        Me.TabPage1.SuspendLayout()
-        CType(Me.DgvConsultar, System.ComponentModel.ISupportInitialize).BeginInit()
-        Me.TabPrincipal.SuspendLayout()
-        Me.SuspendLayout()
-        '
-        'TabAgregar
-        '
-        Me.TabAgregar.Controls.Add(Me.LblUser)
-        Me.TabAgregar.Controls.Add(Me.BtnInsertar)
-        Me.TabAgregar.Controls.Add(Me.LblPRust)
-        Me.TabAgregar.Controls.Add(Me.LblPAny)
-        Me.TabAgregar.Controls.Add(Me.LvlRust)
-        Me.TabAgregar.Controls.Add(Me.LblAny)
-        Me.TabAgregar.Controls.Add(Me.TxtPassRust)
-        Me.TabAgregar.Controls.Add(Me.TxtPassAny)
-        Me.TabAgregar.Controls.Add(Me.TxtRustDesk)
-        Me.TabAgregar.Controls.Add(Me.TxtAnydesk)
-        Me.TabAgregar.Controls.Add(Me.TxtUsuario)
-        Me.TabAgregar.Controls.Add(Me.LblDatosUsuario)
-        Me.TabAgregar.Location = New System.Drawing.Point(4, 24)
-        Me.TabAgregar.Name = "TabAgregar"
-        Me.TabAgregar.Padding = New System.Windows.Forms.Padding(3)
-        Me.TabAgregar.Size = New System.Drawing.Size(370, 290)
-        Me.TabAgregar.TabIndex = 1
-        Me.TabAgregar.Text = "Agregar usuario"
-        Me.TabAgregar.UseVisualStyleBackColor = True
-        '
-        'LblUser
-        '
-        Me.LblUser.AutoSize = True
-        Me.LblUser.Location = New System.Drawing.Point(7, 54)
-        Me.LblUser.Name = "LblUser"
-        Me.LblUser.Size = New System.Drawing.Size(113, 15)
-        Me.LblUser.TabIndex = 11
-        Me.LblUser.Text = "Nombre de Usuario:"
-        '
-        'BtnInsertar
-        '
-        Me.BtnInsertar.Location = New System.Drawing.Point(123, 238)
-        Me.BtnInsertar.Name = "BtnInsertar"
-        Me.BtnInsertar.Size = New System.Drawing.Size(105, 23)
-        Me.BtnInsertar.TabIndex = 10
-        Me.BtnInsertar.Text = "Insertar Usuario"
-        Me.BtnInsertar.UseVisualStyleBackColor = True
-        '
-        'LblPRust
-        '
-        Me.LblPRust.AutoSize = True
-        Me.LblPRust.Location = New System.Drawing.Point(205, 159)
-        Me.LblPRust.Name = "LblPRust"
-        Me.LblPRust.Size = New System.Drawing.Size(111, 15)
-        Me.LblPRust.TabIndex = 9
-        Me.LblPRust.Text = "Password RustDesk:"
-        '
-        'LblPAny
-        '
-        Me.LblPAny.AutoSize = True
-        Me.LblPAny.Location = New System.Drawing.Point(12, 159)
-        Me.LblPAny.Name = "LblPAny"
-        Me.LblPAny.Size = New System.Drawing.Size(108, 15)
-        Me.LblPAny.TabIndex = 8
-        Me.LblPAny.Text = "Password Anydesk:"
-        '
-        'LvlRust
-        '
-        Me.LvlRust.AutoSize = True
-        Me.LvlRust.Location = New System.Drawing.Point(204, 84)
-        Me.LvlRust.Name = "LvlRust"
-        Me.LvlRust.Size = New System.Drawing.Size(71, 15)
-        Me.LvlRust.TabIndex = 7
-        Me.LvlRust.Text = "Id RustDesk:"
-        '
-        'LblAny
-        '
-        Me.LblAny.AutoSize = True
-        Me.LblAny.Location = New System.Drawing.Point(15, 84)
-        Me.LblAny.Name = "LblAny"
-        Me.LblAny.Size = New System.Drawing.Size(68, 15)
-        Me.LblAny.TabIndex = 6
-        Me.LblAny.Text = "Id Anydesk:"
-        '
-        'TxtPassRust
-        '
-        Me.TxtPassRust.Location = New System.Drawing.Point(204, 188)
-        Me.TxtPassRust.Name = "TxtPassRust"
-        Me.TxtPassRust.Size = New System.Drawing.Size(112, 23)
-        Me.TxtPassRust.TabIndex = 5
-        '
-        'TxtPassAny
-        '
-        Me.TxtPassAny.Location = New System.Drawing.Point(15, 188)
-        Me.TxtPassAny.Name = "TxtPassAny"
-        Me.TxtPassAny.Size = New System.Drawing.Size(118, 23)
-        Me.TxtPassAny.TabIndex = 4
-        '
-        'TxtRustDesk
-        '
-        Me.TxtRustDesk.Location = New System.Drawing.Point(205, 111)
-        Me.TxtRustDesk.Name = "TxtRustDesk"
-        Me.TxtRustDesk.Size = New System.Drawing.Size(112, 23)
-        Me.TxtRustDesk.TabIndex = 3
-        '
-        'TxtAnydesk
-        '
-        Me.TxtAnydesk.Location = New System.Drawing.Point(15, 111)
-        Me.TxtAnydesk.Name = "TxtAnydesk"
-        Me.TxtAnydesk.Size = New System.Drawing.Size(118, 23)
-        Me.TxtAnydesk.TabIndex = 2
-        '
-        'TxtUsuario
-        '
-        Me.TxtUsuario.Location = New System.Drawing.Point(126, 51)
-        Me.TxtUsuario.Name = "TxtUsuario"
-        Me.TxtUsuario.Size = New System.Drawing.Size(135, 23)
-        Me.TxtUsuario.TabIndex = 1
-        '
-        'LblDatosUsuario
-        '
-        Me.LblDatosUsuario.AutoSize = True
-        Me.LblDatosUsuario.Location = New System.Drawing.Point(15, 23)
-        Me.LblDatosUsuario.Name = "LblDatosUsuario"
-        Me.LblDatosUsuario.Size = New System.Drawing.Size(96, 15)
-        Me.LblDatosUsuario.TabIndex = 0
-        Me.LblDatosUsuario.Text = "Datos de Usuario"
-        '
-        'TabPage1
-        '
-        Me.TabPage1.Controls.Add(Me.IconButton1)
-        Me.TabPage1.Controls.Add(Me.DgvConsultar)
-        Me.TabPage1.Controls.Add(Me.LabelNota)
-        Me.TabPage1.Controls.Add(Me.TextUsuario)
-        Me.TabPage1.Controls.Add(Me.LblUsuario)
-        Me.TabPage1.Controls.Add(Me.BtnEliminar)
-        Me.TabPage1.Controls.Add(Me.BtnModificar)
-        Me.TabPage1.Controls.Add(Me.BtnConsultar)
-        Me.TabPage1.Controls.Add(Me.BtnAgregar)
-        Me.TabPage1.Location = New System.Drawing.Point(4, 24)
-        Me.TabPage1.Name = "TabPage1"
-        Me.TabPage1.Padding = New System.Windows.Forms.Padding(3)
-        Me.TabPage1.Size = New System.Drawing.Size(370, 290)
-        Me.TabPage1.TabIndex = 0
-        Me.TabPage1.Text = "Acceso"
-        Me.TabPage1.UseVisualStyleBackColor = True
-        '
-        'DgvConsultar
-        '
-        Me.DgvConsultar.BackgroundColor = System.Drawing.SystemColors.HotTrack
-        Me.DgvConsultar.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.DgvConsultar.Location = New System.Drawing.Point(12, 57)
-        Me.DgvConsultar.Name = "DgvConsultar"
-        Me.DgvConsultar.RowTemplate.Height = 25
-        Me.DgvConsultar.Size = New System.Drawing.Size(335, 165)
-        Me.DgvConsultar.TabIndex = 7
-        '
-        'LabelNota
-        '
-        Me.LabelNota.AutoSize = True
-        Me.LabelNota.Font = New System.Drawing.Font("Segoe UI", 6.5!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point)
-        Me.LabelNota.Location = New System.Drawing.Point(62, 42)
-        Me.LabelNota.Name = "LabelNota"
-        Me.LabelNota.Size = New System.Drawing.Size(255, 12)
-        Me.LabelNota.TabIndex = 6
-        Me.LabelNota.Text = "*Actualmente solo se puede ingresar un IdUsuario para eliminar"
-        '
-        'TextUsuario
-        '
-        Me.TextUsuario.Location = New System.Drawing.Point(62, 16)
-        Me.TextUsuario.Name = "TextUsuario"
-        Me.TextUsuario.Size = New System.Drawing.Size(262, 23)
-        Me.TextUsuario.TabIndex = 5
-        '
-        'LblUsuario
-        '
-        Me.LblUsuario.AutoSize = True
-        Me.LblUsuario.Location = New System.Drawing.Point(6, 19)
-        Me.LblUsuario.Name = "LblUsuario"
-        Me.LblUsuario.Size = New System.Drawing.Size(50, 15)
-        Me.LblUsuario.TabIndex = 4
-        Me.LblUsuario.Text = "Usuario:"
-        '
-        'BtnEliminar
-        '
-        Me.BtnEliminar.Location = New System.Drawing.Point(249, 252)
-        Me.BtnEliminar.Name = "BtnEliminar"
-        Me.BtnEliminar.Size = New System.Drawing.Size(75, 23)
-        Me.BtnEliminar.TabIndex = 3
-        Me.BtnEliminar.Text = "Eliminar"
-        Me.BtnEliminar.UseVisualStyleBackColor = True
-        '
-        'BtnModificar
-        '
-        Me.BtnModificar.Location = New System.Drawing.Point(168, 252)
-        Me.BtnModificar.Name = "BtnModificar"
-        Me.BtnModificar.Size = New System.Drawing.Size(75, 23)
-        Me.BtnModificar.TabIndex = 2
-        Me.BtnModificar.Text = "Modificar"
-        Me.BtnModificar.UseVisualStyleBackColor = True
-        '
-        'BtnConsultar
-        '
-        Me.BtnConsultar.Location = New System.Drawing.Point(87, 253)
-        Me.BtnConsultar.Name = "BtnConsultar"
-        Me.BtnConsultar.Size = New System.Drawing.Size(75, 23)
-        Me.BtnConsultar.TabIndex = 1
-        Me.BtnConsultar.Text = "Consultar"
-        Me.BtnConsultar.UseVisualStyleBackColor = True
-        '
-        'BtnAgregar
-        '
-        Me.BtnAgregar.Location = New System.Drawing.Point(6, 253)
-        Me.BtnAgregar.Name = "BtnAgregar"
-        Me.BtnAgregar.Size = New System.Drawing.Size(75, 23)
-        Me.BtnAgregar.TabIndex = 0
-        Me.BtnAgregar.Text = "Agregar"
-        Me.BtnAgregar.UseVisualStyleBackColor = True
-        '
-        'TabPrincipal
-        '
-        Me.TabPrincipal.Controls.Add(Me.TabPage1)
-        Me.TabPrincipal.Controls.Add(Me.TabAgregar)
-        Me.TabPrincipal.Location = New System.Drawing.Point(12, 12)
-        Me.TabPrincipal.Name = "TabPrincipal"
-        Me.TabPrincipal.SelectedIndex = 0
-        Me.TabPrincipal.Size = New System.Drawing.Size(378, 318)
-        Me.TabPrincipal.TabIndex = 1
-        '
-        'IconButton1
-        '
-        Me.IconButton1.IconChar = FontAwesome.Sharp.IconChar.MagnifyingGlass
-        Me.IconButton1.IconColor = System.Drawing.Color.Black
-        Me.IconButton1.IconFont = FontAwesome.Sharp.IconFont.[Auto]
-        Me.IconButton1.IconSize = 25
-        Me.IconButton1.Location = New System.Drawing.Point(330, 10)
-        Me.IconButton1.Name = "IconButton1"
-        Me.IconButton1.Size = New System.Drawing.Size(34, 32)
-        Me.IconButton1.TabIndex = 8
-        Me.IconButton1.UseVisualStyleBackColor = True
-        '
-        'FrmAccesoRemotos
-        '
-        Me.AutoScaleDimensions = New System.Drawing.SizeF(7.0!, 15.0!)
-        Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.BackColor = System.Drawing.SystemColors.ActiveCaption
-        Me.ClientSize = New System.Drawing.Size(402, 350)
-        Me.Controls.Add(Me.TabPrincipal)
-        Me.Name = "FrmAccesoRemotos"
-        Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
-        Me.Text = "Acceso Remotos"
-        Me.TabAgregar.ResumeLayout(False)
-        Me.TabAgregar.PerformLayout()
-        Me.TabPage1.ResumeLayout(False)
-        Me.TabPage1.PerformLayout()
-        CType(Me.DgvConsultar, System.ComponentModel.ISupportInitialize).EndInit()
-        Me.TabPrincipal.ResumeLayout(False)
-        Me.ResumeLayout(False)
-
+        Dim DataGridViewCellStyle1 As DataGridViewCellStyle = New DataGridViewCellStyle()
+        Dim DataGridViewCellStyle2 As DataGridViewCellStyle = New DataGridViewCellStyle()
+        TabAgregar = New TabPage()
+        LblUser = New Label()
+        BtnInsertar = New Button()
+        LblPRust = New Label()
+        LblPAny = New Label()
+        LvlRust = New Label()
+        LblAny = New Label()
+        TxtPassRust = New TextBox()
+        TxtPassAny = New TextBox()
+        TxtRustDesk = New TextBox()
+        TxtAnydesk = New TextBox()
+        TxtUsuario = New TextBox()
+        LblDatosUsuario = New Label()
+        TabPage1 = New TabPage()
+        IconBuscar = New FontAwesome.Sharp.IconButton()
+        DgvConsultar = New DataGridView()
+        LabelNota = New Label()
+        TextConsultar = New TextBox()
+        LblUsuario = New Label()
+        BtnEliminar = New Button()
+        BtnModificar = New Button()
+        BtnAgregar = New Button()
+        TabPrincipal = New TabControl()
+        TabAgregar.SuspendLayout()
+        TabPage1.SuspendLayout()
+        CType(DgvConsultar, ComponentModel.ISupportInitialize).BeginInit()
+        TabPrincipal.SuspendLayout()
+        SuspendLayout()
+        ' 
+        ' TabAgregar
+        ' 
+        TabAgregar.Controls.Add(LblUser)
+        TabAgregar.Controls.Add(BtnInsertar)
+        TabAgregar.Controls.Add(LblPRust)
+        TabAgregar.Controls.Add(LblPAny)
+        TabAgregar.Controls.Add(LvlRust)
+        TabAgregar.Controls.Add(LblAny)
+        TabAgregar.Controls.Add(TxtPassRust)
+        TabAgregar.Controls.Add(TxtPassAny)
+        TabAgregar.Controls.Add(TxtRustDesk)
+        TabAgregar.Controls.Add(TxtAnydesk)
+        TabAgregar.Controls.Add(TxtUsuario)
+        TabAgregar.Controls.Add(LblDatosUsuario)
+        TabAgregar.Location = New Point(4, 24)
+        TabAgregar.Name = "TabAgregar"
+        TabAgregar.Padding = New Padding(3)
+        TabAgregar.Size = New Size(555, 290)
+        TabAgregar.TabIndex = 1
+        TabAgregar.Text = "Agregar usuario"
+        TabAgregar.UseVisualStyleBackColor = True
+        ' 
+        ' LblUser
+        ' 
+        LblUser.AutoSize = True
+        LblUser.Location = New Point(7, 54)
+        LblUser.Name = "LblUser"
+        LblUser.Size = New Size(113, 15)
+        LblUser.TabIndex = 11
+        LblUser.Text = "Nombre de Usuario:"
+        ' 
+        ' BtnInsertar
+        ' 
+        BtnInsertar.Location = New Point(123, 238)
+        BtnInsertar.Name = "BtnInsertar"
+        BtnInsertar.Size = New Size(105, 23)
+        BtnInsertar.TabIndex = 10
+        BtnInsertar.Text = "Insertar Usuario"
+        BtnInsertar.UseVisualStyleBackColor = True
+        ' 
+        ' LblPRust
+        ' 
+        LblPRust.AutoSize = True
+        LblPRust.Location = New Point(205, 159)
+        LblPRust.Name = "LblPRust"
+        LblPRust.Size = New Size(111, 15)
+        LblPRust.TabIndex = 9
+        LblPRust.Text = "Password RustDesk:"
+        ' 
+        ' LblPAny
+        ' 
+        LblPAny.AutoSize = True
+        LblPAny.Location = New Point(12, 159)
+        LblPAny.Name = "LblPAny"
+        LblPAny.Size = New Size(108, 15)
+        LblPAny.TabIndex = 8
+        LblPAny.Text = "Password Anydesk:"
+        ' 
+        ' LvlRust
+        ' 
+        LvlRust.AutoSize = True
+        LvlRust.Location = New Point(204, 84)
+        LvlRust.Name = "LvlRust"
+        LvlRust.Size = New Size(71, 15)
+        LvlRust.TabIndex = 7
+        LvlRust.Text = "Id RustDesk:"
+        ' 
+        ' LblAny
+        ' 
+        LblAny.AutoSize = True
+        LblAny.Location = New Point(15, 84)
+        LblAny.Name = "LblAny"
+        LblAny.Size = New Size(68, 15)
+        LblAny.TabIndex = 6
+        LblAny.Text = "Id Anydesk:"
+        ' 
+        ' TxtPassRust
+        ' 
+        TxtPassRust.Location = New Point(204, 188)
+        TxtPassRust.Name = "TxtPassRust"
+        TxtPassRust.Size = New Size(112, 23)
+        TxtPassRust.TabIndex = 5
+        ' 
+        ' TxtPassAny
+        ' 
+        TxtPassAny.Location = New Point(15, 188)
+        TxtPassAny.Name = "TxtPassAny"
+        TxtPassAny.Size = New Size(118, 23)
+        TxtPassAny.TabIndex = 4
+        ' 
+        ' TxtRustDesk
+        ' 
+        TxtRustDesk.Location = New Point(205, 111)
+        TxtRustDesk.Name = "TxtRustDesk"
+        TxtRustDesk.Size = New Size(112, 23)
+        TxtRustDesk.TabIndex = 3
+        ' 
+        ' TxtAnydesk
+        ' 
+        TxtAnydesk.Location = New Point(15, 111)
+        TxtAnydesk.Name = "TxtAnydesk"
+        TxtAnydesk.Size = New Size(118, 23)
+        TxtAnydesk.TabIndex = 2
+        ' 
+        ' TxtUsuario
+        ' 
+        TxtUsuario.Location = New Point(126, 51)
+        TxtUsuario.Name = "TxtUsuario"
+        TxtUsuario.Size = New Size(135, 23)
+        TxtUsuario.TabIndex = 1
+        ' 
+        ' LblDatosUsuario
+        ' 
+        LblDatosUsuario.AutoSize = True
+        LblDatosUsuario.Location = New Point(12, 20)
+        LblDatosUsuario.Name = "LblDatosUsuario"
+        LblDatosUsuario.Size = New Size(96, 15)
+        LblDatosUsuario.TabIndex = 0
+        LblDatosUsuario.Text = "Datos de Usuario"
+        ' 
+        ' TabPage1
+        ' 
+        TabPage1.Controls.Add(IconBuscar)
+        TabPage1.Controls.Add(DgvConsultar)
+        TabPage1.Controls.Add(LabelNota)
+        TabPage1.Controls.Add(TextConsultar)
+        TabPage1.Controls.Add(LblUsuario)
+        TabPage1.Controls.Add(BtnEliminar)
+        TabPage1.Controls.Add(BtnModificar)
+        TabPage1.Controls.Add(BtnAgregar)
+        TabPage1.Location = New Point(4, 24)
+        TabPage1.Name = "TabPage1"
+        TabPage1.Padding = New Padding(3)
+        TabPage1.Size = New Size(555, 290)
+        TabPage1.TabIndex = 0
+        TabPage1.Text = "Acceso"
+        TabPage1.UseVisualStyleBackColor = True
+        ' 
+        ' IconBuscar
+        ' 
+        IconBuscar.IconChar = FontAwesome.Sharp.IconChar.MagnifyingGlass
+        IconBuscar.IconColor = Color.Black
+        IconBuscar.IconFont = FontAwesome.Sharp.IconFont.Auto
+        IconBuscar.IconSize = 25
+        IconBuscar.Location = New Point(330, 10)
+        IconBuscar.Name = "IconBuscar"
+        IconBuscar.Size = New Size(34, 32)
+        IconBuscar.TabIndex = 8
+        IconBuscar.UseVisualStyleBackColor = True
+        ' 
+        ' DgvConsultar
+        ' 
+        DgvConsultar.AllowUserToAddRows = False
+        DataGridViewCellStyle1.BackColor = Color.AliceBlue
+        DataGridViewCellStyle1.ForeColor = Color.Black
+        DataGridViewCellStyle1.SelectionBackColor = Color.Blue
+        DgvConsultar.AlternatingRowsDefaultCellStyle = DataGridViewCellStyle1
+        DgvConsultar.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill
+        DgvConsultar.BackgroundColor = SystemColors.ScrollBar
+        DgvConsultar.CellBorderStyle = DataGridViewCellBorderStyle.None
+        DgvConsultar.ColumnHeadersBorderStyle = DataGridViewHeaderBorderStyle.None
+        DataGridViewCellStyle2.Alignment = DataGridViewContentAlignment.MiddleLeft
+        DataGridViewCellStyle2.BackColor = Color.Azure
+        DataGridViewCellStyle2.Font = New Font("Tahoma", 9.75F, FontStyle.Italic, GraphicsUnit.Point)
+        DataGridViewCellStyle2.ForeColor = Color.Blue
+        DataGridViewCellStyle2.SelectionBackColor = SystemColors.Highlight
+        DataGridViewCellStyle2.SelectionForeColor = SystemColors.HighlightText
+        DataGridViewCellStyle2.WrapMode = DataGridViewTriState.True
+        DgvConsultar.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle2
+        DgvConsultar.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize
+        DgvConsultar.Location = New Point(10, 57)
+        DgvConsultar.Name = "DgvConsultar"
+        DgvConsultar.ReadOnly = True
+        DgvConsultar.RowHeadersWidthSizeMode = DataGridViewRowHeadersWidthSizeMode.AutoSizeToAllHeaders
+        DgvConsultar.RowTemplate.Height = 25
+        DgvConsultar.SelectionMode = DataGridViewSelectionMode.FullRowSelect
+        DgvConsultar.Size = New Size(523, 165)
+        DgvConsultar.TabIndex = 7
+        ' 
+        ' LabelNota
+        ' 
+        LabelNota.AutoSize = True
+        LabelNota.Font = New Font("Segoe UI", 6.5F, FontStyle.Regular, GraphicsUnit.Point)
+        LabelNota.Location = New Point(62, 42)
+        LabelNota.Name = "LabelNota"
+        LabelNota.Size = New Size(255, 12)
+        LabelNota.TabIndex = 6
+        LabelNota.Text = "*Actualmente solo se puede ingresar un IdUsuario para eliminar"
+        ' 
+        ' TextConsultar
+        ' 
+        TextConsultar.Location = New Point(62, 16)
+        TextConsultar.Name = "TextConsultar"
+        TextConsultar.Size = New Size(262, 23)
+        TextConsultar.TabIndex = 5
+        ' 
+        ' LblUsuario
+        ' 
+        LblUsuario.AutoSize = True
+        LblUsuario.Location = New Point(6, 19)
+        LblUsuario.Name = "LblUsuario"
+        LblUsuario.Size = New Size(50, 15)
+        LblUsuario.TabIndex = 4
+        LblUsuario.Text = "Usuario:"
+        ' 
+        ' BtnEliminar
+        ' 
+        BtnEliminar.Location = New Point(458, 253)
+        BtnEliminar.Name = "BtnEliminar"
+        BtnEliminar.Size = New Size(75, 23)
+        BtnEliminar.TabIndex = 3
+        BtnEliminar.Text = "Eliminar"
+        BtnEliminar.UseVisualStyleBackColor = True
+        ' 
+        ' BtnModificar
+        ' 
+        BtnModificar.Location = New Point(249, 253)
+        BtnModificar.Name = "BtnModificar"
+        BtnModificar.Size = New Size(75, 23)
+        BtnModificar.TabIndex = 2
+        BtnModificar.Text = "Modificar"
+        BtnModificar.UseVisualStyleBackColor = True
+        ' 
+        ' BtnAgregar
+        ' 
+        BtnAgregar.Location = New Point(10, 253)
+        BtnAgregar.Name = "BtnAgregar"
+        BtnAgregar.Size = New Size(75, 23)
+        BtnAgregar.TabIndex = 0
+        BtnAgregar.Text = "Agregar"
+        BtnAgregar.UseVisualStyleBackColor = True
+        ' 
+        ' TabPrincipal
+        ' 
+        TabPrincipal.Controls.Add(TabPage1)
+        TabPrincipal.Controls.Add(TabAgregar)
+        TabPrincipal.Location = New Point(12, 12)
+        TabPrincipal.Name = "TabPrincipal"
+        TabPrincipal.SelectedIndex = 0
+        TabPrincipal.Size = New Size(563, 318)
+        TabPrincipal.TabIndex = 1
+        ' 
+        ' FrmAccesoRemotos
+        ' 
+        AutoScaleDimensions = New SizeF(7F, 15F)
+        AutoScaleMode = AutoScaleMode.Font
+        BackColor = SystemColors.ActiveCaption
+        ClientSize = New Size(587, 346)
+        Controls.Add(TabPrincipal)
+        Name = "FrmAccesoRemotos"
+        StartPosition = FormStartPosition.CenterScreen
+        Text = "Acceso Remotos"
+        TabAgregar.ResumeLayout(False)
+        TabAgregar.PerformLayout()
+        TabPage1.ResumeLayout(False)
+        TabPage1.PerformLayout()
+        CType(DgvConsultar, ComponentModel.ISupportInitialize).EndInit()
+        TabPrincipal.ResumeLayout(False)
+        ResumeLayout(False)
     End Sub
 
     Friend WithEvents TabAgregar As TabPage
@@ -320,13 +329,12 @@ Partial Class FrmAccesoRemotos
     Friend WithEvents LblDatosUsuario As Label
     Friend WithEvents TabPage1 As TabPage
     Friend WithEvents LabelNota As Label
-    Friend WithEvents TextUsuario As TextBox
+    Friend WithEvents TextConsultar As TextBox
     Friend WithEvents LblUsuario As Label
     Friend WithEvents BtnEliminar As Button
     Friend WithEvents BtnModificar As Button
-    Friend WithEvents BtnConsultar As Button
     Friend WithEvents BtnAgregar As Button
     Friend WithEvents TabPrincipal As TabControl
     Friend WithEvents DgvConsultar As DataGridView
-    Friend WithEvents IconButton1 As FontAwesome.Sharp.IconButton
+    Friend WithEvents IconBuscar As FontAwesome.Sharp.IconButton
 End Class
