@@ -1,9 +1,10 @@
 ﻿Imports System.Data.Sql
 Imports System.Data.SqlClient
 Public Class Conexion
-    Private cadenaConexion As String = "Data Source=LAPTOP-CSURA\SOPORTIT;Initial Catalog=SoporteIt;Integrated Security=True"
+    'Private cadenaConexion As String = "Data Source=LAPTOP-CSURA\SOPORTIT;Initial Catalog=SoporteIt;Integrated Security=True"
+    Private cadenaConexion As String = "Data Source=SOPORT-IT;Initial Catalog=SoporteIt;Integrated Security=True"
     'Configurar acceso a base de datos
-    Public Function conectar(ByRef con As SqlConnection) As Boolean
+    Public Function conectar(ByRef con As sqlconnection) As Boolean
         con = New SqlConnection(cadenaConexion)
         'Using con As New SqlConnection("Data Source=LAPTOP-CSURA\SOPORTIT;Initial Catalog=SoporteIt;Integrated Security=True")
         '    con.Open()

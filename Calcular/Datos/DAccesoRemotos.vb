@@ -3,7 +3,7 @@ Imports System.Data.SqlClient
 
 Public Class DAccesoRemotos
     Inherits Conexion
-    Private Id As Integer
+    Private IdUsuario As String
     Private NombreUsuario As String
     Private AccesoAnydesk As String
     Private AccesoRuskDesk As String
@@ -19,12 +19,19 @@ Public Class DAccesoRemotos
         PassRust = pRusk
     End Sub
 
-    Public Property IdUsuario As Integer
+    Public Sub New(Id As String)
+        IdUsuario = Id
+    End Sub
+
+    Public Sub New()
+    End Sub
+
+    Public Property IdUsuarioP As String
         Get
-            Return Id
+            Return IdUsuario
         End Get
-        Set(value As Integer)
-            Id = value
+        Set(value As String)
+            IdUsuario = value
         End Set
     End Property
     Public Property Nombre_Usuario As String
@@ -76,6 +83,37 @@ Public Class DAccesoRemotos
             PassRust = value
         End Set
     End Property
+
+    Public Function ConsultarAcceso() As DataTable
+        Dim con As SqlConnection = Nothing
+        Try
+            conectar(con)
+            cmd = New SqlCommand("SELECT * FROM AccesosRemotos")
+            cmd.Connection = con
+
+            If cmd.ExecuteNonQuery Then
+                Dim dt As New DataTable
+                Dim adp As New SqlDataAdapter(cmd)
+
+                adp.Fill(dt)
+
+                Return dt
+            Else
+                Return Nothing
+
+            End If
+
+        Catch ex As Exception
+            MsgBox(ex.Message)
+            Return Nothing
+
+        Finally
+
+            desconectar(con)
+        End Try
+    End Function
+
+
     Public Function InsertarAcceso(da As DAccesoRemotos) As Boolean
         Dim con As SqlConnection = Nothing
         Try
@@ -95,6 +133,29 @@ Public Class DAccesoRemotos
             MsgBox(ex.Message)
             Return False
 
+
+        Finally
+            desconectar(con)
+
+        End Try
+    End Function
+
+    Public Function EliminarAceso(de As DAccesoRemotos) As Boolean
+        Dim con As SqlConnection = Nothing
+        Try
+            conectar(con)
+            Dim sql As String = "EXEC DEL_USUARIO " & de.IdUsuario
+            cmd = New SqlCommand(sql, con)
+            If cmd.ExecuteNonQuery() Then
+                MsgBox("El usuario se ha eliminado correctamemte")
+                Return True
+            Else
+                Return False
+            End If
+
+        Catch ex As Exception
+            MsgBox(ex.Message)
+            Return False
 
         Finally
             desconectar(con)

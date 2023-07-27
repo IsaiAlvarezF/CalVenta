@@ -22,13 +22,6 @@ Partial Class FrmAccesoRemotos
     'No lo modifique con el editor de código.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
-        Me.TabPrincipal = New System.Windows.Forms.TabControl()
-        Me.TabPage1 = New System.Windows.Forms.TabPage()
-        Me.LblUsuario = New System.Windows.Forms.Label()
-        Me.BtnEliminar = New System.Windows.Forms.Button()
-        Me.BtnModificar = New System.Windows.Forms.Button()
-        Me.BtnConsultar = New System.Windows.Forms.Button()
-        Me.BtnAgregar = New System.Windows.Forms.Button()
         Me.TabAgregar = New System.Windows.Forms.TabPage()
         Me.LblUser = New System.Windows.Forms.Label()
         Me.BtnInsertar = New System.Windows.Forms.Button()
@@ -42,80 +35,22 @@ Partial Class FrmAccesoRemotos
         Me.TxtAnydesk = New System.Windows.Forms.TextBox()
         Me.TxtUsuario = New System.Windows.Forms.TextBox()
         Me.LblDatosUsuario = New System.Windows.Forms.Label()
-        Me.TabPrincipal.SuspendLayout()
-        Me.TabPage1.SuspendLayout()
+        Me.TabPage1 = New System.Windows.Forms.TabPage()
+        Me.DgvConsultar = New System.Windows.Forms.DataGridView()
+        Me.LabelNota = New System.Windows.Forms.Label()
+        Me.TextUsuario = New System.Windows.Forms.TextBox()
+        Me.LblUsuario = New System.Windows.Forms.Label()
+        Me.BtnEliminar = New System.Windows.Forms.Button()
+        Me.BtnModificar = New System.Windows.Forms.Button()
+        Me.BtnConsultar = New System.Windows.Forms.Button()
+        Me.BtnAgregar = New System.Windows.Forms.Button()
+        Me.TabPrincipal = New System.Windows.Forms.TabControl()
+        Me.IconButton1 = New FontAwesome.Sharp.IconButton()
         Me.TabAgregar.SuspendLayout()
+        Me.TabPage1.SuspendLayout()
+        CType(Me.DgvConsultar, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.TabPrincipal.SuspendLayout()
         Me.SuspendLayout()
-        '
-        'TabPrincipal
-        '
-        Me.TabPrincipal.Controls.Add(Me.TabPage1)
-        Me.TabPrincipal.Controls.Add(Me.TabAgregar)
-        Me.TabPrincipal.Location = New System.Drawing.Point(12, 12)
-        Me.TabPrincipal.Name = "TabPrincipal"
-        Me.TabPrincipal.SelectedIndex = 0
-        Me.TabPrincipal.Size = New System.Drawing.Size(355, 318)
-        Me.TabPrincipal.TabIndex = 1
-        '
-        'TabPage1
-        '
-        Me.TabPage1.Controls.Add(Me.LblUsuario)
-        Me.TabPage1.Controls.Add(Me.BtnEliminar)
-        Me.TabPage1.Controls.Add(Me.BtnModificar)
-        Me.TabPage1.Controls.Add(Me.BtnConsultar)
-        Me.TabPage1.Controls.Add(Me.BtnAgregar)
-        Me.TabPage1.Location = New System.Drawing.Point(4, 24)
-        Me.TabPage1.Name = "TabPage1"
-        Me.TabPage1.Padding = New System.Windows.Forms.Padding(3)
-        Me.TabPage1.Size = New System.Drawing.Size(347, 290)
-        Me.TabPage1.TabIndex = 0
-        Me.TabPage1.Text = "Acceso"
-        Me.TabPage1.UseVisualStyleBackColor = True
-        '
-        'LblUsuario
-        '
-        Me.LblUsuario.AutoSize = True
-        Me.LblUsuario.Location = New System.Drawing.Point(9, 24)
-        Me.LblUsuario.Name = "LblUsuario"
-        Me.LblUsuario.Size = New System.Drawing.Size(50, 15)
-        Me.LblUsuario.TabIndex = 4
-        Me.LblUsuario.Text = "Usuario:"
-        '
-        'BtnEliminar
-        '
-        Me.BtnEliminar.Location = New System.Drawing.Point(249, 252)
-        Me.BtnEliminar.Name = "BtnEliminar"
-        Me.BtnEliminar.Size = New System.Drawing.Size(75, 23)
-        Me.BtnEliminar.TabIndex = 3
-        Me.BtnEliminar.Text = "Eliminar"
-        Me.BtnEliminar.UseVisualStyleBackColor = True
-        '
-        'BtnModificar
-        '
-        Me.BtnModificar.Location = New System.Drawing.Point(168, 252)
-        Me.BtnModificar.Name = "BtnModificar"
-        Me.BtnModificar.Size = New System.Drawing.Size(75, 23)
-        Me.BtnModificar.TabIndex = 2
-        Me.BtnModificar.Text = "Modificar"
-        Me.BtnModificar.UseVisualStyleBackColor = True
-        '
-        'BtnConsultar
-        '
-        Me.BtnConsultar.Location = New System.Drawing.Point(87, 253)
-        Me.BtnConsultar.Name = "BtnConsultar"
-        Me.BtnConsultar.Size = New System.Drawing.Size(75, 23)
-        Me.BtnConsultar.TabIndex = 1
-        Me.BtnConsultar.Text = "Consultar"
-        Me.BtnConsultar.UseVisualStyleBackColor = True
-        '
-        'BtnAgregar
-        '
-        Me.BtnAgregar.Location = New System.Drawing.Point(6, 253)
-        Me.BtnAgregar.Name = "BtnAgregar"
-        Me.BtnAgregar.Size = New System.Drawing.Size(75, 23)
-        Me.BtnAgregar.TabIndex = 0
-        Me.BtnAgregar.Text = "Agregar"
-        Me.BtnAgregar.UseVisualStyleBackColor = True
         '
         'TabAgregar
         '
@@ -134,7 +69,7 @@ Partial Class FrmAccesoRemotos
         Me.TabAgregar.Location = New System.Drawing.Point(4, 24)
         Me.TabAgregar.Name = "TabAgregar"
         Me.TabAgregar.Padding = New System.Windows.Forms.Padding(3)
-        Me.TabAgregar.Size = New System.Drawing.Size(347, 290)
+        Me.TabAgregar.Size = New System.Drawing.Size(370, 290)
         Me.TabAgregar.TabIndex = 1
         Me.TabAgregar.Text = "Agregar usuario"
         Me.TabAgregar.UseVisualStyleBackColor = True
@@ -237,35 +172,141 @@ Partial Class FrmAccesoRemotos
         Me.LblDatosUsuario.TabIndex = 0
         Me.LblDatosUsuario.Text = "Datos de Usuario"
         '
+        'TabPage1
+        '
+        Me.TabPage1.Controls.Add(Me.IconButton1)
+        Me.TabPage1.Controls.Add(Me.DgvConsultar)
+        Me.TabPage1.Controls.Add(Me.LabelNota)
+        Me.TabPage1.Controls.Add(Me.TextUsuario)
+        Me.TabPage1.Controls.Add(Me.LblUsuario)
+        Me.TabPage1.Controls.Add(Me.BtnEliminar)
+        Me.TabPage1.Controls.Add(Me.BtnModificar)
+        Me.TabPage1.Controls.Add(Me.BtnConsultar)
+        Me.TabPage1.Controls.Add(Me.BtnAgregar)
+        Me.TabPage1.Location = New System.Drawing.Point(4, 24)
+        Me.TabPage1.Name = "TabPage1"
+        Me.TabPage1.Padding = New System.Windows.Forms.Padding(3)
+        Me.TabPage1.Size = New System.Drawing.Size(370, 290)
+        Me.TabPage1.TabIndex = 0
+        Me.TabPage1.Text = "Acceso"
+        Me.TabPage1.UseVisualStyleBackColor = True
+        '
+        'DgvConsultar
+        '
+        Me.DgvConsultar.BackgroundColor = System.Drawing.SystemColors.HotTrack
+        Me.DgvConsultar.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
+        Me.DgvConsultar.Location = New System.Drawing.Point(12, 57)
+        Me.DgvConsultar.Name = "DgvConsultar"
+        Me.DgvConsultar.RowTemplate.Height = 25
+        Me.DgvConsultar.Size = New System.Drawing.Size(335, 165)
+        Me.DgvConsultar.TabIndex = 7
+        '
+        'LabelNota
+        '
+        Me.LabelNota.AutoSize = True
+        Me.LabelNota.Font = New System.Drawing.Font("Segoe UI", 6.5!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point)
+        Me.LabelNota.Location = New System.Drawing.Point(62, 42)
+        Me.LabelNota.Name = "LabelNota"
+        Me.LabelNota.Size = New System.Drawing.Size(255, 12)
+        Me.LabelNota.TabIndex = 6
+        Me.LabelNota.Text = "*Actualmente solo se puede ingresar un IdUsuario para eliminar"
+        '
+        'TextUsuario
+        '
+        Me.TextUsuario.Location = New System.Drawing.Point(62, 16)
+        Me.TextUsuario.Name = "TextUsuario"
+        Me.TextUsuario.Size = New System.Drawing.Size(262, 23)
+        Me.TextUsuario.TabIndex = 5
+        '
+        'LblUsuario
+        '
+        Me.LblUsuario.AutoSize = True
+        Me.LblUsuario.Location = New System.Drawing.Point(6, 19)
+        Me.LblUsuario.Name = "LblUsuario"
+        Me.LblUsuario.Size = New System.Drawing.Size(50, 15)
+        Me.LblUsuario.TabIndex = 4
+        Me.LblUsuario.Text = "Usuario:"
+        '
+        'BtnEliminar
+        '
+        Me.BtnEliminar.Location = New System.Drawing.Point(249, 252)
+        Me.BtnEliminar.Name = "BtnEliminar"
+        Me.BtnEliminar.Size = New System.Drawing.Size(75, 23)
+        Me.BtnEliminar.TabIndex = 3
+        Me.BtnEliminar.Text = "Eliminar"
+        Me.BtnEliminar.UseVisualStyleBackColor = True
+        '
+        'BtnModificar
+        '
+        Me.BtnModificar.Location = New System.Drawing.Point(168, 252)
+        Me.BtnModificar.Name = "BtnModificar"
+        Me.BtnModificar.Size = New System.Drawing.Size(75, 23)
+        Me.BtnModificar.TabIndex = 2
+        Me.BtnModificar.Text = "Modificar"
+        Me.BtnModificar.UseVisualStyleBackColor = True
+        '
+        'BtnConsultar
+        '
+        Me.BtnConsultar.Location = New System.Drawing.Point(87, 253)
+        Me.BtnConsultar.Name = "BtnConsultar"
+        Me.BtnConsultar.Size = New System.Drawing.Size(75, 23)
+        Me.BtnConsultar.TabIndex = 1
+        Me.BtnConsultar.Text = "Consultar"
+        Me.BtnConsultar.UseVisualStyleBackColor = True
+        '
+        'BtnAgregar
+        '
+        Me.BtnAgregar.Location = New System.Drawing.Point(6, 253)
+        Me.BtnAgregar.Name = "BtnAgregar"
+        Me.BtnAgregar.Size = New System.Drawing.Size(75, 23)
+        Me.BtnAgregar.TabIndex = 0
+        Me.BtnAgregar.Text = "Agregar"
+        Me.BtnAgregar.UseVisualStyleBackColor = True
+        '
+        'TabPrincipal
+        '
+        Me.TabPrincipal.Controls.Add(Me.TabPage1)
+        Me.TabPrincipal.Controls.Add(Me.TabAgregar)
+        Me.TabPrincipal.Location = New System.Drawing.Point(12, 12)
+        Me.TabPrincipal.Name = "TabPrincipal"
+        Me.TabPrincipal.SelectedIndex = 0
+        Me.TabPrincipal.Size = New System.Drawing.Size(378, 318)
+        Me.TabPrincipal.TabIndex = 1
+        '
+        'IconButton1
+        '
+        Me.IconButton1.IconChar = FontAwesome.Sharp.IconChar.MagnifyingGlass
+        Me.IconButton1.IconColor = System.Drawing.Color.Black
+        Me.IconButton1.IconFont = FontAwesome.Sharp.IconFont.[Auto]
+        Me.IconButton1.IconSize = 25
+        Me.IconButton1.Location = New System.Drawing.Point(330, 10)
+        Me.IconButton1.Name = "IconButton1"
+        Me.IconButton1.Size = New System.Drawing.Size(34, 32)
+        Me.IconButton1.TabIndex = 8
+        Me.IconButton1.UseVisualStyleBackColor = True
+        '
         'FrmAccesoRemotos
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(7.0!, 15.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.SystemColors.ActiveCaption
-        Me.ClientSize = New System.Drawing.Size(375, 343)
+        Me.ClientSize = New System.Drawing.Size(402, 350)
         Me.Controls.Add(Me.TabPrincipal)
         Me.Name = "FrmAccesoRemotos"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "Acceso Remotos"
-        Me.TabPrincipal.ResumeLayout(False)
-        Me.TabPage1.ResumeLayout(False)
-        Me.TabPage1.PerformLayout()
         Me.TabAgregar.ResumeLayout(False)
         Me.TabAgregar.PerformLayout()
+        Me.TabPage1.ResumeLayout(False)
+        Me.TabPage1.PerformLayout()
+        CType(Me.DgvConsultar, System.ComponentModel.ISupportInitialize).EndInit()
+        Me.TabPrincipal.ResumeLayout(False)
         Me.ResumeLayout(False)
 
     End Sub
 
-    Friend WithEvents TabPrincipal As TabControl
-    Friend WithEvents TabPage1 As TabPage
-    Friend WithEvents LblUsuario As Label
-    Friend WithEvents BtnEliminar As Button
-    Friend WithEvents BtnModificar As Button
-    Friend WithEvents BtnConsultar As Button
-    Friend WithEvents BtnAgregar As Button
     Friend WithEvents TabAgregar As TabPage
-    Friend WithEvents TxtUsuario As TextBox
-    Friend WithEvents LblDatosUsuario As Label
+    Friend WithEvents LblUser As Label
     Friend WithEvents BtnInsertar As Button
     Friend WithEvents LblPRust As Label
     Friend WithEvents LblPAny As Label
@@ -275,5 +316,17 @@ Partial Class FrmAccesoRemotos
     Friend WithEvents TxtPassAny As TextBox
     Friend WithEvents TxtRustDesk As TextBox
     Friend WithEvents TxtAnydesk As TextBox
-    Friend WithEvents LblUser As Label
+    Friend WithEvents TxtUsuario As TextBox
+    Friend WithEvents LblDatosUsuario As Label
+    Friend WithEvents TabPage1 As TabPage
+    Friend WithEvents LabelNota As Label
+    Friend WithEvents TextUsuario As TextBox
+    Friend WithEvents LblUsuario As Label
+    Friend WithEvents BtnEliminar As Button
+    Friend WithEvents BtnModificar As Button
+    Friend WithEvents BtnConsultar As Button
+    Friend WithEvents BtnAgregar As Button
+    Friend WithEvents TabPrincipal As TabControl
+    Friend WithEvents DgvConsultar As DataGridView
+    Friend WithEvents IconButton1 As FontAwesome.Sharp.IconButton
 End Class
